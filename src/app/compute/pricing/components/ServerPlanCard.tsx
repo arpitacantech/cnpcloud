@@ -34,7 +34,6 @@ export function ServerPlanCard({
   interval,
   className,
 }: ServerPlanCardProps) {
-
   /* ---------- Plan type detection ---------- */
   const isIPv4 = "ipType" in plan;
   const isQuantityPlan = isIPv4 || !("vCPU" in plan);
@@ -112,14 +111,32 @@ export function ServerPlanCard({
 
   const effectiveInterval = isQuantityPlan ? "monthly" : interval;
 
-  const basePrice =
-    currency === "INR"
-      ? effectiveInterval === "monthly"
+  // ✅ Type-safe basePrice
+const getBasePrice = (): number => {
+  // ServerPlan: may have both monthly and hourly pricing
+  if ("vCPU" in plan) {
+    if (currency === "INR") {
+      return effectiveInterval === "monthly"
         ? plan.priceINRMonthly
-        : plan.priceINRHourly!
-      : effectiveInterval === "monthly"
-      ? plan.priceUSDMonthly
-      : plan.priceUSDHourly!;
+        : plan.priceINRHourly ?? 0;
+    } else {
+      return effectiveInterval === "monthly"
+        ? plan.priceUSDMonthly
+        : plan.priceUSDHourly ?? 0;
+    }
+  }
+
+  // IPv4Plan or ServicePlan: only monthly pricing
+  if ("ipType" in plan || "minQty" in plan) {
+    if (currency === "INR") return plan.priceINRMonthly;
+    return plan.priceUSDMonthly;
+  }
+
+  return 0;
+};
+
+
+  const basePrice = getBasePrice();
 
   const storagePrice =
     currency === "INR"
@@ -158,165 +175,143 @@ export function ServerPlanCard({
     return "Storage:";
   })();
 
-  const isLoadBalancer = "name" in plan && plan.name.toLowerCase().includes("load balancer");
+  const isLoadBalancer =
+    "name" in plan && plan.name.toLowerCase().includes("load balancer");
 
   const currencySymbol = currency === "USD" ? "$" : "₹";
   const intervalLabel = effectiveInterval === "monthly" ? "/mo" : "/hr";
 
+  /* ---------- Render ---------- */
   return (
     <div
-        className={cn(
-            "group relative flex flex-col lg:flex-row lg:items-center justify-between gap-4 p-4 sm:p-5",
-            "bg-cmpt_card/10 border border-cmpt_border rounded-cmpt_lg",
-            "hover:bg-cmpt_card hover:border-cmpt_primary/30",
-            "transition-all duration-300",
-            plan.popular && "border-cmpt_primary/50 bg-cmpt_primary/5",
-            className
-        )}
-        >
-        {plan.popular && (
-            <div className="absolute -top-3 left-4 flex items-center gap-1 px-3 py-1 bg-cmpt_primary text-cmpt_primary-foreground text-xs font-semibold rounded-full">
-            <Sparkles className="w-3 h-3" />
-            Popular
-            </div>
-        )}
+      className={cn(
+        "group relative flex flex-col lg:flex-row lg:items-center justify-between gap-4 p-4 sm:p-5",
+        "bg-cmpt_card/10 border border-cmpt_border rounded-cmpt_lg",
+        "hover:bg-cmpt_card hover:border-cmpt_primary/30",
+        "transition-all duration-300",
+        'popular' in plan && plan.popular && "border-cmpt_primary/50 bg-cmpt_primary/5",
+        className
+      )}
+    >
+      {'popular' in plan && plan.popular && (
+        <div className="absolute -top-3 left-4 flex items-center gap-1 px-3 py-1 bg-cmpt_primary text-cmpt_primary-foreground text-xs font-semibold rounded-full">
+          <Sparkles className="w-3 h-3" />
+          Popular
+        </div>
+      )}
 
-        {/* Plan Info */}
-        <div className="flex-1 min-w-0">
-            <h4 className="text-cmpt_foreground font-semibold text-lg mb-2">{plan.name}</h4>
+      {/* Plan Info */}
+      <div className="flex-1 min-w-0">
+        <h4 className="text-cmpt_foreground font-semibold text-lg mb-2">
+          {plan.name}
+        </h4>
 
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-cmpt_muted-foreground">
-              {!isQuantityPlan && (
-                <>
-                  <div className="flex items-center gap-1.5">
-                    <Cpu className="w-4 h-4 text-cmpt_primary" />
-                    <span>{(plan as ServerPlan).vCPU} vCPU</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <MemoryStick className="w-4 h-4 text-cmpt_primary" />
-                    <span>{(plan as ServerPlan).ram} RAM</span>
-                  </div>
-                </>
-              )}
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-cmpt_muted-foreground">
+          {!isQuantityPlan && (
+            <>
               <div className="flex items-center gap-1.5">
-                {(() => {
-                    if ("name" in plan && plan.name.toLowerCase().includes("load balancer")) {
-                      return "";
-                    }
-                    return <HardDrive className="w-4 h-4 text-cmpt_primary" />;
-                  })()}
-                <span>
-                  {(() => {
-                    if ("name" in plan && plan.name.toLowerCase().includes("load balancer")) {
-                      return "";
-                    }
-                    if (isIPv4) {
-                      return `${quantity} IP`;
-                    }
-                    if ("name" in plan) {
-                      const name = plan.name.toLowerCase();
-
-                      if (name === "vpn" || name === "backup") {
-                        return `${quantity} Node`;
-                      }
-
-                      if (name.includes("storage") || name.includes("snapshot")) {
-                        return `${quantity} GB`;
-                      }
-                    }
-                    return `${baseStorage + additionalStorage} GB`;
-                  })()}
-                </span>
+                <Cpu className="w-4 h-4 text-cmpt_primary" />
+                <span>{(plan as ServerPlan).vCPU} vCPU</span>
               </div>
-            </div>
-        </div>
-
-        {/* Storage Counter */}
-        <div className="flex items-center gap-2">
-            <span className="text-xs text-cmpt_muted-foreground whitespace-nowrap">
-              {quantityLabel}
+              <div className="flex items-center gap-1.5">
+                <MemoryStick className="w-4 h-4 text-cmpt_primary" />
+                <span>{(plan as ServerPlan).ram} RAM</span>
+              </div>
+            </>
+          )}
+          <div className="flex items-center gap-1.5">
+            {!isLoadBalancer && <HardDrive className="w-4 h-4 text-cmpt_primary" />}
+            <span>
+              {isIPv4
+                ? `${quantity} IP`
+                : "name" in plan && (plan.name.toLowerCase() === "vpn" || plan.name.toLowerCase() === "backup")
+                ? `${quantity} Node`
+                : `${baseStorage + additionalStorage} GB`}
             </span>
-
-            {!isLoadBalancer && (
-              <div className="flex items-center gap-1">
-                {/* Decrement */}
-                <button
-                  type="button"
-                  onClick={handleDecrement}
-                  disabled={isQuantityPlan ? quantity === 1 : additionalStorage === 0}
-                  className={cn(
-                    "flex items-center justify-center w-7 h-7",
-                    "bg-cmpt_secondary/50 border border-cmpt_border rounded-cmpt_sm",
-                    "text-cmpt_foreground hover:bg-cmpt_secondary hover:border-cmpt_primary/30",
-                    "transition-all duration-200",
-                    "disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-cmpt_secondary/50 disabled:hover:border-cmpt_border"
-                  )}
-                >
-                  <Minus className="w-3 h-3" />
-                </button>
-
-                {/* Quantity / Storage */}
-                <input
-                  type="text"
-                  value={isQuantityPlan ? String(quantity) : storageInput}
-                  onChange={handleStorageChange}
-                  onBlur={handleStorageBlur}
-                  className={cn(
-                    "flex items-center justify-center w-[70px] h-7 px-2",
-                    "bg-cmpt_secondary/30 border border-cmpt_border rounded-cmpt_sm",
-                    "text-cmpt_foreground font-mono text-xs font-medium text-center",
-                    "focus:outline-none focus:ring-1 focus:ring-cmpt_primary/40",
-                    storageError
-                      ? "border-red-500 focus:ring-red-400/40"
-                      : "border-cmpt_border focus:ring-cmpt_primary/40"
-                  )}
-                />
-
-                {/* Increment */}
-                <button
-                  type="button"
-                  onClick={handleIncrement}
-                  disabled={additionalStorage >= 1000}
-                  className={cn(
-                    "flex items-center justify-center w-7 h-7",
-                    "bg-cmpt_secondary/50 border border-cmpt_border rounded-cmpt_sm",
-                    "text-cmpt_foreground hover:bg-cmpt_secondary hover:border-cmpt_primary/30",
-                    "transition-all duration-200",
-                    "disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-cmpt_secondary/50 disabled:hover:border-cmpt_border"
-                  )}
-                >
-                  <Plus className="w-3 h-3" />
-                </button>
-              </div>
-            )}
+          </div>
         </div>
+      </div>
 
-        {/* Price and CTA */}
-        <div className="flex items-center justify-between lg:justify-end gap-4">
-            <div className="text-right">
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold price-text">
-                  {currencySymbol}
-                  {formatPrice(displayPrice)}
-                </span>
-                <span className="text-sm text-cmpt_muted-foreground">
-                  {intervalLabel}
-                </span>
-              </div>
-            </div>
+      {/* Storage / Quantity Counter */}
+      <div className="flex items-center gap-2">
+        <span className="text-xs text-cmpt_muted-foreground whitespace-nowrap">
+          {quantityLabel}
+        </span>
 
-            {/* CTA Button */}
+        {!isLoadBalancer && (
+          <div className="flex items-center gap-1">
             <button
-            className={cn(
-                "px-5 py-2.5 rounded-cmpt_md text-sm font-semibold transition-all duration-200",
-                plan.popular
-                ? "bg-cmpt_primary text-cmpt_primary-foreground hover:bg-cmpt_primary/90 glow-subtle"
-                : "bg-cmpt_secondary/50 text-cmpt_foreground border border-cmpt_border hover:bg-cmpt_secondary hover:border-cmpt_primary/30"
-            )}
+              type="button"
+              onClick={handleDecrement}
+              disabled={isQuantityPlan ? quantity === 1 : additionalStorage === 0}
+              className={cn(
+                "flex items-center justify-center w-7 h-7",
+                "bg-cmpt_secondary/50 border border-cmpt_border rounded-cmpt_sm",
+                "text-cmpt_foreground hover:bg-cmpt_secondary hover:border-cmpt_primary/30",
+                "transition-all duration-200",
+                "disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-cmpt_secondary/50 disabled:hover:border-cmpt_border"
+              )}
             >
-            Select Plan
+              <Minus className="w-3 h-3" />
             </button>
+
+            <input
+              type="text"
+              value={isQuantityPlan ? String(quantity) : storageInput}
+              onChange={handleStorageChange}
+              onBlur={handleStorageBlur}
+              className={cn(
+                "flex items-center justify-center w-[70px] h-7 px-2",
+                "bg-cmpt_secondary/30 border border-cmpt_border rounded-cmpt_sm",
+                "text-cmpt_foreground font-mono text-xs font-medium text-center",
+                "focus:outline-none focus:ring-1 focus:ring-cmpt_primary/40",
+                storageError
+                  ? "border-red-500 focus:ring-red-400/40"
+                  : "border-cmpt_border focus:ring-cmpt_primary/40"
+              )}
+            />
+
+            <button
+              type="button"
+              onClick={handleIncrement}
+              disabled={additionalStorage >= 1000}
+              className={cn(
+                "flex items-center justify-center w-7 h-7",
+                "bg-cmpt_secondary/50 border border-cmpt_border rounded-cmpt_sm",
+                "text-cmpt_foreground hover:bg-cmpt_secondary hover:border-cmpt_primary/30",
+                "transition-all duration-200",
+                "disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-cmpt_secondary/50 disabled:hover:border-cmpt_border"
+              )}
+            >
+              <Plus className="w-3 h-3" />
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Price and CTA */}
+      <div className="flex items-center justify-between lg:justify-end gap-4">
+        <div className="text-right">
+          <div className="flex items-baseline gap-1">
+            <span className="text-2xl font-bold price-text">
+              {currencySymbol}
+              {formatPrice(displayPrice)}
+            </span>
+            <span className="text-sm text-cmpt_muted-foreground">{intervalLabel}</span>
+          </div>
         </div>
+
+        <button
+          className={cn(
+            "px-5 py-2.5 rounded-cmpt_md text-sm font-semibold transition-all duration-200",
+            'popular' in plan && plan.popular
+              ? "bg-cmpt_primary text-cmpt_primary-foreground hover:bg-cmpt_primary/90 glow-subtle"
+              : "bg-cmpt_secondary/50 text-cmpt_foreground border border-cmpt_border hover:bg-cmpt_secondary hover:border-cmpt_primary/30"
+          )}
+        >
+          Select Plan
+        </button>
+      </div>
     </div>
   );
 }
