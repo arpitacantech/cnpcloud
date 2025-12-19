@@ -1,0 +1,24 @@
+import Navbar from "../components/Navbar";
+import HeroCompute from "./components/HeroCompute";
+import DifferentiationSection from "./components/DifferentiationSection";
+import TextParallaxContentExample from "./components/text-parallax-content-scroll";
+import CTASection from "../components/CTASection";
+import Footer from "../components/Footer";
+import ComparisonSection from "./components/ComparisonSection";
+import FAQ1 from "../components/FAQ1";
+
+
+export default function Home() {
+  return (
+   <>
+    <Navbar />
+    <HeroCompute />
+    <DifferentiationSection />
+    <TextParallaxContentExample />
+    <ComparisonSection />
+    <FAQ1 />
+    <CTASection />
+    <Footer />
+    </>
+  );
+}
