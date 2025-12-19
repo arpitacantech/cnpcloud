@@ -131,8 +131,3 @@ export default function HeroSection() {
     </section>
   );
 }
-<motion.div
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.3 }}
-></motion.div>
