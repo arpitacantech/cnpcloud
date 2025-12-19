@@ -1,5 +1,12 @@
 "use client";
-import BeamsBackground from "./BeamsBackground";
+
+import dynamic from "next/dynamic";
+
+const BeamsBackground = dynamic(
+  () => import("./BeamsBackground"),
+  { ssr: false }
+);
+
 import { ContainerScroll } from "../../components/ui/container-scroll-animation";
 import Image from "next/image";
 import ClientLogos from "@/src/app/components/Clients";
