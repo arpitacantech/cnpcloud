@@ -1,123 +1,131 @@
 "use client";
-import ClientLogos from "@/src/app/components/Clients";
-import { motion } from "framer-motion";
-export default function (){
-    return(
-        <>
-        <section className="px-4 pt-[180px] pb-8 md:px-8 min-h-[100vh] w-full">
-      <motion.div
-        className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8 mb-4"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        {/* LEFT CONTENT */}
-        <motion.div
-          className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl"
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-sm text-white font-medium flex items-center gap-4"
-          >
-            Enterprise-Grade Hosting
-          </motion.h1>
+import React from "react";
 
-          <motion.h2
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-4xl text-[#f7f8f8] font-extrabold md:text-5xl"
-          >
-            Dev-Friendly Managed Laravel Hosting!
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-[#a8a8a8] text-lg"
-          >
-            Launch your Laravel apps and host your Laravel project with
-            Cloudways’ Laravel Web Hosting, featuring 1-click installation.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0"
-          >
-            <a href="#" className="button bg-[#7808d0]">
-                            <span className="button__icon-wrapper">
-                                <svg
-                                viewBox="0 0 14 15"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="button__icon-svg"
-                                width="10"
-                                >
-                                <path
-                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                                    fill="currentColor"
-                                ></path>
-                                </svg>
-
-                                <svg
-                                viewBox="0 0 14 15"
-                                fill="none"
-                                width="10"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="button__icon-svg button__icon-svg--copy"
-                                >
-                                <path
-                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                                    fill="currentColor"
-                                ></path>
-                                </svg>
-                            </span>
-                            Explore All
-                            </a>
-          </motion.div>
-        </motion.div>
-
-        {/* RIGHT IMAGE */}
-        <motion.div
-          className="flex-none mt-14 md:mt-0 md:max-w-xl"
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <img
-            src="https://framerusercontent.com/images/fAuKhrjDP7EgvniVHypyADtGAvo.jpg?scale-down-to=2048"
-            alt="Laravel Hosting"
-          />
-        </motion.div>
-      </motion.div>
-
-      {/* LOGOS */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <ClientLogos transparent />
-      </motion.div>
-    </section>
-        </>
-    )
+// Inline Button Component
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "default" | "secondary" | "ghost" | "gradient";
+  size?: "default" | "sm" | "lg";
+  children: React.ReactNode;
 }
 
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant = "default", size = "default", className = "", children, ...props }, ref) => {
+    const baseStyles =
+      "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
 
+    const variants = {
+      default: "bg-white text-black hover:bg-gray-100",
+      secondary: "bg-gray-800 text-white hover:bg-gray-700",
+      ghost: "hover:bg-gray-800/50 text-white",
+      gradient:
+        "bg-gradient-to-b from-white via-white/95 to-white/60 text-black hover:scale-105 active:scale-95",
+    };
+
+    const sizes = {
+      default: "h-10 px-4 py-2 text-sm",
+      sm: "h-10 px-5 text-sm",
+      lg: "h-12 px-8 text-base",
+    };
+
+    return (
+      <button
+        ref={ref}
+        className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+);
+
+Button.displayName = "Button";
+
+// Icon
+const ArrowRight = ({ className = "", size = 16 }: { className?: string; size?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M5 12h14" />
+    <path d="m12 5 7 7-7 7" />
+  </svg>
+);
+
+// Hero Component
+const Hero = React.memo(() => {
+  return (
+    <section
+      className="relative flex flex-col items-center px-6 pt-32 md:pt-40 pb-24"
+
+      style={{ animation: "fadeIn 0.6s ease-out" }}
+    >
+{/* Top Background Video (bleeds into dashboard) */}
+<div className="absolute top-0 left-0 w-full h-[85vh] md:h-[95vh] z-0 overflow-hidden">
+  <video
+    className="h-full w-full object-cover grayscale scale-[1.35]"
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="auto"
+  >
+    <source src="/assets/hero-video.mp4" type="video/mp4" />
+  </video>
+
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/80" />
+</div>
+      <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>Enterprise-Grade Hosting
+    </span></div>
+
+    <h1 className="cc-h1 text-center"><span>Experience Seemless</span><br/><span>Laravel Hosting</span></h1>
+    <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Enjoy robust performance, automatic scalability, and enhanced security, all backed by our expert support team. Whether you’re launching a startup or managing.</p>
+
+    <div className="flex items-center gap-4 relative z-10 mb-16">
+       {/* CTA BUTTON */}
+        <a href="#" className="button"><span>Get Started</span></a>
+      </div>
+
+      <div className="w-full max-w-5xl relative ">
+        {/* <div
+          className="absolute left-1/2 w-[90%] pointer-events-none z-0"
+          style={{ top: "-10%", transform: "translateX(-50%)" }}
+        >
+          <img
+            src="/glow.png"
+            alt=""
+            className="w-full h-auto opacity-60 mix-blend-screen"
+          />
+        </div> */}
+
+        <div className="relative z-10">
+          <img
+            src="https://i.postimg.cc/SKcdVTr1/Dashboard2.png"
+            alt="Dashboard preview"
+            className="w-full h-auto rounded-lg shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+  );
+});
+
+Hero.displayName = "Hero";
+
+// Main Component
+export default function Component() {
+  return (
+    // <main className="min-h-screen bg-black text-white">
+      <Hero />
+    // </main>
+  );
+}

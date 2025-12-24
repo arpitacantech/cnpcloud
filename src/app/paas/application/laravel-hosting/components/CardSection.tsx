@@ -21,7 +21,7 @@ const FeatureCard = ({
 }: FeatureCardProps) => {
   return (
     <motion.div
-      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-xl hover:shadow-crypto-purple/5 group animate-on-scroll"
+      className="rotating-border bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-xl hover:shadow-crypto-purple/5 group animate-on-scroll"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
@@ -35,11 +35,11 @@ const FeatureCard = ({
         {icon}
       </div>
 
-      <h3 className="text-white text-lg font-semibold mb-2">
+      <h3 className="font-sora text-white text-lg font-semibold mb-2">
         {title}
       </h3>
 
-      <p className="text-white/70 text-sm leading-relaxed font-['Lexend']">
+      <p className="text-white/70 text-sm leading-relaxed">
         {children}
       </p>
     </motion.div>
@@ -51,8 +51,8 @@ const FeatureCard = ({
 ================================ */
 export default function SecurityFeatures() {
   return (
-    <section className="px-[16px] py-[40px] mx-auto xl:px-[80px] xl:py-[80px] bg-[#050505]">
-      <div className="container mx-auto px-4">
+    <section className="px-[16px] py-[40px] mx-auto xl:px-[80px] xl:py-[80px]">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <motion.div
           className="text-center mb-16"
@@ -61,14 +61,8 @@ export default function SecurityFeatures() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-heading font-bold text-[48px] leading-[50px] tracking-[0.5px] text-white mb-8">
-            Enterprise Security for Laravel Applications
-          </h2>
-
-          <p className="max-w-md xl:max-w-none mx-auto text-[16px] text-white opacity-80 tracking-[0.5px] font-['Lexend'] font-[100]">
-            CryptoFlow gives you the edge with advanced tools designed for both
-            beginners and professional traders.
-          </p>
+          <h2 className="cc-h2">Enterprise Security for Laravel Applications</h2>
+          <p className="subtitle">CryptoFlow gives you the edge with advanced tools designed for both beginners and professional traders.</p>
         </motion.div>
 
         {/* Cards Grid */}
