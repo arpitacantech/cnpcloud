@@ -18,11 +18,34 @@ const fadeUp = {
 };
 
 const bars = [
-  { title: "Cantech Cloud", height: 200, highlighted: true },
-  { title: "AWS", height: 260 },
-  { title: "Azure", height: 320 },
-  { title: "Google Cloud", height: 380 },
+  {
+    title: "AWS Cloud",
+    price: "$294.44",
+    specs: "16 vCPU / 32GB RAM / 50GB SSD",
+  },
+  {
+    title: "DigitalOcean",
+    price: "$295.00",
+    specs: "16 vCPU / 32GB RAM / 50GB SSD",
+  },
+  {
+    title: "Cantech Cloud",
+    price: "$169.00",
+    specs: "16 vCPU / 32GB RAM / 50GB SSD",
+    highlighted: true,
+  },
+  {
+    title: "Google Cloud",
+    price: "$391.39",
+    specs: "16 vCPU / 32GB RAM / 50GB SSD",
+  },
+  {
+    title: "Microsoft Azure",
+    price: "$391.95",
+    specs: "16 vCPU / 32GB RAM / 50GB SSD",
+  },
 ];
+
 
 
 const ComparisonSection: React.FC = () => {
@@ -37,59 +60,83 @@ const ComparisonSection: React.FC = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.p
-          className="title-badges"
+          className="inline-block border border-gray-300 text-gray-300 uppercase text-sm px-3 py-1 rounded-full mb-3 tracking-wide"
           variants={fadeUp}
         >
           comparison
         </motion.p>
 
         <motion.h2
-          className="cc-h2"
+          className="text-[32px] font-extrabold mx-auto mb-3"
           variants={fadeUp}
         >
           Compare Us
         </motion.h2>
 
         <motion.p
-          className="subtitle"
+          className="max-w-4xl mx-auto text-[#ffffffb3] font-lexend"
           variants={fadeUp}
         >
           Choose the plan that fits your business. See what’s included and pick the right features for your team
         </motion.p>
       </motion.div>
 
-      {/* BIG Bars */}
-      <motion.div
-  className="flex flex-wrap justify-center items-end gap-16 max-w-6xl mx-auto"
+     {/* Comparison Cards */}
+<motion.div
+  className="flex flex-nowrap justify-center items-center gap-10 max-w-7xl mx-auto overflow-x-auto  py-16"
+
   variants={container}
   initial="hidden"
   whileInView="show"
   viewport={{ once: true, amount: 0.3 }}
 >
+  {bars.map((item, index) => (
+    <motion.div
+      key={index}
+      variants={fadeUp}
+      className={`
+        relative rounded-3xl 
+    ${item.highlighted ? "w-[300px] h-[400px]" : "w-[240px] h-[340px]"}
+        border transition-all duration-500
+        bg-[linear-gradient(135deg,#0d0d0d,#050505)]
+        shadow-[0_0_20px_rgba(0,0,0,0.6)]
+        flex flex-col items-center justify-center text-center px-6
+        ${
+          item.highlighted
+  ? "border-white/70 shadow-[0_0_50px_rgba(255,255,255,0.45)]"
+  : "border-white/10"
 
-        {bars.map((bar, index) => (
-          <motion.div
-            key={index}
-            variants={fadeUp}
-            className="flex flex-col items-center"
-          >
-            <div
-              className={`
-                w-40 md:w-60 rounded-t-3xl transition-all duration-500
-                border border-white/10
-                bg-[linear-gradient(135deg,#0d0d0d,#050505)]
-                shadow-[0_0_10px_rgba(0,0,0,0.5)]
-                ${bar.highlighted ? "shadow-[0_0_25px_rgba(255,255,255,0.4)] border-white/40 scale-[1.05]" : ""}
-              `}
-              style={{ height: `${bar.height}px` }}
-            />
 
-            <h3 className="text-gray-200 font-semibold mt-6 text-1xl font-sora">
-              {bar.title}
-            </h3>
-          </motion.div>
-        ))}
-      </motion.div>
+        }
+      `}
+    >
+  
+
+      <h3
+        className={`text-lg font-semibold mb-3 font-sora ${
+          item.highlighted ? "text-white" : "text-gray-200"
+        }`}
+      >
+        {item.title}
+      </h3>
+
+      <p className="text-sm text-gray-400 mb-6">
+        {item.specs}
+      </p>
+
+      <div
+        className={`text-4xl font-extrabold mb-2 ${
+          item.highlighted ? "text-white" : "text-white"
+        }`}
+      >
+        {item.price}
+      </div>
+
+      <span className="text-gray-400 text-sm">/ Month</span>
+    </motion.div>
+  ))}
+</motion.div>
+
     </section>
   );
 };
