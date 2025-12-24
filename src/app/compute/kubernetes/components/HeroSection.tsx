@@ -34,14 +34,15 @@
 // }
 "use client";
 
+import { Cloud } from 'lucide-react';
 import { motion } from "framer-motion";
 // import HeroBackground from "@/src/app/compute/kubernetes/components/HeroBackground";
 
 export default function HeroSection() {
   return (
-    <section className="relative border-y border-base-900 overflow-hidden">
+    <section className="relative overflow-hidden px-6 pt-32 md:pt-40 pb-0">
     {/* <HeroBackground /> */}
-      <div className="max-w-screen-xl mx-auto px-4 pt-[180px] pb-0 md:px-8">
+      <div className="max-w-screen-xl mx-auto px-4 pb-0 md:px-8">
 
         <motion.div
           initial="hidden"
@@ -54,32 +55,25 @@ export default function HeroSection() {
               },
             },
           }}
-          className="space-y-5 max-w-6xl mx-auto text-center"
+          className="text-center"
         >
 
           {/* Badge */}
-          <motion.h1
+          <motion.div
             variants={{
               hidden: { opacity: 0, y: -20 },
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-sm text-white font-medium inline-block p-[7px_15px] bg-[#121212] rounded-[26px] border border-[#383838]"
+            className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"
           >
-            Cantech Cloud Kubernetes
-          </motion.h1>
+            <Cloud /><span>Cloud Compute</span>
+          </motion.div>
 
           {/* Heading */}
-          <motion.h2
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-[46px] text-white font-extrabold mx-auto"
-          >
-            Production-Ready Managed Kubernetes, Simplified
-          </motion.h2>
+          <h1 className="cc-h1 text-center">
+            <span>Production-Ready Managed</span><span className='block mt-[7px]'>Kubernetes, Simplified</span>
+          </h1>
 
           {/* Description */}
           <motion.p
@@ -88,7 +82,7 @@ export default function HeroSection() {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-            className="max-w-2xl mx-auto pb-4 text-[#ffffffb3]"
+            className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10"
           >
             Deploy, scale, and operate containerized workloads with a fully managed,
             highly available Kubernetes control plane—without operational overhead.
@@ -103,12 +97,9 @@ export default function HeroSection() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="items-center justify-center gap-x-3 sm:flex"
           >
-            <a
-              href="#"
-              className="bg-white text-black px-6 py-3 rounded-full font-medium transition-all duration-300 ease-in-out shadow-md hover:shadow-[0_0_20px_rgba(255,255,255,0.8)] hover:scale-105"
-            >
-              Get Started
-            </a>
+            <div className="gap-4 relative z-10 mb-16">
+                <a href="#" className="button"><span>Get Started</span></a>
+            </div>
           </motion.div>
 
         </motion.div>
@@ -126,7 +117,7 @@ export default function HeroSection() {
             alt=""
           />
         </motion.div>
-
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-600/80 to-transparent"></div>      
       </div>
     </section>
   );
