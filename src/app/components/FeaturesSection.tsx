@@ -53,9 +53,9 @@ function FeatureCard({ icon, title, description, imageSrc, className }: FeatureC
       <div className="relative z-20 flex flex-col gap-4">
         <div className="flex items-center gap-4">
           <div className="text-white">{icon}</div>
-          <h3 className="text-xl font-semibold text-gray-300 font-sora">{title}</h3>
+          <h3 className="cc-h3">{title}</h3>
         </div>
-        <p className="text-gray-400 font-lexend">{description}</p>
+        <p className="cc-p">{description}</p>
       </div>
     </motion.div>
   );
@@ -66,13 +66,13 @@ export default function FeatureSection({ className }: { className?: string }) {
     <section className={cn("mx-auto max-w-7xl px-4 md:px-8", className)}>
       {/* Heading */}
       <div className="max-w-6xl mx-auto text-center mb-16">
-        <p className="inline-block border border-gray-300 text-gray-300 uppercase text-sm px-3 py-1 rounded-full mb-3 tracking-wide">
+        <p className="title-badges">
           Features
         </p>
-        <h2 className="text-[32px] font-extrabold mx-auto mb-3">
+        <h2 className="cc-h2">
           Cloud Platform For Developers
         </h2>
-        <p className="text-[#ffffffb3] font-lexend max-w-5xl mx-auto">
+        <p className="subtitle">
           Deploy your application instantly on our fully redundant, high performance and scalable Cloud Platform-as-a-Service.
         </p>
       </div>
@@ -83,7 +83,7 @@ export default function FeatureSection({ className }: { className?: string }) {
           icon={<Zap size={24} />}
           title="Fast Deployment"
           description="Deploy your apps instantly with zero downtime."
-          imageSrc="/assets/images/home/feature-img.jpg" // replace with your image path
+          imageSrc="/assets/images/home/feature-img.webp"
           className="md:col-span-1 md:row-span-3 min-h-[400px]"
         />
         <FeatureCard

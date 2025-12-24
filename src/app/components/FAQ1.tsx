@@ -138,7 +138,7 @@ useEffect(() => {
         <div className={`faq1-intro ${introReady ? "faq1-intro--active" : ""}`}>
           <span className="faq1-intro__beam" aria-hidden="true" />
           <span className="faq1-intro__pulse" aria-hidden="true" />
-          <span className="faq1-intro__label"> FAQ</span>
+          <span className="faq1-intro__label text-sm">FAQ</span>
           <span className="faq1-intro__meter" aria-hidden="true" />
           <span className="faq1-intro__tick" aria-hidden="true" />
         </div>
@@ -176,9 +176,11 @@ useEffect(() => {
                   aria-expanded={open}
                   onClick={() => toggleQuestion(index)}
                   style={{ ["--faq-outline" as any]: "rgba(255,255,255,0.35)" }}
-                  className="relative flex w-full items-start gap-6 px-8 py-7 text-left transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--faq-outline)] "
+                  className={`relative flex w-full gap-6 px-8 py-7 text-left flex-row-reverse transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--faq-outline)]
+                    ${open ? "items-start" : "items-start"}
+                  `}
                 >
-                  <span className={`relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full border transition-all duration-500 group-hover:scale-105 ${palette.iconRing} ${palette.iconSurface}`}>
+                  <span className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-500 group-hover:scale-105 ${palette.iconRing} ${palette.iconSurface}`}>
                     <span className={`pointer-events-none absolute inset-0 rounded-full border opacity-30 ${palette.iconRing} ${open ? "animate-ping" : ""}`} />
                     <svg className={`relative h-5 w-5 transition-transform duration-500 ${palette.icon} ${open ? "rotate-45" : ""}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 5v14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -189,13 +191,8 @@ useEffect(() => {
                   <div className="flex flex-1 flex-col ">
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
                       <h3 className="text-lg font-medium leading-tight sm:text-xl text-white">{item.question}</h3>
-                      {/* {item.meta && (
-                        <span className="inline-flex w-fit items-center rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.35em] transition-opacity duration-300 sm:ml-auto border-white/10 text-neutral-400">
-                          {item.meta}
-                        </span>
-                      )} */}
                     </div>
-
+                    
                     <div
                       id={panelId}
                       role="region"

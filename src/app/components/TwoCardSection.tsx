@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, Variants, easeOut } from "framer-motion";
 
 interface FeatureCardProps {
-  iconSrc?: string; // optional if not used
+  iconSrc?: string;
   title: string;
   description: string;
 }
@@ -41,21 +41,21 @@ export default function TwoCardSection() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.p
-          className="inline-block border border-gray-300 text-gray-300 uppercase text-sm px-3 py-1 rounded-full mb-3 tracking-wide"
+          className="title-badges"
           variants={fadeUp}
         >
           Services
         </motion.p>
 
         <motion.h2
-          className="bg-gradient-to-b from-white via-gray-300 to-gray-400 bg-clip-text text-transparent text-[32px] font-extrabold mx-auto mb-3"
+          className="cc-h2"
           variants={fadeUp}
         >
           Select the service that best fits your needs
         </motion.h2>
 
         <motion.p
-          className="max-w-4xl mx-auto bg-gradient-to-b from-white via-gray-300 to-gray-400 bg-clip-text text-transparent text-[#ffffffb3] font-lexend"
+          className="subtitle font-lexend"
           variants={fadeUp}
         >
           Choose from our range of services to get started quickly and easily
@@ -75,8 +75,7 @@ export default function TwoCardSection() {
             imageSrc="/assets/images/home/card1.png"
             title="PaaS"
             description="Enjoy instant access to pre-configured cloud environments, ready to deploy"
-            button="Access Service"
-            href="/paas"
+            buttonHref="/paas"
           />
         </motion.div>
 
@@ -85,8 +84,7 @@ export default function TwoCardSection() {
             imageSrc="/assets/images/home/card2.png"
             title="Cloud Compute"
             description="Full control over computing resources for advanced workloads"
-            button="Access Service"
-            href="/compute"
+            buttonHref="/compute"
           />
         </motion.div>
       </motion.div>
