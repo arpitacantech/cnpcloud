@@ -37,21 +37,21 @@ const ComparisonSection: React.FC = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.p
-          className="inline-block border border-gray-300 text-gray-300 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide"
+          className="title-badges"
           variants={fadeUp}
         >
           comparison
         </motion.p>
 
         <motion.h2
-          className="text-4xl md:text-5xl font-semibold text-gray-200 mb-2"
+          className="cc-h2"
           variants={fadeUp}
         >
           Compare Us
         </motion.h2>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto"
+          className="subtitle"
           variants={fadeUp}
         >
           Choose the plan that fits your business. See what’s included and pick the right features for your team
@@ -84,7 +84,7 @@ const ComparisonSection: React.FC = () => {
               style={{ height: `${bar.height}px` }}
             />
 
-            <h3 className="text-gray-200 font-semibold mt-6 text-2xl">
+            <h3 className="text-gray-200 font-semibold mt-6 text-1xl font-sora">
               {bar.title}
             </h3>
           </motion.div>

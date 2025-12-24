@@ -129,27 +129,27 @@ const OverlayCopy = ({ subheading, heading }: OverlayCopyProps) => {
       style={{ y, opacity }}
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
     >
-      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">{subheading}</p>
-      <p className="text-center text-4xl font-bold md:text-7xl">{heading}</p>
+      <p className="title-badges mb-5">{subheading}</p>
+      <p className="cc-h2 text-[58px]">{heading}</p>
     </motion.div>
   );
 };
 
 const ExampleContent = () => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
+  <div className="mx-auto flex md:max-w-7xl justify-between gap-5 pb-24 pt-12">
+    <h3 className="cc-h3 md:max-w-2xl ">
       Additional content 
-    </h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, blanditiis soluta eius quam modi aliquam quaerat odit.
+    </h3>
+    <div className="md:max-w-5xl">
+      <p className="cc-p">
+        Lorem ipsum dolor sit amet consect adipisicing elit. Quasi, blanditiis soluta eius quam modi aliquam quaerat odit.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, blanditiis soluta eius quam modi aliquam quaerat odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, blanditiis soluta eius quam modi aliquam quaerat odit.
       </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium reiciendis blanditiis.
+      <p className="cc-p pt-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium reiciendis blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, blanditiis soluta eius quam modi aliquam quaerat odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, blanditiis soluta eius quam modi aliquam quaerat odit.
       </p>
-      <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
+      {/* <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
         Learn more <FiArrowUpRight className="inline" />
-      </button>
+      </button> */}
     </div>
   </div>
 );
