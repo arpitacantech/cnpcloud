@@ -25,7 +25,7 @@ interface WrapperProps {
 const CardWrapper = ({ className = "", children }: WrapperProps) => {
   return (
     <div
-      className={`rounded-3xl border border-gray-700 bg-black shadow-xl ${className}`}
+      className={`rounded-3xl border glass-card bg-black shadow-xl ${className}`}
     >
       {children}
     </div>
@@ -68,10 +68,10 @@ const Card = ({ card, index }: CardProps) => {
   return (
     <div
       ref={cardRef}
-      className="min-h-screen flex items-center justify-center px-6 lg:px-8"
+      className="h-[70vh] flex items-center justify-center pt-20 px-6 lg:px-8"
       style={{
         position: "sticky",
-        top: `${100 + index * 20}px`,
+        top: `${80 + index * 12}px`,
       }}
     >
       <motion.div
@@ -80,8 +80,8 @@ const Card = ({ card, index }: CardProps) => {
       >
         <CardWrapper className="relative p-12 lg:p-16 overflow-hidden transition-all duration-700">
           {/* Background Effects */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white-500/10 rounded-full blur-2xl" />
+          {/* <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl" /> */}
 
           <div className="relative z-10">
             {/* Icon */}
@@ -93,22 +93,22 @@ const Card = ({ card, index }: CardProps) => {
                   : { scale: 0, rotate: -180 }
               }
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center justify-center w-16 h-16 bg-gray-600 rounded-2xl mb-8"
+              className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-8"
             >
               <IconComponent className="w-8 h-8 text-white" />
             </motion.div>
 
             {/* Title */}
-            <motion.h2
+            <motion.h3
               initial={{ opacity: 0, y: 20 }}
               animate={
                 isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
               }
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+              className="cc-h2"
             >
               {card.title}
-            </motion.h2>
+            </motion.h3>
 
             {/* Description */}
             <motion.p
@@ -135,8 +135,6 @@ const Card = ({ card, index }: CardProps) => {
               <span className="text-sm font-medium">{card.stats}</span>
             </motion.div>
           </div>
-
-          
         </CardWrapper>
       </motion.div>
     </div>

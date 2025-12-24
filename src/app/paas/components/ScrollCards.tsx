@@ -61,20 +61,20 @@ export default function ScrollCards() {
     <section id="scroll-cards" className="relative bg-black py-20">
       <div className="max-w-5xl mx-auto relative">
 
-        {/* ⭐ Sticky / Not Sticky header */}
+        {/* Sticky / Not Sticky header */}
         <div
           className={`z-10 bg-black pt-4 pb-2 ${
             isSticky ? "sticky top-0" : "static"
           }`}
         >
           <motion.div
-            className="w-full flex justify-center mb-10"
+            className="w-full flex justify-center mb-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={badgeVariants}
           >
-            <p className="inline-block border border-gray-300 text-gray-300 uppercase text-xs md:text-sm px-3 py-1 rounded-full tracking-wide">
+            <p className="title-badges">
               Feature
             </p>
           </motion.div>
@@ -86,12 +86,8 @@ export default function ScrollCards() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl lg:text-6xl font-medium bg-gradient-to-r from-white to-gray-600 text-transparent bg-clip-text mb-6">
-                Cloud Platform For Developers
-              </h2>
-              <p className="text-xl text-gray-300 max-w-5xl mx-auto">
-                Deploy your application instantly on our fully redundant, high performance and scalable Cloud Platform-as-a-Service.
-              </p>
+              <h2 className="cc-h2">Cloud Platform For Developers</h2>
+              <p className="subtitle">Deploy your application instantly on our fully redundant, high performance and scalable Cloud Platform-as-a-Service.</p>
             </motion.div>
           </div>
         </div>
@@ -104,7 +100,7 @@ export default function ScrollCards() {
         </div>
 
         {/* Sentinel to detect the end */}
-        <div ref={endRef} className="h-10"></div>
+        {/* <div ref={endRef} className="h-10"></div> */}
 
       </div>
     </section>

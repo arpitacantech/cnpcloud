@@ -10,63 +10,52 @@ export default function HeroSection() {
   return (
     <section className="relative w-full  bg-black overflow-hidden pt-52 pb-0">
 
-      {/* ⭐ 1. SHADER BACKGROUND */}
+      {/* 1. SHADER BACKGROUND */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
         <ShaderAnimation />
       </div>
 
-      {/* ⭐ 2. GRAYSCALE OVERLAY */}
-      <div className="absolute inset-0 w-full h-full z-[1] pointer-events-none 
-                      bg-black/60 backdrop-blur-[1px] 
-                      mix-blend-normal 
-                      grayscale">
-      </div>
+      {/* 2. GRAYSCALE OVERLAY */}
+      <div className="absolute inset-0 w-full h-full z-[1] pointer-events-none bg-black/60 backdrop-blur-[1px] mix-blend-normal grayscale"></div>
 
-      {/* ⭐ 3. CONTENT ABOVE EVERYTHING */}
-      <div className="relative z-10 max-w-5xl mx-auto text-center px-6 mb-20">
+      {/* 3. CONTENT ABOVE EVERYTHING */}
+      <div className="relative z-20 max-w-5xl mx-auto text-center px-6 mb-20">
 
         {/* Heading */}
-        <h1
-          className="text-5xl md:text-7xl font-semibold mb-10 
-          bg-gradient-to-r from-white to-gray-400 
-          bg-clip-text text-transparent">
-          Sign Up And Deploy Your
+        <h1 className="cc-h1">
+          <span>Sign Up And Deploy Your</span>
           <span className="block mt-6">Application For Free</span>
         </h1>
 
         {/* Email input + button */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Enter Your Email"
-            className="w-full sm:flex-1 px-4 py-3 rounded-full bg-black/70 border border-gray-700 text-white placeholder-gray-400"
-          />
-          <button className="inline-block px-7 py-3 bg-black/70 text-white font-medium rounded-full 
-            shadow-[0_0_12px_rgba(192,192,192,0.6)]
-            hover:shadow-[0_0_24px_rgba(192,192,192,1)]
-            text-lg">
-            Sign up
-          </button>
-        </div>
+        <form action="https://app.cantech.cloud/" method="GET" className="relative flex items-center max-w-md mx-auto">
+          {/* Email Input */}
+          <input type="email" name="signup" required placeholder="Enter your email" className="w-full px-7 pr-36 py-3 rounded-full bg-black/70 border border-gray-700 text-white placeholder-gray-400 text-sm font-normal focus:outline-none"/>
+
+          {/* Button inside input */}
+          <button type="submit" className="absolute right-1.5 px-6 py-2.5 bg-white text-black font-medium rounded-full text-sm hover:bg-gray-200 transition-all shadow-[0_0_12px_rgba(255,255,255,0.6)]">Start Free Trial</button>
+        </form>
 
       </div>
 
-      {/* ⭐ Dashboard */}
+      {/* Dashboard */}
       <div className="-mt-80 relative z-10">
         <ContainerScroll titleComponent={<></>}>
           <div className="relative w-full max-w-[1200px] mx-auto">
-            <Image
-              src="/assets/images/paas/dashboard.png"
-              alt="Dashboard preview"
-              width={1200}
-              height={700}
-              className="w-full h-auto rounded-2xl shadow-2xl"
-            />
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/15qwtTdk2f4?si=I-o5nKwssK11moO5"
+                title="Product Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
           </div>
         </ContainerScroll>
       </div>
 
-      {/* ⭐ Clients */}
+      {/* Clients */}
       <div className="-mt-72 relative z-10">
         <ClientLogos transparent />
       </div>
