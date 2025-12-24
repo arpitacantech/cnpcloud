@@ -1,75 +1,117 @@
 "use client";
-import HomePage from "./hero-bg";
+import React from "react";
 
-export default function HeroSection() {
+// Inline Button Component
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "default" | "secondary" | "ghost" | "gradient";
+  size?: "default" | "sm" | "lg";
+  children: React.ReactNode;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant = "default", size = "default", className = "", children, ...props }, ref) => {
+    const baseStyles =
+      "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+
+    const variants = {
+      default: "bg-white text-black hover:bg-gray-100",
+      secondary: "bg-gray-800 text-white hover:bg-gray-700",
+      ghost: "hover:bg-gray-800/50 text-white",
+      gradient:
+        "bg-gradient-to-b from-white via-white/95 to-white/60 text-black hover:scale-105 active:scale-95",
+    };
+
+    const sizes = {
+      default: "h-10 px-4 py-2 text-sm",
+      sm: "h-10 px-5 text-sm",
+      lg: "h-12 px-8 text-base",
+    };
+
+    return (
+      <button
+        ref={ref}
+        className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+);
+
+Button.displayName = "Button";
+
+// Icon
+const ArrowRight = ({ className = "", size = 16 }: { className?: string; size?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M5 12h14" />
+    <path d="m12 5 7 7-7 7" />
+  </svg>
+);
+
+// Hero Component
+const Hero = React.memo(() => {
   return (
-    <section className="relative w-full bg-black overflow-hidden py-[70px] min-h-[100vh]">
-      <div className="absolute inset-0 z-0 h-full">
-        <HomePage />
+    <section
+      className="relative flex flex-col items-center px-6 pt-32 md:pt-40 pb-24"
+
+      style={{ animation: "fadeIn 0.6s ease-out" }}
+    >
+{/* Top Background Video (bleeds into dashboard) */}
+<div className="absolute top-0 left-0 w-full h-[85vh] md:h-[95vh] z-0 overflow-hidden">
+  <video
+    className="h-full w-full object-cover grayscale scale-[1.35]"
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="auto"
+  >
+    <source src="/assets/hero-video.mp4" type="video/mp4" />
+  </video>
+
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/80" />
+</div>
+      <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-gauge-icon lucide-gauge"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><span>High-Performance
+    </span></div>
+
+    <h1 className="cc-h1 text-center"><span>Scalable PaaS Cloud Application</span><span className="block mt-[7px]">for Modern Workloads</span></h1>
+    <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Deploy Laravel, Symfony, WordPress, Magento & more on scalable, secure infrastructure with 24/7 support. Auto-scaling, transparent pricing, and expert management included.</p>
+
+      <div className="flex items-center gap-4 relative z-10 mb-16">
+        <a href="#" className="button"><span>Get Started</span></a>
       </div>
 
-      <div className="relative z-10 text-center px-4 pt-10"> 
-  <h1
-    className="font-sora text-[60px] line-height: normal; font-semibold mb-10 bg-gradient-to-r from-white to-gray-700 bg-clip-text text-transparent">
-    Deploy Cloud Apps With
-    <span className="block"> Confidence and Scale</span>
-  </h1>
-
-  {/* <p className="text-lg md:text-2xl text-gray-500 mb-10">
-    One platform for all your cloud applications. Simple, secure, and infinitely scalable
-  </p> */}
-  <ul className="list-none mb-14 flex flex-col md:flex-row md:items-center md:justify-center md:flex-wrap lg:flex-nowrap gap-4 md:gap-9 w-fit md:mx-auto">
-            <li data-ns-animate="" data-delay="0.3" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
-              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                <rect x="0.664062" y="0.5" width="18" height="18" rx="9" fill="" className="fill-secondary dark:fill-accent/20"></rect>
-                <path d="M8.98067 13.2561L14.4131 7.92144C14.7477 7.5959 14.7477 7.0697 14.4131 6.74416C14.0785 6.41861 13.5377 6.41861 13.2031 6.74416L8.37567 11.4901L6.12502 9.28807C5.79043 8.96253 5.2496 8.96253 4.91501 9.28807C4.58041 9.61362 4.58041 10.1398 4.91501 10.4654L7.77066 13.2561C7.93753 13.4184 8.1566 13.5 8.37567 13.5C8.59473 13.5 8.8138 13.4184 8.98067 13.2561Z" fill="" className="fill-white"></path>
-              </svg>
-              <span className="text-tagline-2 dark:text-accent/60"> Enterprise Security </span>
-            </li>
-            <li data-ns-animate="" data-delay="0.4" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
-              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                <rect x="0.664062" y="0.5" width="18" height="18" rx="9" fill="" className="fill-secondary dark:fill-accent/20"></rect>
-                <path d="M8.98067 13.2561L14.4131 7.92144C14.7477 7.5959 14.7477 7.0697 14.4131 6.74416C14.0785 6.41861 13.5377 6.41861 13.2031 6.74416L8.37567 11.4901L6.12502 9.28807C5.79043 8.96253 5.2496 8.96253 4.91501 9.28807C4.58041 9.61362 4.58041 10.1398 4.91501 10.4654L7.77066 13.2561C7.93753 13.4184 8.1566 13.5 8.37567 13.5C8.59473 13.5 8.8138 13.4184 8.98067 13.2561Z" fill="" className="fill-white"></path>
-              </svg>
-              <span className="text-tagline-2 dark:text-accent/60">
-                Scalable Infrastructure
-              </span>
-            </li>
-            <li data-ns-animate="" data-delay="0.5" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
-              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                <rect x="0.664062" y="0.5" width="18" height="18" rx="9" fill="" className="fill-secondary dark:fill-accent/20"></rect>
-                <path d="M8.98067 13.2561L14.4131 7.92144C14.7477 7.5959 14.7477 7.0697 14.4131 6.74416C14.0785 6.41861 13.5377 6.41861 13.2031 6.74416L8.37567 11.4901L6.12502 9.28807C5.79043 8.96253 5.2496 8.96253 4.91501 9.28807C4.58041 9.61362 4.58041 10.1398 4.91501 10.4654L7.77066 13.2561C7.93753 13.4184 8.1566 13.5 8.37567 13.5C8.59473 13.5 8.8138 13.4184 8.98067 13.2561Z" fill="" className="fill-white"></path>
-              </svg>
-              <span className="text-tagline-2 dark:text-accent/60"> 99.99% Uptime </span>
-            </li>
-            <li data-ns-animate="" data-delay="0.5" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
-              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                <rect x="0.664062" y="0.5" width="18" height="18" rx="9" fill="" className="fill-secondary dark:fill-accent/20"></rect>
-                <path d="M8.98067 13.2561L14.4131 7.92144C14.7477 7.5959 14.7477 7.0697 14.4131 6.74416C14.0785 6.41861 13.5377 6.41861 13.2031 6.74416L8.37567 11.4901L6.12502 9.28807C5.79043 8.96253 5.2496 8.96253 4.91501 9.28807C4.58041 9.61362 4.58041 10.1398 4.91501 10.4654L7.77066 13.2561C7.93753 13.4184 8.1566 13.5 8.37567 13.5C8.59473 13.5 8.8138 13.4184 8.98067 13.2561Z" fill="" className="fill-white"></path>
-              </svg>
-              <span className="text-tagline-2 dark:text-accent/60"> Secure & Reliable </span>
-            </li>
-          </ul> 
-<div className="mt-24 flex justify-center gap-6">
-  <button
-    className="w-40 h-14 rounded-lg bg-black border border-white/20 text-white text-lg 
-               transition shadow-none 
-               hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] 
-               hover:text-white hover:[text-shadow:_0_0_10px_rgba(255,255,255,0.8)]">
-    Explore More
-  </button>
-
-  <button
-    className="w-40 h-14 rounded-lg bg-black border border-white/20 text-white text-lg 
-               transition shadow-none 
-               hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] 
-               hover:text-white hover:[text-shadow:_0_0_10px_rgba(255,255,255,0.8)]">
-    Get Started
-  </button>
-</div>
-
-</div>
-
+      <div className="w-full max-w-5xl relative ">
+        <div className="relative z-10">
+          <img
+            src="https://i.postimg.cc/SKcdVTr1/Dashboard2.png"
+            alt="Dashboard preview"
+            className="w-full h-auto rounded-lg shadow-2xl"
+          />
+        </div>
+      </div>
     </section>
+  );
+});
+
+Hero.displayName = "Hero";
+
+// Main Component
+export default function Component() {
+  return (
+    <Hero />
   );
 }
