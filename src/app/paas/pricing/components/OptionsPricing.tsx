@@ -1,6 +1,7 @@
 
 import { OptionItem, currencySymbols, Currency } from '@/data/pricingData';
 import { Shield, Globe, Database } from 'lucide-react';
+import { formatPrice } from '@/utils/formatPrice';
 
 interface OptionsPricingProps {
   ssl: OptionItem[];
@@ -58,7 +59,7 @@ const OptionSection = ({ title, description, icon, items, currency, delay }: Opt
                 <div className="text-left">
                   <p className="text-xs text-muted-foreground uppercase">Per Month</p>
                   <p className={`font-bold ${isFree ? 'text-primary' : ''}`}>
-                    {isFree ? 'FREE' : `${symbol}${item.pricePerMonth}`}
+                    {isFree ? 'FREE' : `${symbol}${formatPrice(item.pricePerMonth, currency)}`}
                   </p>
                 </div>
               </div>

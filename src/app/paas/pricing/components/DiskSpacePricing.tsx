@@ -1,6 +1,7 @@
 
 import { DiskSpaceTier, currencySymbols, Currency } from '@/data/pricingData';
 import { HardDrive, Gift } from 'lucide-react';
+import { formatPrice } from '@/utils/formatPrice';
 
 interface DiskSpacePricingProps {
   diskSpace: DiskSpaceTier[];
@@ -39,13 +40,13 @@ export const DiskSpacePricing = ({ diskSpace, currency }: DiskSpacePricingProps)
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Per Hour</p>
                   <p className={`text-xl font-bold ${isFree ? 'text-primary' : 'text-foreground'}`}>
-                    {isFree ? 'FREE' : `${symbol}${tier.pricePerHour}`}
+                    {isFree ? 'FREE' : `${symbol}${formatPrice(tier.pricePerHour, currency)}`}
                   </p>
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Per Month</p>
                   <p className={`text-xl font-bold ${isFree ? 'text-primary' : 'price-value'}`}>
-                    {isFree ? 'FREE' : `${symbol}${tier.pricePerMonth}`}
+                    {isFree ? 'FREE' : `${symbol}${formatPrice(tier.pricePerMonth, currency)}`}
                   </p>
                 </div>
               </div>
