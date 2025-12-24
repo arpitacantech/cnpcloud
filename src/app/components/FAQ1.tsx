@@ -143,13 +143,13 @@ useEffect(() => {
           <span className="faq1-intro__tick" aria-hidden="true" />
         </div>
 
-        <header className="flex flex-col gap-8 md:flex-row md:items-end md:justify-center">
+        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-center">
           <div className="space-y-4">
             {/* <p className="text-xs uppercase tracking-[0.35em] text-neutral-400">Questions</p> */}
             <h2 className="text-[32px] font-extrabold mx-auto mb-3 leading-tight text-white">Frequently Asked Question</h2>
             {/* <p className="max-w-xl text-base text-neutral-400">Everything you need to know about partnering with our team, condensed into calm monochrome clarity.</p> */}
           </div>
-        </header>
+        </div>
 
         <ul className="space-y-4">
           {faqs.map((item, index) => {
@@ -190,16 +190,15 @@ useEffect(() => {
 
                   <div className="flex flex-1 flex-col ">
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-                      <h3 className="text-lg font-medium leading-tight sm:text-xl text-white">{item.question}</h3>
+                      <h3 className="cc-h3">{item.question}</h3>
                     </div>
                     
                     <div
                       id={panelId}
                       role="region"
                       aria-labelledby={buttonId}
-                      className={`overflow-hidden text-lg leading-relaxed transition-[max-height] duration-500 ease-out ${open ? "max-h-64" : "max-h-0"} text-neutral-400`}
-                    >
-                      <p className="pr-2 pt-4">{item.answer}</p>
+                      className={`overflow-hidden text-lg leading-relaxed transition-[max-height] duration-500 ease-out ${open ? "max-h-64" : "max-h-0"} text-neutral-400`}>
+                      <p className="cc-p pt-4">{item.answer}</p>
                     </div>
                   </div>
                 </button>
