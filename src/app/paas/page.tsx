@@ -1,5 +1,5 @@
 
-import Navbar from "../components/Navbar";
+import PaasNavbar from "./components/PaasNavbar";
 import HeroSection from "@/src/app/paas/components/HeroSection";
 import DifferentiationSection from "./components/DifferentiationSection";
 import ScrollCards from "./components/ScrollCards";
@@ -11,7 +11,7 @@ import FAQ1 from "../components/FAQ1";
 export default function paas() {
   return (
   <>
-  <Navbar />
+  <PaasNavbar />
   <HeroSection />
   <DifferentiationSection />
   <ScrollCards />
