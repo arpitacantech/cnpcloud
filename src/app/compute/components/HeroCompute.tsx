@@ -16,7 +16,7 @@ export default function HeroCompute() {
     <section className="relative w-full bg-black overflow-hidden px-6 pt-32 md:pt-40 pb-24">
       <div className="container px-4 mx-auto max-w-6xl">
       <div className="absolute inset-0 w-full h-11 z-0 pointer-events-none">
-        {/* <BeamsBackground /> */}
+        <BeamsBackground />
       </div>
 
       <div className="relative z-20 max-w-5xl mx-auto text-center px-6 mb-20">
