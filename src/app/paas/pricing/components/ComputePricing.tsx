@@ -2,6 +2,7 @@
 import { CloudletTier, currencySymbols, Currency } from '@/data/pricingData';
 import { PriceCard } from './PriceCard';
 import { Server, Zap } from 'lucide-react';
+import { convertPrice } from '@/utils/convertPrice';
 
 interface ComputePricingProps {
   reservedCloudlets: CloudletTier[];
@@ -32,7 +33,7 @@ export const ComputePricing = ({ reservedCloudlets, dynamicCloudlets, currency }
               key={tier.range}
               title={`${tier.range} Cloudlets`}
               subtitle={tier.ram}
-              price={`${symbol}${tier.pricePerMonth.toFixed(2)}`}
+              price={`${symbol}${convertPrice(tier.pricePerMonth, currency).toFixed(2)}`}
               priceLabel="per cloudlet / month"
               delay={index * 100}
               highlight={index === 0}
@@ -60,7 +61,7 @@ export const ComputePricing = ({ reservedCloudlets, dynamicCloudlets, currency }
               key={tier.range}
               title={`${tier.range} Cloudlets`}
               subtitle={tier.ram}
-              price={`${symbol}${tier.pricePerMonth.toFixed(2)}`}
+              price={`${symbol}${convertPrice(tier.pricePerMonth, currency).toFixed(2)}`}
               priceLabel="per cloudlet / month"
               delay={index * 100}
               icon={<Zap className="w-4 h-4" />}

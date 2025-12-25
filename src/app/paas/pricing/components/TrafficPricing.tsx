@@ -1,5 +1,6 @@
 import { TrafficTier, currencySymbols, Currency } from '@/data/pricingData';
 import { Wifi, Gift, ArrowDownRight } from 'lucide-react';
+import { formatPrice } from '@/utils/formatPrice';
 
 interface TrafficPricingProps {
   traffic: TrafficTier[];
@@ -31,14 +32,6 @@ export const TrafficPricing = ({ traffic, currency }: TrafficPricingProps) => {
               className={`glass-card glow-border p-6 opacity-0 animate-fade-up hover:translate-y-[-4px] transition-transform duration-300`}
               style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
             >
-              
-              {!isFree && index === traffic.length - 1 && (
-                <div className="flex items-center gap-1 text-primary text-xs font-medium mb-3">
-                  <ArrowDownRight className="w-3 h-3" />
-                  <span>BEST RATE</span>
-                </div>
-              )}
-              
               <h3 className="text-lg font-semibold text-foreground mb-1">{tier.trafficRange}</h3>
               <p className="text-sm text-muted-foreground mb-4">External traffic last month</p>
               
@@ -52,7 +45,7 @@ export const TrafficPricing = ({ traffic, currency }: TrafficPricingProps) => {
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Price per GB</p>
                   <p className={`text-2xl font-bold ${isFree ? ' text-primary' : 'price-value'}`}>
-                    {isFree ? 'FREE' : `${symbol}${tier.pricePerGB}`}
+                    {isFree ? 'FREE' : `${symbol}${formatPrice(tier.pricePerGB, currency)}`}
                   </p>
                 </div>
               </div>

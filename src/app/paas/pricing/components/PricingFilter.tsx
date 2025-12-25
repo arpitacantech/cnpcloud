@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from 'react';
-import { Region, Category, pricingData, regionToCurrency, regionLabels } from '@/data/pricingData';
+import { useEffect, useState } from 'react';
+import { Region, Category, pricingData, Currency, regionLabels } from '@/data/pricingData';
 import { RegionSelector } from "./RegionSelector";
 import { CategoryFilter } from "./CategoryFilter";
 import { ComputePricing } from "./ComputePricing";
@@ -9,13 +9,18 @@ import { DiskSpacePricing } from "./DiskSpacePricing";
 import { TrafficPricing } from "./TrafficPricing";
 import { OptionsPricing } from "./OptionsPricing";
 import { Cloud, Sparkles } from 'lucide-react';
+import { getCurrencyFromIP } from '@/utils/getCurrencyFromIP';
 
 export const PricingFilter = () => {
+  const [currency, setCurrency] = useState<Currency>('INR');
   const [selectedRegion, setSelectedRegion] = useState<Region>('india');
   const [selectedCategory, setSelectedCategory] = useState<Category>('compute');
-  
+
+  useEffect(() => {
+    getCurrencyFromIP().then(setCurrency);
+  }, []);
+
   const regionData = pricingData[selectedRegion];
-  const currency = regionToCurrency[selectedRegion];
   
   const renderPricing = () => {
     switch (selectedCategory) {
