@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import AnimatedLogo from "../components/AnimatedLogo";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,9 +31,19 @@ export default function Navbar() {
           style={{ backdropFilter: "blur(40px)" }}
         >
           {/* LOGO */}
-          <div className="flex flex-1 items-center">
+          {/* <div className="flex flex-1 items-center">
             <span className="whitespace-nowrap text-base font-semibold text-white sm:text-lg">Cantech Cloud</span>
-          </div>
+          </div> */}
+          {/* LOGO */}
+<div className="flex flex-1 items-center gap-2">
+  <div className="w-10 h-10 md:w-10 md:h-10">
+    <AnimatedLogo className="w-full h-full scale-125" />
+  </div>
+  <span className="whitespace-nowrap text-base font-semibold text-white sm:text-lg">
+    Cantech Cloud
+  </span>
+</div>
+
 
           {/* DESKTOP MENU */}
           <ul className="hidden md:flex flex-1 justify-center items-center space-x-10 text-white/80">
