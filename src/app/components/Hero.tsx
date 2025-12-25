@@ -44,8 +44,9 @@ export default function Hero() {
               </span>
             </li>
           </ul>
+          <a href="#"  className="button"><span>Get Started</span>  </a>
         </div>
-        <a href="#" className="mt-6 inline-flex items-center justify-center rounded-full bg-black/70 px-6 py-2.5 text-base font-medium text-white shadow-[0_0_12px_rgba(192,192,192,0.6)] transition-all hover:shadow-[0_0_24px_rgba(192,192,192,1)] animate-zoom-in-delay2 sm:mt-8 sm:px-7 sm:py-3 sm:text-lg md:mt-10 md:px-8 md:py-3.5 md:text-xl"> Get Started </a>
+        
         <div className="absolute bottom-6 sm:bottom-8 md:bottom-10 w-full z-20 animate-zoom-in">
           <ClientLogos transparent />
         </div>
