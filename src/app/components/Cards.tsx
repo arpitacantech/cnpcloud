@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useState } from "react";
 
 interface FeatureCardProps {
@@ -35,17 +34,9 @@ export default function Cards({
       onMouseMove={handleMove}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
-      className="
-        relative p-[1px] rounded-xl overflow-hidden
-        bg-[linear-gradient(135deg,#0d0d0d,#050505)]
-        border border-white/10
-        transition duration-300
-        cursor-pointer
-      "
-    >
+      className="relative p-[1px] rounded-xl overflow-hidden bg-[linear-gradient(135deg,#0d0d0d,#050505)] border border-white/10 transition duration-300 cursor-pointer">
       {/* BORDER GLOW */}
-      <div
-        className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-200"
+      <div className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-200"
         style={{
           opacity,
           background: `
@@ -59,20 +50,9 @@ export default function Cards({
       />
 
       {/* INNER CONTAINER */}
-      <div
-        className="
-          relative z-10 rounded-xl p-6
-          bg-[#09090b]/95
-          backdrop-blur-sm
-          overflow-hidden
-        "
-      >
+      <div className="relative z-10 rounded-xl p-6 bg-[#09090b]/95 backdrop-blur-sm overflow-hidden">
         {/* INNER SPOTLIGHT - NOW ABOVE BACKGROUND */}
-        <div
-          className="
-            pointer-events-none absolute inset-0
-            transition-opacity duration-200
-          "
+        <div className="pointer-events-none absolute inset-0 transition-opacity duration-200"
           style={{
             opacity,
             background: `
@@ -91,7 +71,7 @@ export default function Cards({
           <img src={imageSrc} alt={title} className="w-100 h-100 mb-4 object-contain mx-auto"/>
           <div className="w-full text-left space-y-4">
             <h3 className="cc-h3 text-2xl">{title}</h3>
-            <p className="text-gray-400 text-xl">{description}</p>
+            <p className="cc-p">{description}</p>
             <a href={buttonHref} className="cc-btn service-btn-color relative z-50 inline-flex items-center">
               <span className="button__icon-wrapper">
                 <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="button__icon-svg" width="10">
