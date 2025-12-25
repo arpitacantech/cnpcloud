@@ -36,15 +36,15 @@ export const ServicesSection = () => {
 
       <div className="md:px-8 text-center">
 
-            <p className="text-[32px] text-white font-extrabold mx-auto mb-6">
+            <h2 className="cc-h2">
                 Why Choose CloudPe Kubernetes-as-a-Service?
-            </p>
-            <p className="text-[#ffffffb3]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus
+            </h2>
+            <p className="subtitle">
+                Lorem ipsum dolor sit amet, adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus
             </p>
         </div>
 
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20">
          
 
         {/* Content Grid */}
@@ -65,7 +65,7 @@ export const ServicesSection = () => {
 
           {/* Sticky Image */}
           <div className="hidden lg:block lg:w-4/12">
-            <div className="sticky top-24 border border-solid border-[1px] border-[#ffffff29] rounded-xl">
+            <div className="sticky top-24 border border-solid border-[#ffffff29] rounded-xl">
               <StickyImage />
             </div>
           </div>

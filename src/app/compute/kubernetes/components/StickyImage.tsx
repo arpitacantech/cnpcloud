@@ -25,7 +25,7 @@ export const StickyImage = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
         
         {/* Floating badge */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
@@ -39,7 +39,7 @@ export const StickyImage = () => {
               Secure, Scalable, Reliable
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Glow effect */}
         <div className="absolute -inset-1 bg-gradient-to-r from-accent/20 via-transparent to-accent/20 blur-2xl opacity-40 -z-10" />
