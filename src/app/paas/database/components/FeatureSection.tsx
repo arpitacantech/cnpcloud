@@ -54,13 +54,13 @@ export default function FeatureSection() {
               transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <span className="inline-block bg-slate-700/40 text-xs text-slate-300 px-3 py-1 rounded-full">
+              <span className="title-badges">
                 Creative Freedom
               </span>
             </motion.div>
 
             <motion.h2
-              className="text-3xl sm:text-4xl font-semibold leading-tight mb-4"
+              className="cc-h2"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}

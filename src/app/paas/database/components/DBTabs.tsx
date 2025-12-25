@@ -126,12 +126,8 @@ export default function ProductTabs() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
-        Database Products & Services
-      </h2>
-      <p className="text-white opacity-80 max-w-2xl mx-auto">
-        Choose from individual databases, high-availability clusters, or powerful add-ons.
-      </p>
+      <h2 className="cc-h2">Database Products & Services</h2>
+      <p className="subtitle">Choose from individual databases, high-availability clusters, or powerful add-ons.</p>
     </motion.div>
 
     {/* Tabs */}
@@ -150,10 +146,10 @@ export default function ProductTabs() {
         <button
           key={t.id}
           onClick={() => setTab(t.id as any)}
-          className={`database-tab px-4 py-2 rounded-md font-medium ring-1 transition-all ${
+          className={` px-4 py-2 rounded-md font-medium text-[#ffffffb3] transition-all ${
             tab === t.id
-              ? "bg-white text-black shadow"
-              : "bg-transparent text-white"
+              ? "bg-white text-black shadow database-tab border-0"
+              : "bg-transparent"
           }`}
         >
           {t.label}
@@ -200,10 +196,10 @@ export default function ProductTabs() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold text-white">
+                  <h3 className="cc-h3 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-400 mt-2">
+                  <p className="cc-p">
                     {item.description}
                   </p>
                 </div>

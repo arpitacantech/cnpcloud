@@ -35,7 +35,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-14 md:py-16 lg:py-20 font-display text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.1] tracking-[0.7px]">
+    <section className="py-14 md:py-16 lg:py-20">
   <div className="container px-4 mx-auto max-w-6xl">
     
     {/* Section Header */}
@@ -46,13 +46,8 @@ const Features = () => {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-white font-['lexend'] text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
-        Why Choose CloudPeak?
-      </h2>
-
-      <p className="mx-auto mb-[40px] mt-[25px] text-center text-white text-[16px] opacity-80 tracking-[0.5px] font-['Lexend'] font-[100]">
-        Everything you need for production-ready database hosting
-      </p>
+      <h2 className="cc-h2">Why Choose Cantech Cloud?</h2>
+      <p className="subtitle font-lexend">Everything you need for production-ready database hosting</p>
     </motion.div>
 
     {/* Features Grid */}
@@ -95,12 +90,10 @@ const Features = () => {
           </div>
 
           {/* Title */}
-          <h3 className="font-body text-lg font-semibold text-white mb-2">
-            {feature.title}
-          </h3>
+          <h3 className="cc-h3">{feature.title}</h3>
 
           {/* Description */}
-          <p className="text-sm leading-relaxed max-w-xs text-white">
+          <p className="cc-p">
             {feature.description}
           </p>
         </motion.div>
