@@ -10,22 +10,10 @@ export default function HeroSection() {
   return (
     <section className="relative w-full  bg-black overflow-hidden pt-52 pb-0">
       {/* 1. SHADER BACKGROUND */}
-      {/* <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <ShaderAnimation />
-      </div> */}
-      {/* 1. VIDEO BACKGROUND */}
-
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full  object-top"
-        >
-          <source src="/paas-hero-vid.mp4" type="video/mp4" />
-        </video>
+        <ShaderAnimation />
       </div>
+      
 
       {/* 2. GRAYSCALE OVERLAY */}
       <div className="absolute inset-0 w-full h-full z-[1] pointer-events-none bg-black/60 backdrop-blur-[1px] mix-blend-normal grayscale"></div>
