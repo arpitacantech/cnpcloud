@@ -146,7 +146,7 @@ useEffect(() => {
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-center">
           <div className="space-y-4">
             {/* <p className="text-xs uppercase tracking-[0.35em] text-neutral-400">Questions</p> */}
-            <h2 className="text-[32px] font-extrabold mx-auto mb-3 leading-tight text-white">Frequently Asked Question</h2>
+            <h2 className="cc-h2">Frequently Asked Question</h2>
             {/* <p className="max-w-xl text-base text-neutral-400">Everything you need to know about partnering with our team, condensed into calm monochrome clarity.</p> */}
           </div>
         </div>
