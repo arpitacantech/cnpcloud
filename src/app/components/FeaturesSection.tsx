@@ -78,45 +78,59 @@ export default function FeatureSection({ className }: { className?: string }) {
       </div>
 
       {/* Bento Grid */}
-      <div className="grid w-full gap-6 grid-cols-1 md:grid-cols-3 md:grid-rows-3 auto-rows-[minmax(180px,auto)]">
-        <FeatureCard
-          icon={<Zap size={24} />}
-          title="Fast Deployment"
-          description="Deploy your apps instantly with zero downtime."
-          imageSrc="/assets/images/home/feature-img.webp"
-          className="md:col-span-1 md:row-span-3 min-h-[400px]"
-        />
-        <FeatureCard
-          icon={<Sparkles size={24} />}
-          title="High Performance"
-          description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
-          className="min-h-[200px]"
-        />
-        <FeatureCard
-          icon={<Target size={24} />}
-          title="Scalable"
-          description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
-          className="min-h-[200px]"
-        />
-        <FeatureCard
-          icon={<Layers size={24} />}
-          title="Multi-Layer Security"
-          description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
-          className="min-h-[200px]"
-        />
-        <FeatureCard
-          icon={<Gauge size={24} />}
-          title="Monitoring"
-          description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
-          className="min-h-[200px]"
-        />
-        <FeatureCard
-          icon={<Shield size={24} />}
-          title="Reliability"
-          description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
-          className="md:col-span-2 min-h-[250px]"
-        />
-      </div>
+      
+<div
+  className="
+    grid w-full gap-6
+    grid-cols-1
+    md:grid-cols-2
+    lg:grid-cols-3 lg:grid-rows-3
+    auto-rows-[minmax(180px,auto)]
+  "
+>
+  <FeatureCard
+    icon={<Zap size={24} />}
+    title="Fast Deployment"
+    description="Deploy your apps instantly with zero downtime."
+    imageSrc="/assets/images/home/feature-img.webp"
+    className="
+      min-h-[260px]
+      md:col-span-2          /* full width on tablet */
+      lg:col-span-1 lg:row-span-3  /* original desktop behavior */
+    "
+  />
+  <FeatureCard
+    icon={<Sparkles size={24} />}
+    title="High Performance"
+    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    className="min-h-[200px]"
+  />
+  <FeatureCard
+    icon={<Target size={24} />}
+    title="Scalable"
+    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    className="min-h-[200px]"
+  />
+  <FeatureCard
+    icon={<Layers size={24} />}
+    title="Multi-Layer Security"
+    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    className="min-h-[200px]"
+  />
+  <FeatureCard
+    icon={<Gauge size={24} />}
+    title="Monitoring"
+    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    className="min-h-[200px]"
+  />
+  <FeatureCard
+    icon={<Shield size={24} />}
+    title="Reliability"
+    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    className="md:col-span-2 lg:col-span-2 min-h-[250px]"
+  />
+</div>
+
     </section>
   );
 }

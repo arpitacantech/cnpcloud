@@ -46,54 +46,55 @@ export default function Navbar() {
 
 
           {/* DESKTOP MENU */}
-          <ul className="hidden md:flex flex-1 justify-center items-center space-x-10 text-white/80">
-            {/* PRODUCT DROPDOWN */}
-            <li className="relative group">
-              <button className="flex items-center gap-1 hover:text-white font-sora font-normal">
-                Products
-                <ChevronDown className="w-4 h-4 transition group-hover:rotate-180" />
-              </button>
+<ul className="hidden lg:flex flex-1 justify-center items-center space-x-10 text-white/80">
+  {/* PRODUCT DROPDOWN */}
+  <li className="relative group">
+    <button className="flex items-center gap-1 hover:text-white font-sora font-normal">
+      Products
+      <ChevronDown className="w-4 h-4 transition group-hover:rotate-180" />
+    </button>
 
-              <div
-                className="
-                  absolute top-full left-1/2 -translate-x-1/2 mt-4 w-44
-                  opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                  transition-all duration-200
-                "
-              >
-                <div className="bg-black backdrop-blur-xl border border-white/15 rounded-xl p-3 shadow-xl">
-                  <Link href="/paas" className="block px-4 py-2 rounded-lg hover:bg-white/10 font-sora">
-                    PaaS
-                  </Link>
-                  <Link href="/compute" className="block px-4 py-2 rounded-lg hover:bg-white/10 font-sora">
-                    Compute
-                  </Link>
-                </div>
-              </div>
-            </li>
+    <div
+      className="
+        absolute top-full left-1/2 -translate-x-1/2 mt-4 w-44
+        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+        transition-all duration-200
+      "
+    >
+      <div className="bg-black backdrop-blur-xl border border-white/15 rounded-xl p-3 shadow-xl">
+        <Link href="/paas" className="block px-4 py-2 rounded-lg hover:bg-white/10 font-sora">
+          PaaS
+        </Link>
+        <Link href="/compute" className="block px-4 py-2 rounded-lg hover:bg-white/10 font-sora">
+          Compute
+        </Link>
+      </div>
+    </div>
+  </li>
 
-            <li><Link href="#" className="hover:text-white font-sora font-normal">About</Link></li>
-            <li><Link href="#" className="hover:text-white font-sora font-normal">Contact</Link></li>
-            <li><Link href="#" className="hover:text-white font-sora font-normal">Blog</Link></li>
-          </ul>
+  <li><Link href="#" className="hover:text-white font-sora font-normal">About</Link></li>
+  <li><Link href="#" className="hover:text-white font-sora font-normal">Contact</Link></li>
+  <li><Link href="#" className="hover:text-white font-sora font-normal">Blog</Link></li>
+</ul>
 
-          {/* CTA */}
-          <div className="hidden md:flex flex-1 justify-end">
-            <Link
-              href="#"
-              className="px-6 py-2 rounded-full text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,1)]"
-            >
-              Get Started →
-            </Link>
-          </div>
+{/* CTA */}
+<div className="hidden lg:flex flex-1 justify-end">
+  <Link
+    href="#"
+    className="px-6 py-2 rounded-full text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,1)]"
+  >
+    Get Started →
+  </Link>
+</div>
 
-          {/* MOBILE TOGGLE */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setOpen(true)}
-          >
-            <Menu size={26} />
-          </button>
+{/* MOBILE + TABLET TOGGLE */}
+<button
+  className="md:flex lg:hidden text-white ml-auto"
+  onClick={() => setOpen(true)}
+>
+  <Menu size={26} />
+</button>
+
         </div>
       </nav>
 
