@@ -4,30 +4,30 @@ import { StickyImage } from "./StickyImage";
 
 const services = [
   {
-    title: "High-Performance NVMe Block Storage",
+    title: "Quick Installation",
     description:
-      "Get low-latency, high-IOPS block storage powered by NVMe. It’s well-suited for databases, analytics workloads, and virtual machines that depend on fast, consistent performance.",
+      "Pre-configured components of Kubernetes and automated installation in several clicks do not require manual intervention.",
   },
   {
-    title: "S3-Compatible Object Storage",
+    title: "Hyper Scalability",
     description:
-      "Store unstructured data at scale with S3-compatible object storage. It works seamlessly with your existing tools and keeps storage costs predictable as you grow.",
+      "The cluster is designed for automatic vertical and horizontal scaling with auto-discovery of new worker nodes.",
   },
   {
-    title: "Automated Backup & Snapshot Solutions",
+    title: "Simplified Management",
     description:
-      "Cantech Cloud lets you automate backups and snapshots with custom policies and retention of up to 7 years, covering your VMs, volumes and applications without manual effort.",
+      "Out-of-box Kubernetes dashboard is complemented with user-friendly UI, built-in Web SSH and CLI for more convenient orchestration.",
   },
   {
-    title: "Multi-Region Disaster Recovery",
+    title: "Automated DevOps Integration",
     description:
-      "Cantech Cloud replicates your data across regions and supports failover with RTOs as low as 15 minutes and RPOs down to 30 minutes, helping you stay online even during unexpected outages.",
+      "Integrated DevOps automation within the package can be customized and extended using open API and Cloud Scripting.",
   },
-  {
-    title: "Diverse Block Storage Tiers for Every Use Case",
-    description:
-      "Cantech Cloud offers block storage options for every workload. From NVMe for general use, high IOPS or cost efficiency, to SAS and Magnetic tiers for large-scale and archival needs.",
-  },
+  // {
+  //   title: "Diverse Block Storage Tiers for Every Use Case",
+  //   description:
+  //     "Cantech Cloud offers block storage options for every workload. From NVMe for general use, high IOPS or cost efficiency, to SAS and Magnetic tiers for large-scale and archival needs.",
+  // },
 ];
 
 export const ServicesSection = () => {
@@ -36,15 +36,15 @@ export const ServicesSection = () => {
 
       <div className="md:px-8 text-center">
 
-            <h2 className="cc-h2">
-                Why Choose CloudPe Kubernetes-as-a-Service?
-            </h2>
-            <p className="subtitle">
-                Lorem ipsum dolor sit amet, adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus
+            <p className="text-[32px] text-white font-extrabold mx-auto mb-6">
+                Why Choose Cantech Kubernetes-as-a-Service
+            </p>
+            <p className="text-[#ffffffb3]">
+                Experience Cantech managed kubernetes hosting that combines enterprise-grade infrastructure, automated management and flexi scaling for high performance and security.
             </p>
         </div>
 
-      <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20">
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
          
 
         {/* Content Grid */}
@@ -65,7 +65,7 @@ export const ServicesSection = () => {
 
           {/* Sticky Image */}
           <div className="hidden lg:block lg:w-4/12">
-            <div className="sticky top-24 border border-solid border-[#ffffff29] rounded-xl">
+            <div className="sticky top-24 border border-solid border-[1px] border-[#ffffff29] rounded-xl">
               <StickyImage />
             </div>
           </div>

@@ -22,14 +22,14 @@ export const ServiceCard = ({ title, description, index }: ServiceCardProps) => 
     >
       <div className="flex items-start gap-5">
         {/* Check Icon */}
-        <div data-slot="card" className="bg-card text-[#c0c0c0] border border-base-200 flex-col gap-6 py-6 flex size-12 shrink-0 items-center justify-center rounded-sm !p-0 md:size-16"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap size-6" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></div>
+        <div data-slot="card" className="bg-card text-[#c0c0c0] border border-base-200 flex-col gap-6 border py-6 flex size-12 shrink-0 items-center justify-center rounded-sm !p-0 md:size-16"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap size-6" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></div>
 
         {/* Content */}
-        <div className="flex-1 min-w-0 flex flex-col gap-4">
-          <h3 className="cc-h3">
+        <div className="flex-1 min-w-0">
+          <h3 className="mb-4 text-white text-lg md:text-xl font-semibold">
             {title}
           </h3>
-          <p className="cc-p">
+          <p className="text-sm md:text-base text-neutral-300 max-w-prose">
             {description}
           </p>
           <div className="w-full h-px mt-6 mb-6 opacity-100 bg-[#ffffff0d] bg-[linear-gradient(to_right,#0000,#fff9_60%,#0000)]"></div>

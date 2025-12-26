@@ -38,7 +38,7 @@ export default function HeroSection() {
 
           {/* Heading */}
           <h1 className="cc-h1 text-center">
-            <span>Production-Ready Managed</span><span className='block mt-[7px]'>Kubernetes, Simplified</span>
+            <span>Build and Scale on Enterprise-Grade</span><span className='block mt-[7px]'>Managed Kubernetes</span>
           </h1>
 
           {/* Description */}
@@ -50,8 +50,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
             className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10"
           >
-            Deploy, scale, and operate containerized workloads with a fully managed,
-            highly available Kubernetes control plane—without operational overhead.
+            Scale modern applications seamlessly by using a secure, highly available managed kubernetes by Cantech cloud without operational costs.
           </motion.p>
 
           {/* CTA */}
