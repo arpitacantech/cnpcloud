@@ -39,9 +39,15 @@ export default function Navbar() {
   <div className="w-10 h-10 md:w-10 md:h-10">
     <AnimatedLogo className="w-full h-full scale-125" />
   </div>
-  <span className="whitespace-nowrap text-base font-semibold text-white sm:text-lg">
-    Cantech Cloud
-  </span>
+  <span className="whitespace-nowrap font-semibold">
+  <img
+    src="/cloud.svg"
+    alt="Cantech Cloud"
+    className="h-4 w-auto sm:h-5"
+  />
+</span>
+
+
 </div>
 
 
