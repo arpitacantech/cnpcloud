@@ -33,31 +33,22 @@ export default function TwoCardSection() {
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <motion.p
-          className="inline-block border border-gray-300 text-gray-300 uppercase text-sm px-3 py-1 rounded-full mb-2 tracking-wide"
-          variants={fadeUp}
-        >
-          types
-        </motion.p>
+        <p className="title-badges">
+          Types
+        </p>
 
-        <motion.h2
-          className="text-4xl md:text-5xl font-semibold bg-gradient-to-b from-white via-gray-300 to-gray-400 bg-clip-text text-transparent mb-2"
-          variants={fadeUp}
-        >
+        <h2 className="cc-h2">
           What are the Types of Cloud Storage?
-        </motion.h2>
-
-        <motion.p
-          className="text-xl text-gray-400 max-w-4xl mx-auto"
-          variants={fadeUp}
-        >
+        </h2>
+        <p className="subtitle">
           Different types of cloud storage are designed for specific use cases and performance requirements.
-        </motion.p>
+        </p>
       </motion.div>
 
       {/* Cards */}
       <motion.div
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6"
+
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -147,7 +138,7 @@ export default function TwoCardSection() {
         {/* Backup Storage */}
         <motion.div
           variants={fadeUp}
-          className="rounded-3xl p-8 bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col"
+          className="rounded-3xl p-8 bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col "
 
         >
           <p className="text-center text-xl font-semibold text-white">$0.10</p>

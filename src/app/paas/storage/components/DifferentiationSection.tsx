@@ -20,21 +20,17 @@ export default function DifferentiationSection() {
   };
 
   return (
-    <section className="w-full bg-black text-white py-32  relative">
-      {/* ⭐ Centered Small Badge at the Top */}
+    <section className="w-full bg-black text-white py-32 relative">
+      {/* Centered Small Badge at the Top */}
       <motion.div
         className="w-full flex justify-center mb-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={badgeVariants}
-      >
-        <p className="inline-block border border-gray-300 text-gray-300 uppercase text-xs md:text-sm px-3 py-1 rounded-full tracking-wide">
-          Differentiation
-        </p>
-      </motion.div>
+      ></motion.div>
 
-      <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 px-6">
         {/* LEFT CONTENT */}
         <motion.div
           className="flex flex-col justify-center"
@@ -43,51 +39,61 @@ export default function DifferentiationSection() {
           viewport={{ once: true }}
           variants={leftVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-6 bg-gradient-to-r from-white to-gray-600 text-transparent bg-clip-text">
-  Why Cantech Cloud <br /> Stands Out
-</h2>
-
-          <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-            Cantech Cloud delivers cloud compute solutions that combine speed, flexibility,
-            and robust security. Our platform is designed to keep your operations running
-            smoothly, letting your business scale efficiently while maintaining top-notch reliability.
+          <h2 className="text-left mx-0 cc-h2">
+            Why Cantech Cloud <br /> Stands Out
+          </h2>
+          <p className="leading-relaxed max-w-xl mx-0 subtitle">
+            Cantech Cloud delivers cloud compute solutions that combine speed,
+            flexibility, and robust security. Our platform is designed to keep
+            your operations running smoothly, letting your business scale
+            efficiently while maintaining top-notch reliability.
           </p>
         </motion.div>
 
         {/* RIGHT GRID OF CARDS */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={rightVariants}
         >
           {/* Card 1 */}
-          <div className="bg-[#111111] border border-[#1e1e1e] rounded-2xl p-8 text-center">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">99.99%</h3>
-            <p className="text-gray-300 text-m">
-              Guaranteed uptime — keeping your applications available around the clock
+          <div className="animated-card">
+            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+              99.99%
+            </h3>
+            <p className="cc-p">
+              Guaranteed uptime — keeping your applications available around the
+              clock
             </p>
           </div>
           {/* Card 2 */}
-          <div className="bg-[#111111] border border-[#1e1e1e] rounded-2xl p-8 text-center">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">45%</h3>
-            <p className="text-gray-300 text-m">
+          <div className="animated-card">
+            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+              45%
+            </h3>
+            <p className="cc-p">
               Lower operational costs through smart resource management
             </p>
           </div>
           {/* Card 3 */}
-          <div className="bg-[#111111] border border-[#1e1e1e] rounded-2xl p-8 text-center">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">60%</h3>
-            <p className="text-gray-300 text-m">
+          <div className="animated-card">
+            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+              60%
+            </h3>
+            <p className="cc-p">
               Quicker deployment cycles compared to traditional IT setups
             </p>
           </div>
           {/* Card 4 */}
-          <div className="bg-[#111111] border border-[#1e1e1e] rounded-2xl p-8 text-center">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">100%</h3>
-            <p className="text-gray-300 text-m">
-              Elastic scalability — instantly expand or contract based on your needs
+          <div className="animated-card">
+            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+              100%
+            </h3>
+            <p className="cc-p">
+              Elastic scalability — instantly expand or contract based on your
+              needs
             </p>
           </div>
         </motion.div>

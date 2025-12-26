@@ -1,137 +1,159 @@
 "use client";
-import HomePage from "../../application/components/hero-bg";
 
-export default function HeroStorage() {
-  return (
-  <section className="relative w-full bg-black overflow-hidden pt-40 pb-40 min-h-[100vh]">
-    <div className="absolute inset-0 z-0 h-full">
-      <HomePage />
-    </div>
+import { motion } from "framer-motion";
+import { Database, Check } from 'lucide-react';
+import GlowingGridBackground from "../../database/components/GlowingGridBackground";
 
-    <div className="relative z-10 text-center px-4 pt-10"> 
-    <h1
-    className="text-5xl md:text-7xl font-semibold mb-10 bg-gradient-to-r from-white to-gray-700 bg-clip-text text-transparent">
-    Deploy Cloud Apps With
-    <span className="block mt-6"> Confidence and Scale</span>
-    </h1>
+export default function Hero(){
+    return(
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[80px]">
+        {/* Glowing Grid Background */}
+        <GlowingGridBackground
+          gridSize={64}
+          glowRadius={200}
+          glowLineColor="rgba(255, 255, 255, 1)"
+          followSpeed={0.06}
+        />
+      <div className="container relative z-10 px-4 py-20">
+        <motion.div
+          className="flex flex-col items-center text-center w-full mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {/* Announcement Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-0"
+          >
+            <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
+              <Database /> Database Hosting
+              </div>
+          </motion.div>
 
-    {/* <p className="text-lg md:text-2xl text-gray-500 mb-10">
-    One platform for all your cloud applications. Simple, secure, and infinitely scalable
-    </p> */}
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="cc-h1 text-center"
+          >
+            <span>Enterprise Database</span>
+            <span className="block mt-2">Hosting Made Simple</span>
+          </motion.h1>
 
-    <div className="flex flex-wrap justify-center gap-10 text-gray-300 text-xl">
-    <span className="flex items-center gap-2">
-    • <span>Enterprise Security</span>
-    </span>
+          {/* Subtitle */}
+          <motion.p initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Deploy MongoDB, PostgreSQL, MySQL, Redis & more in seconds. Enterprise-grade security, auto-scaling, and 24/7 expert support included.
+          </motion.p>
 
-    <span className="flex items-center gap-2">
-    • <span>Enterprise Security</span>
-    </span>
+          {/* Feature bullets */}
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row flex-wrap justify-center gap-8 text-sm text-white"
+          >
+            <ul className="list-none mb-14 flex flex-col md:flex-row md:items-center md:justify-center md:flex-wrap lg:flex-nowrap gap-4 md:gap-9 w-fit md:mx-auto">
+              <li data-ns-animate="" data-delay="0.3" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
+                <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
+                <span className="text-tagline-2 dark:text-accent/60">One-Click Deploy</span>
+              </li>
+              <li data-ns-animate="" data-delay="0.4" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
+                <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
+                <span className="text-tagline-2 dark:text-accent/60">24/7 Expert Support</span>
+              </li>
+              <li data-ns-animate="" data-delay="0.5" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
+                <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
+                <span className="text-tagline-2 dark:text-accent/60">Auto-Scaling</span>
+              </li>
+            </ul>
+          </motion.div>
 
-    <span className="flex items-center gap-2">
-    • <span>Enterprise Security</span>
-    </span>
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-8 mt-5"
+          >
+            <a href="#" className="button"><span>Get Started</span></a>
+          </motion.div>
+        </motion.div>
+         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+          {/* Card */}
+          <div className="group relative rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/0 p-8 backdrop-blur-md transition hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] text-left">
+            {/* Icon */}
+            <div className="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-white/10 text-white">
+              ⚡
+            </div>
 
-    <span className="flex items-center gap-2">
-    • <span>Enterprise Security</span>
-    </span>
-    </div>
-    <div className="mt-24 flex justify-center gap-6">
-    <button
-    className="w-40 h-14 rounded-lg bg-black border border-white/20 text-white text-lg transition shadow-none hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:text-white hover:[text-shadow:_0_0_10px_rgba(255,255,255,0.8)]">
-    Explore More
-    </button>
+            {/* Heading + Price */}
+            <div className="flex items-center gap-3 mb-4">
+              <h3 className="text-xl font-semibold text-white">
+                Object Storage
+              </h3>
 
-    <button
-    className="w-40 h-14 rounded-lg bg-black border border-white/20 text-white text-lg transition shadow-none hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:text-white hover:[text-shadow:_0_0_10px_rgba(255,255,255,0.8)]">
-    Get Started
-    </button>
-    </div>
-    {/* Feature Cards */}
-    {/* Feature Cards */}
-    <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+              <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
+                $29
+              </span>
+            </div>
 
-    {/* Card */}
-    <div className="group relative rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/0 p-8 backdrop-blur-md transition hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] text-left">
+            {/* Description */}
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Ultra-fast data processing designed for modern cloud workloads.
+            </p>
 
-    {/* Icon */}
-    <div className="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-white/10 text-white">
-      ⚡
-    </div>
+            {/* Learn more */}
+            <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
+              Learn more →
+            </span>
+          </div>
 
-    {/* Heading + Price */}
-    <div className="flex items-center gap-3 mb-4">
-      <h3 className="text-xl font-semibold text-white">
-        Object Storage
-      </h3>
+          {/* Card */}
+          <div className="group relative rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/0 p-8 backdrop-blur-md transition hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] text-left">
+            <div className="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-white/10 text-white">
+              🔒
+            </div>
 
-      <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
-        $29
-      </span>
-    </div>
+            <div className="flex items-center gap-3 mb-4">
+              <h3 className="text-xl font-semibold text-white">File Storage</h3>
+              <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
+                $49
+              </span>
+            </div>
 
-    {/* Description */}
-    <p className="text-gray-400 mb-6 leading-relaxed">
-      Ultra-fast data processing designed for modern cloud workloads.
-    </p>
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Enterprise-grade protection with continuous monitoring.
+            </p>
 
-    {/* Learn more */}
-    <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
-      Learn more →
-    </span>
-    </div>
+            <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
+              Learn more →
+            </span>
+          </div>
 
-    {/* Card */}
-    <div className="group relative rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/0 p-8 backdrop-blur-md transition hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] text-left">
+          {/* Card */}
+          <div className="group relative rounded-2xl border border-white/10bg-gradient-to-b from-white/5 to-white/0 p-8 backdrop-blur-md transition hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] text-left">
+            <div className="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-white/10 text-white">
+              🧩
+            </div>
 
-    <div className="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-white/10 text-white">
-      🔒
-    </div>
+            <div className="flex items-center gap-3 mb-4">
+              <h3 className="text-xl font-semibold text-white">
+                Backup Storage
+              </h3>
+              <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
+                $19
+              </span>
+            </div>
 
-    <div className="flex items-center gap-3 mb-4">
-      <h3 className="text-xl font-semibold text-white">
-        File Storage
-      </h3>
-      <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
-        $49
-      </span>
-    </div>
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Plug-and-play components that scale with your needs.
+            </p>
 
-    <p className="text-gray-400 mb-6 leading-relaxed">
-      Enterprise-grade protection with continuous monitoring.
-    </p>
-
-    <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
-      Learn more →
-    </span>
-    </div>
-
-    {/* Card */}
-    <div className="group relative rounded-2xl border border-white/10bg-gradient-to-b from-white/5 to-white/0 p-8 backdrop-blur-md transition hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] text-left">
-
-    <div className="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-white/10 text-white">
-      🧩
-    </div>
-
-    <div className="flex items-center gap-3 mb-4">
-      <h3 className="text-xl font-semibold text-white">
-        Backup Storage
-      </h3>
-      <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
-        $19
-      </span>
-    </div>
-
-    <p className="text-gray-400 mb-6 leading-relaxed">
-      Plug-and-play components that scale with your needs.
-    </p>
-
-    <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
-      Learn more →
-    </span>
-    </div>
-    </div>
-    </div>
-  </section>
-  );
+            <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
+              Learn more →
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    )
 }
