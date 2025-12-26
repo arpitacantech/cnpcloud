@@ -13,7 +13,6 @@ export default function HeroSection() {
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
         <ShaderAnimation />
       </div>
-      
 
       {/* 2. GRAYSCALE OVERLAY */}
       <div className="absolute inset-0 w-full h-full z-[1] pointer-events-none bg-black/60 backdrop-blur-[1px] mix-blend-normal grayscale"></div>
@@ -38,13 +37,38 @@ export default function HeroSection() {
             name="signup"
             required
             placeholder="Enter your email"
-            className="w-full px-7 pr-36 py-3 rounded-full bg-black/70 border border-gray-700 text-white placeholder-gray-400 text-sm font-normal focus:outline-none"
+            className="
+    w-full px-5 sm:px-7 
+    pr-28 sm:pr-36 
+    py-3 
+    rounded-full 
+    bg-black/70 
+    border border-gray-700 
+    text-white 
+    placeholder-gray-400 
+    text-xs sm:text-sm 
+    font-normal 
+    focus:outline-none
+  "
           />
 
           {/* Button inside input */}
           <button
             type="submit"
-            className="absolute right-1.5 px-6 py-2.5 bg-white text-black font-medium rounded-full text-sm hover:bg-gray-200 transition-all shadow-[0_0_12px_rgba(255,255,255,0.6)]"
+            className="
+    absolute right-1 
+    sm:right-1.5
+    px-4 sm:px-6
+    py-2 sm:py-2.5
+    bg-white 
+    text-black 
+    font-medium 
+    rounded-full 
+    text-xs sm:text-sm
+    hover:bg-gray-200 
+    transition-all 
+    shadow-[0_0_12px_rgba(255,255,255,0.6)]
+  "
           >
             Start Free Trial
           </button>

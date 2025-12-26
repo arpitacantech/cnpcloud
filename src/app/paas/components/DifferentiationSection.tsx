@@ -28,10 +28,9 @@ export default function DifferentiationSection() {
         whileInView="visible"
         viewport={{ once: true }}
         variants={badgeVariants}
-      >
-      </motion.div>
+      ></motion.div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 px-6">
         {/* LEFT CONTENT */}
         <motion.div
           className="flex flex-col justify-center"
@@ -40,17 +39,20 @@ export default function DifferentiationSection() {
           viewport={{ once: true }}
           variants={leftVariants}
         >
-          <h2 className="text-left mx-0 cc-h2">Why Cantech Cloud <br /> Stands Out</h2>
+          <h2 className="text-left mx-0 cc-h2">
+            Why Cantech Cloud <br /> Stands Out
+          </h2>
           <p className="leading-relaxed max-w-xl mx-0 subtitle">
-            Cantech Cloud delivers cloud compute solutions that combine speed, flexibility,
-            and robust security. Our platform is designed to keep your operations running
-            smoothly, letting your business scale efficiently while maintaining top-notch reliability.
+            Cantech Cloud delivers cloud compute solutions that combine speed,
+            flexibility, and robust security. Our platform is designed to keep
+            your operations running smoothly, letting your business scale
+            efficiently while maintaining top-notch reliability.
           </p>
         </motion.div>
 
         {/* RIGHT GRID OF CARDS */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -58,23 +60,41 @@ export default function DifferentiationSection() {
         >
           {/* Card 1 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">99.99%</h3>
-            <p className="cc-p">Guaranteed uptime — keeping your applications available around the clock</p>
+            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+              99.99%
+            </h3>
+            <p className="cc-p">
+              Guaranteed uptime — keeping your applications available around the
+              clock
+            </p>
           </div>
           {/* Card 2 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">45%</h3>
-            <p className="cc-p">Lower operational costs through smart resource management</p>
+            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+              45%
+            </h3>
+            <p className="cc-p">
+              Lower operational costs through smart resource management
+            </p>
           </div>
           {/* Card 3 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">60%</h3>
-            <p className="cc-p">Quicker deployment cycles compared to traditional IT setups</p>
+            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+              60%
+            </h3>
+            <p className="cc-p">
+              Quicker deployment cycles compared to traditional IT setups
+            </p>
           </div>
           {/* Card 4 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">100%</h3>
-            <p className="cc-p">Elastic scalability — instantly expand or contract based on your needs</p>
+            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+              100%
+            </h3>
+            <p className="cc-p">
+              Elastic scalability — instantly expand or contract based on your
+              needs
+            </p>
           </div>
         </motion.div>
       </div>
