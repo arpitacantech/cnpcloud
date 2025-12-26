@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "What are the benefits of Kubernetes-as-a-Service?",
     answer:
-      "Kubernetes as a service handles the complex setup, maintenance and scaling of kubernetes clusters which allows businesses to focus on other strategic tasks. Some of the benefits are.Reduced operational expenses, quick and faster innovation, cost optimization and improved security.",
+      "Kubernetes as a service handles the complex setup, maintenance and scaling of kubernetes clusters which allows businesses to focus on other strategic tasks. Some of the benefits are. Reduced operational expenses, quick and faster innovation, cost optimization and improved security.",
     // meta: "Systems",
   },
   {
@@ -236,3 +236,4 @@ useEffect(() => {
 
 export default FAQ1;
 export { FAQ1 };
+
