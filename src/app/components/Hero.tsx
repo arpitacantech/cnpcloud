@@ -34,7 +34,7 @@ export default function Hero() {
             <li data-ns-animate="" data-delay="0.5" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
               <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
               <span className="text-tagline-2 dark:text-accent/60"> 
-              99.99% Uptime
+              99.97% Uptime
             </span>
             </li>
             <li data-ns-animate="" data-delay="0.5" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
