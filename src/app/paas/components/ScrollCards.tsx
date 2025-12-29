@@ -27,12 +27,17 @@ const badgeVariants = {
 };
 
 const cardsData: CardData[] = [
-  { id: 1, icon: Zap, title: "Lightning Fast", description: "Experience unprecedented speed with our optimized architecture. Built for performance from the ground up.", stats: "99.9% uptime" },
-  { id: 2, icon: Sparkles, title: "Beautiful Design", description: "Clean interface with delightful animations and perfect spacing.", stats: "100+ components" },
-  { id: 3, icon: Target, title: "Precision Control", description: "Fine-tuned systems give you complete command effortlessly.", stats: "Sub-ms latency" },
-  { id: 4, icon: Layers, title: "Layered Architecture", description: "Scalable, clean, modern structure built for long-term use.", stats: "Enterprise ready" },
-  { id: 5, icon: Gauge, title: "Real-time Analytics", description: "Live insights and dashboards to make faster decisions.", stats: "Live dashboards" },
-  { id: 6, icon: Shield, title: "Enterprise Security", description: "Your data stays protected with best-in-class encryption.", stats: "SOC 2 certified" },
+  { id: 1, icon: Zap, title: "Automatic Software Stacks", description: "We support Java, PHP, Python, Ruby, and more.", stats: "Smart Stacks & Tools" },
+  { id: 2, icon: Sparkles, title: "PHP Optimization", description: "Laravel applications run faster on our tuned stacks.", stats: "Faster Apps" },
+  { id: 3, icon: Target, title: "Global Infrastructure", description: "Your users get fast speeds from any location.", stats: "Global Reach" },
+  { id: 4, icon: Layers, title: "Docker Support", description: "You deploy containerized apps without any manual configuration.", stats: "Easy Container Ready" },
+  { id: 5, icon: Gauge, title: "Smart Backups", description: "Our system saves your data daily without fail.", stats: "Data Safety" },
+  { id: 6, icon: Shield, title: "Elastic Kubernetes Hosting", description: "You manage your containers through one simple dashboard.", stats: "Simple Kubernetes" },
+  { id: 7, icon: Shield, title: "Clustered Database Support", description: "Our system keeps your SQL and NoSQL data synced.", stats: "Database Sync" },
+  { id: 8, icon: Shield, title: "Smart Consumption Billing", description: "You pay only for the exact resources you use.", stats: "Fair Pricing" },
+  { id: 9, icon: Shield, title: "Multi Cloud Management", description: "You control different clouds from a single admin panel.", stats: "Unified Control" },
+  { id: 10, icon: Shield, title: "One Click Scalability", description: "Your application handles huge traffic spikes without any crashes.", stats: "Easy Scaling" },
+  { id: 11, icon: Shield, title: "One-Click Clusters", description: "You set up complex database clusters in seconds.", stats: "Instant Clusters" },
 ];
 
 export default function ScrollCards() {
@@ -86,8 +91,8 @@ export default function ScrollCards() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="cc-h2">Cloud Platform For Developers</h2>
-              <p className="subtitle">Deploy your application instantly on our fully redundant, high performance and scalable Cloud Platform-as-a-Service.</p>
+              <h2 className="cc-h2">Essential Features of Our Modern PaaS</h2>
+              <p className="subtitle">Our PaaS Cloud Platform includes everything for modern app development. You get full control over your hosting environment and everything a developer needs.</p>
             </motion.div>
           </div>
         </div>
