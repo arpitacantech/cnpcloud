@@ -45,11 +45,11 @@ export default function FeatureSection() {
         
       {/* Left side: Heading and Text */}
       <div className="w-1/2 z-10">
-        <h1 className="text-4xl sm:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-600 text-transparent bg-clip-text ">
-          Integrate With Your Favorite Tool
-        </h1>
+        <h2 className="text-4xl sm:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-600 text-transparent bg-clip-text ">
+          Connect Your Favourite Tools With Our PaaS
+        </h2>
         <p className="text-gray-500 dark:text-gray-300 mb-6 max-w-lg">
-          Connect everything you use — from Node.js and PHP to GitHub and Docker — and deploy faster with Cantech Cloud.
+          Our Platform as a Service works perfectly with your current workflow. You can link GitHub, GitLab, Bitbucket, Jenkins, and more.
         </p>
         <div className="flex items-center gap-3">
           {/* <Button variant="default">
