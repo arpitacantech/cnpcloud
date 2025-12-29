@@ -70,10 +70,10 @@ export default function FeatureSection({ className }: { className?: string }) {
           Features
         </p>
         <h2 className="cc-h2">
-          Cloud Platform For Developers
+          Why Choose Cantech Cloud Technology
         </h2>
         <p className="subtitle">
-          Deploy your application instantly on our fully redundant, high performance and scalable Cloud Platform-as-a-Service.
+          Our platform offers many benefits for your business. We offer better technology for less money. You get full control over your server setup.
         </p>
       </div>
 
@@ -101,32 +101,32 @@ export default function FeatureSection({ className }: { className?: string }) {
   />
   <FeatureCard
     icon={<Sparkles size={24} />}
-    title="High Performance"
-    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    title="High Uptime"
+    description="We guarantee 99.97% uptime for your site. This reliability builds trust with your visitors. Your digital platform stays online always, backed by our continuous monitoring."
     className="min-h-[200px]"
   />
   <FeatureCard
     icon={<Target size={24} />}
-    title="Scalable"
-    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    title="Premium Hardware Setup"
+    description="We use Premium AMD and Intel chips with high-speed NVMe storage. Your apps load much faster. This setup improves the experience for your customers."
     className="min-h-[200px]"
   />
   <FeatureCard
     icon={<Layers size={24} />}
-    title="Multi-Layer Security"
-    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    title="Advanced Security"
+    description="We provide virtual firewalls for safety and VPN for private access. Your data remains very secure on our platform. You control every access point easily. We block bad traffic from your servers."
     className="min-h-[200px]"
   />
   <FeatureCard
     icon={<Gauge size={24} />}
-    title="Monitoring"
-    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    title="Fully Managed Ecosystem"
+    description="We offer managed databases and Kubernetes clusters. Our system handles backups and scaling automatically. You use load balancers to distribute traffic. These tools provide native scalability for your apps."
     className="min-h-[200px]"
   />
   <FeatureCard
     icon={<Shield size={24} />}
-    title="Reliability"
-    description="Cantech Cloud dashboard provides intuitive application topology wizard, deployment manager, access to log and config files, team collaboration functionality and integration with CI/CD tools"
+    title="High Performance GPU"
+    description="We offer NVIDIA GPU power. You can run heavy graphics or machine learning models here, and parallel computing very well. This setup increases your productivity. You get results faster with our hardware."
     className="md:col-span-2 lg:col-span-2 min-h-[250px]"
   />
 </div>
@@ -134,3 +134,4 @@ export default function FeatureSection({ className }: { className?: string }) {
     </section>
   );
 }
+
