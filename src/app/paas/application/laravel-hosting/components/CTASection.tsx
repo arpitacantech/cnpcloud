@@ -70,7 +70,7 @@ export default function CTASection() {
             <span className="block bg-gradient-to-b from-white via-gray-300 to-black/50 bg-clip-text text-transparent">
               Expert Support for Your 
             </span>
-            <span className="block mt-5 bg-gradient-to-b from-white via-gray-300 to-black/50 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-b from-white via-gray-300 to-black/50 bg-clip-text text-transparent">
               Laravel Infrastructure
             </span>
           </motion.h2>
@@ -104,4 +104,5 @@ export default function CTASection() {
       </motion.div>
     </motion.section>
   );
+
 }
