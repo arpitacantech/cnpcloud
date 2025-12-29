@@ -87,14 +87,14 @@ const ComparisonSection: React.FC = () => {
           className="text-[32px] font-extrabold mx-auto mb-3"
           variants={fadeUp}
         >
-          Compare Us
+          Compare The Cantech Cloud Advantage
         </motion.h2>
 
         <motion.p
           className="max-w-4xl mx-auto text-[#ffffffb3] font-lexend"
           variants={fadeUp}
         >
-          Choose the plan that fits your business. See what’s included and pick the right features for your team
+          We offer better prices than global brands. Our storage is reliable and fast. You get more value for your money. Check our facts before you decide on a provider.
         </motion.p>
       </motion.div>
 
