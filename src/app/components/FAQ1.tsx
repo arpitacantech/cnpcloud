@@ -5,29 +5,60 @@ const INTRO_STYLE_ID = "faq1-animations";
 
 const faqs = [
   {
-    question: "Where is Cantech based?",
+    question: "What is Cantech Cloud?",
     answer:
-      "Cantech is based in India, with well-placed data centers around the world. These facilities are capable of offering exceptional hosting support to businesses around the world. We have a sizable network and infrastructure that ensures that services are reliable for the majority of the locations. We ensure the delivery of the best service for our clients in different regions with its global reach.",
+      "Cantech Cloud is a leading Indian provider of high-performance infrastructure and reliable web hosting. We have been serving businesses since 2009 for local and global companies grow. You get modern tools and hardware for your platforms.",
     // meta: "Discovery",
   },
   {
-    question: "How is Cantech's technical support?",
+    question: "What cloud services does Cantech Cloud offer?",
     answer:
-      "Cantech offers 24x7, 365 days professional support and skilled technical assistance to fix your problem. We communicate over email, phone and live chat so we can connect with you anytime. So we are specialized in providing quick, rich and customized solutions for your hosting needs. You are committed to keep your server functioning and reliability is our focus. You can rest easy because our help is always there through just a phone call or click away.",
+      "We offer a wide range of services including Cloud Compute for heavy workloads and high-speed NVMe storage. Our PaaS Solutions help you manage databases and Kubernetes clusters without technical stress. You can also get NVIDIA GPU servers for AI projects and secure block storage for your data. We provide all the networking tools like VPNs and firewalls for complete environment control.",
     // meta: "Collaboration",
   },
   {
-    question: "What hosting plans are available at Cantech?",
+    question: "How is Cantech Cloud different from other cloud providers in India?",
     answer:
-      "Cantech offers a variety of hosting plans to cater to your business needs. We have options such as Shared Hosting for entry-level users, VPS Hosting for scalable growth, and Dedicated Servers for extreme performance demands. ",
+      "We offer 24/7 support where you talk to real experts instead of automated bots. Our pricing is very transparent and helps you save up compared to global competitors. We guarantee a 99.97% uptime because we use Tier-3 and Tier-4 certified data centers across India. You get dedicated resources like CPU and RAM that are never shared with other users.",
     // meta: "Systems",
   },
   {
-    question: "How safe is Cantech's server?",
+    question: "Who should use Cantech Cloud services?",
     answer:
-      "Cantech's servers have been tuned for protection against damages and built with advanced security protection for your data and applications.",
+      "Developers use our platform to deploy modern apps and manage microservices with Kubernetes. Business owners choose us to host high-traffic websites that need constant uptime and fast loading speeds. Data scientists pick our GPU servers to run complex AI models and heavy parallel computing tasks. We are the right fit for anyone who needs professional cloud power with excellent support.",
     // meta: "Quality",
   },
+  {
+    question: "Is Cantech Cloud suitable for startups and enterprises?",
+    answer:
+      "Our platform is designed to scale from small startup projects to large enterprise operations easily. Startups benefit from our low entry costs and free migration support to launch their ideas quickly. Enterprises value our advanced security features and the ability to handle massive traffic without performance drops. You can upgrade your resources instantly as your business requirements grow over time.",
+    // meta: "Quality",
+  },
+  {
+    question: "How secure is Cantech Cloud infrastructure?",
+    answer:
+      "We protect your data with multiple layers of security, including BitNinja and advanced DDoS protection. Our data centers use biometric access and 24/7 CCTV monitoring to ensure the physical safety of the hardware. We provide free SSL certificates and virtual firewalls to keep your online transactions and connections private. Regular weekly backups are included to ensure you can recover your information in any emergency.",
+    // meta: "Quality",
+  },
+  {
+    question: "Where are the Cantech Cloud data centers located?",
+    answer:
+      "We have a massive network of tier III & IV data centers in major Indian cities like Mumbai, Noida, Bangalore, and Jaipur. We also have a global network. This local presence ensures ultra-low latency and faster access for your users within the country. Each facility follows global compliance standards like ISO 27001 and PCI DSS for maximum data integrity. You can choose a location close to your target audience to improve your local SEO rankings.",
+    // meta: "Quality",
+  },
+  {
+    question: "Can I move my existing website to Cantech Cloud easily?",
+    answer:
+      "Our technical team offers free migration support to move your data without any trouble. We handle your files and databases to ensure zero downtime for your users. You do not need any great technical skills for this move to our platform. We take care of the full setup from start to finish.",
+    // meta: "Quality",
+  },
+  {
+    question: "Do you offer support for high-performance AI and machine learning?",
+    answer:
+      "We provide powerful NVIDIA GPU instances for your complex parallel computing and AI projects. These servers process huge data sets much faster than regular CPU-based machines. You can scale these resources as your training or inference needs grow. Our team helps you optimize these GPU servers for your specific AI workloads.",
+    // meta: "Quality",
+  }
+  
 ];
 
 const palette = {
@@ -146,7 +177,7 @@ useEffect(() => {
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-center">
           <div className="space-y-4">
             {/* <p className="text-xs uppercase tracking-[0.35em] text-neutral-400">Questions</p> */}
-            <h2 className="cc-h2">Frequently Asked Question</h2>
+            <h2 className="cc-h2">Frequently Asked Questions</h2>
             {/* <p className="max-w-xl text-base text-neutral-400">Everything you need to know about partnering with our team, condensed into calm monochrome clarity.</p> */}
           </div>
         </div>
