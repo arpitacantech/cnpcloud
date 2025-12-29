@@ -68,13 +68,13 @@ export const PricingFilter = () => {
           
           <div className="flex items-center justify-center gap-3 mb-4">
             <Cloud className="w-10 h-10 text-primary" />
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
-              Cloud Pricing
+            <h1 className="cc-h1">
+              Best Low-Cost Cloud Pricing Plans
             </h1>
           </div>
           
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            West 1 {regionLabels[selectedRegion]} - Pay only for what you use with no hidden fees
+          <p className="subtitle">
+             Check our transparent rates for our powerful servers. You get full speed, scalability, and top security without any hidden charges at all.
           </p>
         </header>
         
