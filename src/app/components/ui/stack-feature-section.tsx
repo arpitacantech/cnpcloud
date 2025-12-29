@@ -45,7 +45,7 @@ export default function FeatureSection() {
         
       {/* Left side: Heading and Text */}
       <div className="w-1/2 z-10">
-        <h2 className="text-4xl sm:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-600 text-transparent bg-clip-text ">
+        <h2 className="cc-h2 font-bold mb-4 bg-gradient-to-r from-white to-gray-600 text-transparent bg-clip-text ">
           Connect Your Favourite Tools With Our PaaS
         </h2>
         <p className="text-gray-500 dark:text-gray-300 mb-6 max-w-lg">
