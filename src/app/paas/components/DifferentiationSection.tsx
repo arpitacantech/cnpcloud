@@ -40,13 +40,10 @@ export default function DifferentiationSection() {
           variants={leftVariants}
         >
           <h2 className="text-left mx-0 cc-h2">
-            Why Cantech Cloud <br /> Stands Out
-          </h2>
+            Why Choose Cantech Platform<br /> As a Service
+           </h2>
           <p className="leading-relaxed max-w-xl mx-0 subtitle">
-            Cantech Cloud delivers cloud compute solutions that combine speed,
-            flexibility, and robust security. Our platform is designed to keep
-            your operations running smoothly, letting your business scale
-            efficiently while maintaining top-notch reliability.
+            We offer better value than big cloud providers today. Our PaaS setup runs on your existing hardware easily. You get more power for less total cost. You stop paying for idle server resources today.
           </p>
         </motion.div>
 
@@ -60,40 +57,38 @@ export default function DifferentiationSection() {
         >
           {/* Card 1 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
-              99.99%
+            <h3  class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              100%<span  class="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Secure Environment</span>
             </h3>
             <p className="cc-p">
-              Guaranteed uptime — keeping your applications available around the
-              clock
+              We protect your data with advanced multi-layer security.
             </p>
           </div>
           {/* Card 2 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
-              45%
+            <h3  class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              99.97%<span  class="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Uptime</span>
             </h3>
             <p className="cc-p">
-              Lower operational costs through smart resource management
+              Your website stays online during heavy traffic, too.
             </p>
           </div>
           {/* Card 3 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
-              60%
+            <h3  class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              100%<span  class="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Automated Vertical Scaling</span>
             </h3>
             <p className="cc-p">
-              Quicker deployment cycles compared to traditional IT setups
+              The server scales up or down based on your live traffic.
             </p>
           </div>
           {/* Card 4 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
-              100%
+            <h3  class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              0%<span  class="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Complex Manual Configurations</span>
             </h3>
             <p className="cc-p">
-              Elastic scalability — instantly expand or contract based on your
-              needs
+             We handle all the difficult server settings for your team.
             </p>
           </div>
         </motion.div>
@@ -101,3 +96,4 @@ export default function DifferentiationSection() {
     </section>
   );
 }
+
