@@ -66,12 +66,10 @@ export const PricingFilter = () => {
             <span>Transparent Pricing</span>
           </div>
           
-          <div className="flex items-center justify-center gap-3">
-             <h1 className="cc-h1">
+            <h1 className="cc-h1 text-center">
               <span>Best Low-Cost Cloud Pricing Plans</span>
             </h1>
-          </div>
-          
+
           <p className="subtitle">
              Check our transparent rates for our powerful servers. You get full speed, scalability, and top security without any hidden charges at all.
           </p>
