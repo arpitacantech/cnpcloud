@@ -21,8 +21,8 @@ export default function HeroSection() {
       <div className="relative z-20 max-w-5xl mx-auto text-center px-6 mb-20">
         {/* Heading */}
         <h1 className="cc-h1">
-          <span>Sign Up And Deploy Your</span>
-          <span className="block mt-6">Application For Free</span>
+          <span>Build and Scale Faster with</span>
+          <span className="block mt-2">Cantech PaaS Cloud Platform</span>
         </h1>
 
         {/* Email input + button */}
