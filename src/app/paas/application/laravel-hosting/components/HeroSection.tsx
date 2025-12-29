@@ -84,11 +84,11 @@ const Hero = React.memo(() => {
   {/* Dark overlay */}
   <div className="absolute inset-0 bg-black/80" />
 </div>
-      <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>Enterprise-Grade Hosting
+      <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>Laravel Hosting
     </span></div>
 
-    <h1 className="cc-h1 text-center"><span>Experience Seemless</span><br/><span>Laravel Hosting</span></h1>
-    <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Enjoy robust performance, automatic scalability, and enhanced security, all backed by our expert support team. Whether you’re launching a startup or managing.</p>
+    <h1 className="cc-h1 text-center"><span>The Best Laravel Hosting</span><br/><span>on Cloud PaaS</span></h1>
+    <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Cantech Cloud offers the best Laravel Hosting with auto-scaling and high speed. You can deploy Laravel 11 apps on a high-performance PaaS with built-in security for production.</p>
 
     <div className="flex items-center gap-4 relative z-10 mb-16">
        {/* CTA BUTTON */}

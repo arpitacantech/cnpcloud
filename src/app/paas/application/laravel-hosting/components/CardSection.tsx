@@ -61,15 +61,15 @@ export default function SecurityFeatures() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="cc-h2">Enterprise Security for Laravel Applications</h2>
-          <p className="subtitle">CryptoFlow gives you the edge with advanced tools designed for both beginners and professional traders.</p>
+          <h2 className="cc-h2">Secure Your Laravel Application Hosting</h2>
+          <p className="subtitle">Your data stays safe with our multi-layer protection system. We block threats before they reach your code.</p>
         </motion.div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <FeatureCard
             delay={0}
-            title="Real-time Analytics"
+            title="Web Application Firewall"
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,13 +82,12 @@ export default function SecurityFeatures() {
               </svg>
             }
           >
-            Monitor market movements with advanced charts and indicators updated
-            in real-time.
+            Our WAF stops SQL injection attacks instantly. It monitors every request for suspicious patterns.
           </FeatureCard>
 
           <FeatureCard
             delay={0.1}
-            title="Bank-level Security"
+            title="BitNinja Malware Protection"
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -102,13 +101,12 @@ export default function SecurityFeatures() {
               </svg>
             }
           >
-            Your assets are protected with military-grade encryption and
-            multi-factor authentication.
+            BitNinja uses AI to detect malicious files. It cleans your server without any manual work.
           </FeatureCard>
 
           <FeatureCard
             delay={0.2}
-            title="Instant Execution"
+            title="Advanced DDoS Mitigation"
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,13 +119,12 @@ export default function SecurityFeatures() {
               </svg>
             }
           >
-            Execute trades in milliseconds with our high-performance trading
-            engine.
+            Our system filters out bad traffic spikes. Your website stays online during heavy bot attacks.
           </FeatureCard>
 
           <FeatureCard
             delay={0.3}
-            title="Smart Portfolio"
+            title="Active Fail2Ban Guard"
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -141,12 +138,12 @@ export default function SecurityFeatures() {
               </svg>
             }
           >
-            Optimize your crypto holdings with AI-powered portfolio suggestions.
+            Fail2Ban locks out hackers after failed logins. It secures your SSH and admin panels effectively.
           </FeatureCard>
 
           <FeatureCard
             delay={0.4}
-            title="Price Alerts"
+            title="Isolated Container Security"
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -160,13 +157,12 @@ export default function SecurityFeatures() {
               </svg>
             }
           >
-            Never miss an opportunity with customizable price alerts and
-            notifications.
+           Every app runs in a private container. This isolation prevents cross-site infections between different projects.
           </FeatureCard>
 
           <FeatureCard
             delay={0.5}
-            title="Cold Storage"
+            title="Automatic SSL Management"
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -179,8 +175,7 @@ export default function SecurityFeatures() {
               </svg>
             }
           >
-            Majority of assets stored in offline cold wallets for maximum
-            security.
+            We provide free Let’s Encrypt certificates. The system renews them before they expire automatically.
           </FeatureCard>
         </div>
       </div>
