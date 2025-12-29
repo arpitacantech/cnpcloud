@@ -57,8 +57,8 @@ export default function DifferentiationSection() {
         >
           {/* Card 1 */}
           <div className="animated-card">
-            <h3  class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
-              100%<span  class="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Secure Environment</span>
+            <h3  className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              100%<span  className="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Secure Environment</span>
             </h3>
             <p className="cc-p">
               We protect your data with advanced multi-layer security.
@@ -66,8 +66,8 @@ export default function DifferentiationSection() {
           </div>
           {/* Card 2 */}
           <div className="animated-card">
-            <h3  class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
-              99.97%<span  class="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Uptime</span>
+            <h3  className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              99.97%<span  className="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Uptime</span>
             </h3>
             <p className="cc-p">
               Your website stays online during heavy traffic, too.
@@ -75,8 +75,8 @@ export default function DifferentiationSection() {
           </div>
           {/* Card 3 */}
           <div className="animated-card">
-            <h3  class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
-              100%<span  class="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Automated Vertical Scaling</span>
+            <h3  className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              100%<span  className="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Automated Vertical Scaling</span>
             </h3>
             <p className="cc-p">
               The server scales up or down based on your live traffic.
@@ -84,8 +84,8 @@ export default function DifferentiationSection() {
           </div>
           {/* Card 4 */}
           <div className="animated-card">
-            <h3  class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
-              0%<span  class="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Complex Manual Configurations</span>
+            <h3  className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              0%<span  className="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Complex Manual Configurations</span>
             </h3>
             <p className="cc-p">
              We handle all the difficult server settings for your team.
@@ -96,4 +96,5 @@ export default function DifferentiationSection() {
     </section>
   );
 }
+
 
