@@ -66,7 +66,7 @@ export const PricingFilter = () => {
             <span>Transparent Pricing</span>
           </div>
           
-          <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="flex items-center justify-center gap-3">
              <h1 className="cc-h1">
               <span>Best Low-Cost Cloud Pricing Plans</span>
             </h1>
