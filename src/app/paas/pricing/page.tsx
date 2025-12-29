@@ -3,7 +3,7 @@ import { PricingFilter } from "./components/PricingFilter";
 import ComparisonSection from "../../components/ComparisonSection";
 import CTASection from "../../components/CTASection";
 import Footer from "../../components/Footer";
-import FAQ1 from "../../components/FAQ1";
+import Faq from "./components/Faq";
 
 export default function PassPricing() {
   return (
@@ -11,9 +11,9 @@ export default function PassPricing() {
     <Navbar />
     <PricingFilter />
     <ComparisonSection />
-      <FAQ1 />
-      <CTASection />
-      <Footer />
+    <Faq />
+    <CTASection />
+    <Footer />
   </>
   );
 }
