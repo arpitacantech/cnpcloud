@@ -67,9 +67,8 @@ export const PricingFilter = () => {
           </div>
           
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Cloud className="w-10 h-10 text-primary" />
-            <h1 className="cc-h1">
-              Best Low-Cost Cloud Pricing Plans
+             <h1 className="cc-h1">
+              <span>Best Low-Cost Cloud Pricing Plans</span>
             </h1>
           </div>
           
