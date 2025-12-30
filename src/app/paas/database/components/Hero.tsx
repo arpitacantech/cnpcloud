@@ -45,8 +45,8 @@ export default function Hero(){
           </motion.h1>
 
           {/* Subtitle */}
-          {/* <motion.p initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Deploy MongoDB, PostgreSQL, MySQL, Redis & more in seconds. Enterprise-grade security, auto-scaling, and 24/7 expert support included.
-          </motion.p> */}
+          <motion.p initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Run mission-critical databases on high-speed SSD/NVMe infrastructure with enterprise-grade security, automated scaling, backups, and 24/7 expert support.
+          </motion.p>
 
           {/* Feature bullets */}
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row flex-wrap justify-center gap-8 text-sm text-white"
