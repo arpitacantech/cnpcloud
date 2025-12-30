@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "../../components/Navbar";
+import PaasNavbar from "../../components/PaasNavbar";
 import Hero from "./components/Hero";
 import DifferentiationSection from "./components/DifferentiationSection";
 import DBTabs from './components/DBTabs';
@@ -12,7 +12,7 @@ import Faq from "./components/Faq";
 export default function JitsiHosting() {
     return(
         <>
-            <Navbar />  
+            <PaasNavbar />  
             <Hero />
             <DifferentiationSection />
             <DBTabs />
