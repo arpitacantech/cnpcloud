@@ -28,7 +28,7 @@ export default function Feature3() {
     <section className="py-14 md:py-16 lg:py-20">
       <div className="md:px-8 text-center">
 
-       <div className="max-w-6xl mx-auto text-center mb-16">
+       <div className="max-w-7xl mx-auto text-center mb-16">
         {/* <p className="title-badges">
           Benefits
         </p> */}
@@ -74,7 +74,7 @@ export default function Feature3() {
                 <h3 className="cc-h3">
                   {card.title}
                 </h3>
-                <p className="subtitle">
+                <p className="cc-p">
                   {card.description}
                 </p>
               </div>
@@ -85,3 +85,4 @@ export default function Feature3() {
     </section>
   );
 }
+
