@@ -54,7 +54,7 @@ function Feature2() {
           <h3 className="cc-h3">
                     {item.title}
                   </h3>
-                  <p className="subtitle">
+                  <p className="cc-p">
                     {item.desc}
                   </p>
         </div>
@@ -72,3 +72,4 @@ function Feature2() {
 }
 
 export { Feature2 };
+
