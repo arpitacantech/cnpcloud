@@ -19,13 +19,13 @@ export default function HeroCompute() {
         <BeamsBackground />
       </div>
 
-      <div className="relative z-20 max-w-5xl mx-auto text-center px-6 mb-20">
+      <div className="relative z-20 max-w-7xl mx-auto text-center px-6 mb-20">
         <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"><Cloud /><span>Cloud Compute</span>
         </div>
 
         <h1 className="cc-h1">
-        <span>Experience Optimized Cloud Compute Solutions for</span>
-        <span className="block mt-[7px]">All Your Workloads</span>
+        <span>Enterprise Cloud Compute Solutions</span>
+        <span className="block mt-[7px]">for Every Workload</span>
         </h1>
         <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Power your workloads with optimized cloud compute that balances performances and cost. Designed to support modern applications, data processing and enterprise grade solutions.
 </p>
@@ -56,4 +56,5 @@ export default function HeroCompute() {
     </section>
   );
 }
+
 
