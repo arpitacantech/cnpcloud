@@ -14,7 +14,7 @@ const BeamsBackground = dynamic(
 export default function HeroCompute() {
   return (
     <section className="relative w-full bg-black overflow-hidden px-6 pt-32 md:pt-40 pb-24">
-      <div className="container px-4 mx-auto max-w-6xl">
+      <div className="container px-4 mx-auto max-w-7xl">
       <div className="absolute inset-0 w-full h-11 z-0 pointer-events-none">
         <BeamsBackground />
       </div>
@@ -24,8 +24,8 @@ export default function HeroCompute() {
         </div>
 
         <h1 className="cc-h1">
-        <span>Enterprise Cloud Compute Solutions</span>
-        <span className="block mt-[7px]">for Every Workload</span>
+        <span>Enterprise Cloud Compute</span>
+        <span className="block mt-[7px]">Solutions for Every Workload</span>
         </h1>
         <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Power your workloads with optimized cloud compute that balances performances and cost. Designed to support modern applications, data processing and enterprise grade solutions.
 </p>
@@ -56,5 +56,6 @@ export default function HeroCompute() {
     </section>
   );
 }
+
 
 
