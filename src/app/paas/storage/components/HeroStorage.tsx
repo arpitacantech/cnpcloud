@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Database, Check } from 'lucide-react';
+import { Database, Folder, ShieldCheck, Check } from 'lucide-react';
 import GlowingGridBackground from "../../database/components/GlowingGridBackground";
 
 export default function Hero(){
@@ -29,7 +29,7 @@ export default function Hero(){
             className="mb-0"
           >
             <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
-              <Database /> Database Hosting
+              <Database /> Cloud Storage
               </div>
           </motion.div>
 
@@ -40,12 +40,12 @@ export default function Hero(){
             transition={{ duration: 0.7, delay: 0.1 }}
             className="cc-h1 text-center"
           >
-            <span>Enterprise Database</span>
-            <span className="block mt-2">Hosting Made Simple</span>
+            <span>Cloud Storage Services - Limitless</span>
+            <span className="block mt-2">Scale & Speed</span>
           </motion.h1>
 
           {/* Subtitle */}
-          <motion.p initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Deploy MongoDB, PostgreSQL, MySQL, Redis & more in seconds. Enterprise-grade security, auto-scaling, and 24/7 expert support included.
+          <motion.p initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Storage for every workload.
           </motion.p>
 
           {/* Feature bullets */}
@@ -54,15 +54,19 @@ export default function Hero(){
             <ul className="list-none mb-14 flex flex-col md:flex-row md:items-center md:justify-center md:flex-wrap lg:flex-nowrap gap-4 md:gap-9 w-fit md:mx-auto">
               <li data-ns-animate="" data-delay="0.3" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
                 <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
-                <span className="text-tagline-2 dark:text-accent/60">One-Click Deploy</span>
+                <span className="text-tagline-2 dark:text-accent/60">Reliable Performance</span>
               </li>
               <li data-ns-animate="" data-delay="0.4" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
                 <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
-                <span className="text-tagline-2 dark:text-accent/60">24/7 Expert Support</span>
+                <span className="text-tagline-2 dark:text-accent/60">Enterprise Security</span>
               </li>
               <li data-ns-animate="" data-delay="0.5" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
                 <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
-                <span className="text-tagline-2 dark:text-accent/60">Auto-Scaling</span>
+                <span className="text-tagline-2 dark:text-accent/60">Instant Scalability</span>
+              </li>
+              <li data-ns-animate="" data-delay="0.5" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
+                <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
+                <span className="text-tagline-2 dark:text-accent/60">Proactive Support</span>
               </li>
             </ul>
           </motion.div>
@@ -82,7 +86,7 @@ export default function Hero(){
           <div className="group relative rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/0 p-8 backdrop-blur-md transition hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] text-left">
             {/* Icon */}
             <div className="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-white/10 text-white">
-              ⚡
+              <Database className="h-7 w-7 text-white" />
             </div>
 
             {/* Heading + Price */}
@@ -91,66 +95,66 @@ export default function Hero(){
                 Object Storage
               </h3>
 
-              <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
+              {/* <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
                 $29
-              </span>
+              </span> */}
             </div>
 
             {/* Description */}
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Ultra-fast data processing designed for modern cloud workloads.
+              Scalable S3-compatible storage for photos and large videos.
             </p>
 
             {/* Learn more */}
-            <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
+            {/* <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
               Learn more →
-            </span>
+            </span> */}
           </div>
 
           {/* Card */}
           <div className="group relative rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/0 p-8 backdrop-blur-md transition hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] text-left">
             <div className="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-white/10 text-white">
-              🔒
+             <Folder className="h-7 w-7 text-white" />
             </div>
 
             <div className="flex items-center gap-3 mb-4">
               <h3 className="text-xl font-semibold text-white">File Storage</h3>
-              <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
+              {/* <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
                 $49
-              </span>
+              </span> */}
             </div>
 
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Enterprise-grade protection with continuous monitoring.
+              Shared storage with real-time editing and password protection.
             </p>
 
-            <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
+            {/* <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
               Learn more →
-            </span>
+            </span> */}
           </div>
 
           {/* Card */}
           <div className="group relative rounded-2xl border border-white/10bg-gradient-to-b from-white/5 to-white/0 p-8 backdrop-blur-md transition hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] text-left">
             <div className="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-white/10 text-white">
-              🧩
+              <ShieldCheck className="h-7 w-7 text-white" />
             </div>
 
             <div className="flex items-center gap-3 mb-4">
               <h3 className="text-xl font-semibold text-white">
                 Backup Storage
               </h3>
-              <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
+              {/* <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white/80">
                 $19
-              </span>
+              </span> */}
             </div>
 
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Plug-and-play components that scale with your needs.
+              Redundant clusters for protecting critical business server data.
             </p>
 
-            <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
+            {/* <span className="inline-flex items-center gap-2 text-white/80 cursor-pointer hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8)] transition">
               Learn more →
-            </span>
+            </span> */}
           </div>
         </div>
       </div>
