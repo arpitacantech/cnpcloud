@@ -18,7 +18,7 @@ export default function FeatureSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative w-full max-w-md">
+            <div className="relative w-full max-w-lg">
               <div className="rounded-3xl p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] backdrop-blur-sm border">
                 <img
                   src="https://cdn.prod.website-files.com/63e36d09413f83c58ac5d998/63f3633d48a58b6cfbcb1e25_Content%2001.svg"
@@ -47,7 +47,7 @@ export default function FeatureSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <motion.div
+            {/* <motion.div
               className="mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export default function FeatureSection() {
               <span className="title-badges">
                 Creative Freedom
               </span>
-            </motion.div>
+            </motion.div> */}
 
             <motion.h2
               className="cc-h2"
@@ -67,7 +67,7 @@ export default function FeatureSection() {
               viewport={{ once: true }}
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-slate-300">
-                BitNinja PostgreSQL Protection
+                Advanced Recovery and Health Monitoring
               </span>
             </motion.h2>
 
@@ -78,8 +78,7 @@ export default function FeatureSection() {
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              sodales leo id commodo ornare. Vestibulum lobortis ligula vehicula.
+              We offer high-end tools to resolve your data issues. Reliable database hosting requires constant health checks and deep scans of your storage files.
             </motion.p>
 
             <motion.div
@@ -99,7 +98,7 @@ export default function FeatureSection() {
                 <svg className="w-6 h-6 flex-none text-white" viewBox="0 0 24 24" fill="none">
                   <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <p className="text-slate-300">Responsive Components</p>
+                <p className="text-slate-300">Cluster Recovery</p>
               </motion.div>
 
               <motion.div
@@ -112,7 +111,31 @@ export default function FeatureSection() {
                 <svg className="w-6 h-6 flex-none text-white" viewBox="0 0 24 24" fill="none">
                   <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <p className="text-slate-300">Webflow First Development</p>
+                <p className="text-slate-300">Automatic restoration</p>
+              </motion.div>
+              <motion.div
+                className="flex items-start gap-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <svg className="w-6 h-6 flex-none text-white" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <p className="text-slate-300">Integrity Checks</p>
+              </motion.div>
+              <motion.div
+                className="flex items-start gap-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <svg className="w-6 h-6 flex-none text-white" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <p className="text-slate-300">Diagnostic reports</p>
               </motion.div>
             </motion.div>
           </motion.div>

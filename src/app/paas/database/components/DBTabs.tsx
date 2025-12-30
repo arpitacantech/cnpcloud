@@ -5,69 +5,174 @@ import React, { useState } from "react";
 export type Item = {
   id: string;
   title: string;
-  subtitle?: string;
+  // subtitle?: string;
   description: string;
-  category: "product" | "db" | "addon";
-  price?: string;
+  category: "product" | "indivdb" |  "dbcluster" | "addon";
+  // price?: string;
 };
 
-const TEST_DATA: Item[] = [
+export const TEST_DATA: Item[] = [
+  /* ================= INDIVIDUAL DATABASES ================= */
   {
-    id: "p1",
-    title: "Crypto VPS",
-    subtitle: "vCPU optimized",
+    id: "indivdb1",
+    title: "MongoDB",
     description:
-      "Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe. Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe.",
-    category: "product",
-    price: "₹799/mo",
+      "This NoSQL database handles modern apps with great speed and flexibility. It stores your unstructured data in easy JSON formats for fast access.",
+    category: "indivdb",
   },
   {
-    id: "p2",
-    title: "Managed Kubernetes",
-    subtitle: "Scale with ease",
+    id: "indivdb2",
+    title: "PostgreSQL",
     description:
-      "Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe. Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe.",
-    category: "product",
-    price: "Contact Sales",
+      "This is an advanced open-source system that handles complex data relationships. You have complete support for geographic objects and high-volume transactions with high data consistency.",
+    category: "indivdb",
   },
   {
-    id: "d1",
+    id: "indivdb3",
+    title: "MySQL",
+    description:
+      "This is an open-source and worldwide-renowned database. Millions of developers use it in their web projects. It is very reliable and compatible with nearly all web applications on our high-speed cloud network.",
+    category: "indivdb",
+  },
+  {
+    id: "indivdb4",
+    title: "MariaDB",
+    description:
+      "This system is more suitable than the normal MySQL for heavy tasks. It is completely compatible with your existing code, and it also improves the query speed.",
+    category: "indivdb",
+  },
+  {
+    id: "indivdb5",
+    title: "Redis In-Memory Cache",
+    description:
+      "This can be used as session caching and real-time data. It saves the burden on your primary database by storing frequently accessed items in memory.",
+    category: "indivdb",
+  },
+
+  /* ================= DATABASE CLUSTERS ================= */
+  {
+    id: "dbcluster1",
     title: "MySQL Cluster",
-    subtitle: "Highly available",
     description:
-      "Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe. Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe.",
-    category: "db",
-    price: "From ₹2,499/mo",
+      "This multi-master configuration distributes the traffic among several nodes. It prevents any single point of failure and keeps your website online always.",
+    category: "dbcluster",
   },
   {
-    id: "d2",
+    id: "dbcluster2",
+    title: "MariaDB Galera",
+    description:
+      "This maximum uptime cluster ensures that all nodes contain the same data. You receive synchronous replication, and it eliminates the data loss in case of any hardware failure.",
+    category: "dbcluster",
+  },
+  {
+    id: "dbcluster3",
+    title: "PostgreSQL Primary-Secondary",
+    description:
+      "We set up a master-slave configuration to have enhanced data reading power. The secondary node handles read requests and keeps the primary node very light with write operations.",
+    category: "dbcluster",
+  },
+  {
+    id: "dbcluster4",
     title: "Redis Cluster",
-    subtitle: "In-memory caching",
     description:
-      "Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe. Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe.",
-    category: "db",
-    price: "From ₹999/mo",
+      "This distributed setup spreads your data across multiple nodes for high performance. It ensures your application stays fast even when there is heavy traffic.",
+    category: "dbcluster",
   },
   {
-    id: "a1",
-    title: "Managed Backups",
-    subtitle: "Daily snapshots",
+    id: "dbcluster5",
+    title: "Multi-Region Redis Cluster",
     description:
-      "Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe. Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe.",
-    category: "addon",
-    price: "₹199/mo",
+      "Your data stays synced across different geographical areas to enhance accessibility. It minimizes latency to your international users and provides very high availability.",
+    category: "dbcluster",
   },
   {
-    id: "a2",
-    title: "DDoS Protection",
-    subtitle: "Network shielding",
+    id: "dbcluster6",
+    title: "PostgreSQL Multi-Region Cluster",
     description:
-      "Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe. Low-latency VPS for trading & bots. 4 vCPU, 8GB RAM, NVMe.",
+      "We deploy your Postgres data in multiple global zones for safety. This will ensure that your business is not affected by any local data center outages or disasters.",
+    category: "dbcluster",
+  },
+
+  /* ================= ADD ONS ================= */
+  {
+    id: "addon1",
+    title: "Redis Encrypted Connection",
+    description:
+      "We secure your Redis data with strong encryption during the transfer. This feature keeps your confidential data safe against any unauthorized access or data leakage.",
     category: "addon",
-    price: "₹499/mo",
+  },
+  {
+    id: "addon2",
+    title: "MySQL SSL/TLS Encrypt",
+    description:
+      "Our team enables end-to-end encryption for all your MySQL data traffic. It meets high compliance standards, and your business information remains completely confidential.",
+    category: "addon",
+  },
+  {
+    id: "addon3",
+    title: "Postgres SSL/TLS",
+    description:
+      "This service adds a layer of security to your PostgreSQL connections. It prevents hackers to intercept your data packets in the process of transmission.",
+    category: "addon",
+  },
+  {
+    id: "addon4",
+    title: "Database Backup/Restore",
+    description:
+      "Our automated tool creates point-in-time recovery points for your database. With no effort, you can recover your data to any past state.",
+    category: "addon",
+  },
+  {
+    id: "addon5",
+    title: "Database Corruption Diagnostic",
+    description:
+      "Our system checks your database health for any hidden file errors. It detects problems at an early stage and avoids any significant loss of data to your company.",
+    category: "addon",
+  },
+  {
+    id: "addon6",
+    title: "Database Cluster Recovery",
+    description:
+      "This tool fixes your failed clusters and recovers them fast. It automates the repair process and saves your business a lot of time.",
+    category: "addon",
+  },
+  {
+    id: "addon7",
+    title: "SSL/TLS Encryption",
+    description:
+      "We provide full certificates to secure every connection to your server. This feature builds trust and secures your customer information.",
+    category: "addon",
+  },
+  {
+    id: "addon8",
+    title: "Corruption Diagnostic Tools",
+    description:
+      "Our automated scripts monitor your data integrity at the disk level. The system notifies our team in case it detects any bad sectors or errors.",
+    category: "addon",
+  },
+  {
+    id: "addon9",
+    title: "Automated Cluster Recovery",
+    description:
+      "This service recovers your database nodes in case of an abrupt hardware failure. It takes care of the re-syncing process without any manual work from your side.",
+    category: "addon",
+  },
+  {
+    id: "addon10",
+    title: "TimeZone Change Service",
+    description:
+      "We set your database clock to your local business time. This ensures your logs and reports show the correct time for your region.",
+    category: "addon",
+  },
+  {
+    id: "addon11",
+    title: "BitNinja Security Suite",
+    description:
+      "This tool offers a strong protection against malware and DDoS attacks. It cleans your traffic and blocks malicious bots before they reach your data.",
+    category: "addon",
   },
 ];
-
+ 
 const Icon = ({ name }: { name: string }) => {
   switch (name) {
     case "vps":
@@ -107,7 +212,7 @@ const Icon = ({ name }: { name: string }) => {
 };
 
 export default function ProductTabs() {
-  const [tab, setTab] = useState<"all" | "db" | "addon">("all");
+  const [tab, setTab] = useState<"all" | "indivdb" | "dbcluster" | "addon">("all");
 
   const filtered =
     tab === "all"
@@ -115,8 +220,8 @@ export default function ProductTabs() {
       : TEST_DATA.filter((item) => item.category === tab);
 
   return (
-    <section className="py-20 ">
-  <div className="max-w-6xl mx-auto">
+<section className="py-20 ">
+  <div className="max-w-7xl mx-auto">
     
     {/* Header */}
     <motion.div
@@ -124,10 +229,9 @@ export default function ProductTabs() {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-    >
-      <h2 className="cc-h2">Database Products & Services</h2>
-      <p className="subtitle">Choose from individual databases, high-availability clusters, or powerful add-ons.</p>
+      viewport={{ once: true }}>
+      <h2 className="cc-h2">Our Full Range of Managed Database Hosting Solutions</h2>
+      <p className="subtitle">We provide many types of databases for any type of application.</p>
     </motion.div>
 
     {/* Tabs */}
@@ -140,7 +244,8 @@ export default function ProductTabs() {
     >
       {[
         { id: "all", label: "All Products" },
-        { id: "db", label: "Database Clusters" },
+        { id: "indivdb", label: "Individual Databases" },
+        { id: "dbcluster", label: "Database Clusters" },
         { id: "addon", label: "Add Ons" },
       ].map((t) => (
         <button
@@ -179,7 +284,7 @@ export default function ProductTabs() {
               ease: "easeOut",
             }}
           >
-            <div className="box2 p-5 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <div className="box2 h-full p-5 bg-white rounded-2xl shadow hover:shadow-lg transition">
               <div className="flex gap-4">
                 <div className="text-white">
                   {item.category === "product" ? (
@@ -209,7 +314,6 @@ export default function ProductTabs() {
         ))}
       </motion.div>
     </AnimatePresence>
-
   </div>
 </section>
   );
