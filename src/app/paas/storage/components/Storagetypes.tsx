@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants, easeOut } from "framer-motion";
-import { Database, Folder, ShieldCheck } from "lucide-react";
+import { Check, Database, Folder, ShieldCheck } from "lucide-react";
 
 // Motion variants
 const container: Variants = {
@@ -22,9 +22,48 @@ const fadeUp: Variants = {
   },
 };
 
+const Object_Storage = [
+  "100% S3 Compatibility",
+  "Unlimited Scaling",
+  "Data Immutability",
+  "Erasure coding reliability",
+  "Global edge delivery",
+  "Metadata tagging support",
+  "Lifecycle Management",
+  "High Throughput",
+  "API Access",
+  "AI/ML Optimization",
+];
+ 
+  const File_Storage = [
+    "SMB and NFS protocols",
+    "Integrated ONLYOFFICE editor",
+    "Granular user permissions",
+    "External drive sync",
+    "End-to-end encryption",
+    "Mobile app access",
+    "Real-time Editing",
+    "Password Protection",
+    "Expiry Links",
+    "External Drive Sync",
+    "Admin Controls",
+  ];
+
+  const Backup_Storage = [
+  "GlusterFS cluster support",
+  "Automated daily snapshots",
+  "Instant data recovery",
+  "Point-in-time restoration",
+  "Redundant storage nodes",
+  "Centralized backup console",
+  "Automated Scheduling",
+  "Database Snapshots",
+  "Encryption at Rest",
+];
+
 export default function TwoCardSection() {
   return (
-    <section className="relative w-full py-40">
+    <section className="relative w-full py-12 md:py-14 lg:py-16">
       {/* Section Intro */}
       <motion.div
         className="max-w-6xl mx-auto text-center mb-16"
@@ -38,10 +77,10 @@ export default function TwoCardSection() {
         </p>
 
         <h2 className="cc-h2">
-          What are the Types of Cloud Storage?
+          Types of Cloud Storage and Pricing
         </h2>
         <p className="subtitle">
-          Different types of cloud storage are designed for specific use cases and performance requirements.
+          We offer three main storage solutions to meet various business needs. Both plans have enterprise hardware and 24/7 technical support.
         </p>
       </motion.div>
 
@@ -60,10 +99,10 @@ export default function TwoCardSection() {
           className="rounded-3xl p-8 bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col"
 
         >
-          <p className="text-center text-xl font-semibold text-white">$0.10</p>
+          {/* <p className="text-center text-xl font-semibold text-white">$0.10</p>
           <p className="text-center text-sm text-gray-400 mb-6">
             per GB/month
-          </p>
+          </p> */}
 
           <div className="flex justify-center mb-6">
             <div className="h-14 w-14 rounded-xl bg-white/10 flex items-center justify-center">
@@ -75,24 +114,24 @@ export default function TwoCardSection() {
             Object Storage
           </h3>
 
-          <p className="text-gray-400 text-sm text-center mb-6">
-            Fully S3-compatible object storage for unstructured data—photos,
-            videos, and logs—supporting archiving, analytics, backup, and
-            disaster recovery.
+          <p className="text-gray-400 text-sm text-center mb-6 h-16">
+            This is best for unstructured data like images, videos, and logs with S3 compatibility.
           </p>
 
           <ul className="space-y-3 text-sm text-gray-300 mb-8">
-            <li>• 100% S3-compatible drop-in replacement</li>
-            <li>• Store photos, videos & logs</li>
-            <li>• Optimized for AI/ML workloads</li>
-            <li>• Cloud-native & self-healing</li>
+            {Object_Storage.map((item) => (
+              <li key={item} className="flex gap-2">
+                <Check />
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
 
-          <div className="text-center  mt-auto">
+          {/* <div className="text-center  mt-auto">
             <button className="px-6 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white hover:text-black transition">
               Learn More
             </button>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* File Storage */}
@@ -101,10 +140,10 @@ export default function TwoCardSection() {
           className="rounded-3xl p-8 bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col"
 
         >
-          <p className="text-center text-xl font-semibold text-white">$0.10</p>
+          {/* <p className="text-center text-xl font-semibold text-white">$0.10</p>
           <p className="text-center text-sm text-gray-400 mb-6">
             per GB/month
-          </p>
+          </p> */}
 
           <div className="flex justify-center mb-6">
             <div className="h-14 w-14 rounded-xl bg-white/10 flex items-center justify-center">
@@ -116,23 +155,24 @@ export default function TwoCardSection() {
             File Storage
           </h3>
 
-          <p className="text-gray-400 text-sm text-center mb-6">
-            Secure and scalable file storage with powerful sharing and
-            collaboration features.
+          <p className="text-gray-400 text-sm text-center mb-6 h-16">
+            This works like a traditional shared network drive. Best for team collaboration and shared document management.
           </p>
 
           <ul className="space-y-3 text-sm text-gray-300 mb-8">
-            <li>• Team & external file sharing</li>
-            <li>• Real-time editing (ONLYOFFICE)</li>
-            <li>• Password & expiry protection</li>
-            <li>• Connect S3 & network drives</li>
+            {File_Storage.map((item) => (
+              <li key={item} className="flex gap-2">
+                <Check />
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
 
-          <div className="text-center  mt-auto">
+          {/* <div className="text-center  mt-auto">
             <button className="px-6 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white hover:text-black transition">
               Learn More
             </button>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Backup Storage */}
@@ -141,10 +181,10 @@ export default function TwoCardSection() {
           className="rounded-3xl p-8 bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col "
 
         >
-          <p className="text-center text-xl font-semibold text-white">$0.10</p>
+          {/* <p className="text-center text-xl font-semibold text-white">$0.10</p>
           <p className="text-center text-sm text-gray-400 mb-6">
             per GB/month
-          </p>
+          </p> */}
 
           <div className="flex justify-center mb-6">
             <div className="h-14 w-14 rounded-xl bg-white/10 flex items-center justify-center">
@@ -156,23 +196,24 @@ export default function TwoCardSection() {
             Backup Storage
           </h3>
 
-          <p className="text-gray-400 text-sm text-center mb-6">
-            Scalable and secure backup storage with automated clustering and
-            fast recovery.
+          <p className="text-gray-400 text-sm text-center mb-6 h-16">
+            Secure Remote data storage for databases and systems.
           </p>
 
           <ul className="space-y-3 text-sm text-gray-300 mb-8">
-            <li>• Centralized backups</li>
-            <li>• Standalone or GlusterFS</li>
-            <li>• NFS & FUSE native</li>
-            <li>• Auto-failover clustering</li>
+            {Backup_Storage.map((item) => (
+              <li key={item} className="flex gap-2">
+                <Check />
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
 
-          <div className="text-center  mt-auto">
+          {/* <div className="text-center  mt-auto">
             <button className="px-6 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white hover:text-black transition">
               Learn More
             </button>
-          </div>
+          </div> */}
         </motion.div>
       </motion.div>
     </section>

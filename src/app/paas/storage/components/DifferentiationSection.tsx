@@ -20,16 +20,9 @@ export default function DifferentiationSection() {
   };
 
   return (
-    <section className="w-full bg-black text-white py-32 relative">
+    <section className="w-full bg-black text-white relative py-12 md:py-14 lg:py-16">
       {/* Centered Small Badge at the Top */}
-      <motion.div
-        className="w-full flex justify-center mb-16"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={badgeVariants}
-      ></motion.div>
-
+  
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 px-6">
         {/* LEFT CONTENT */}
         <motion.div
@@ -40,13 +33,10 @@ export default function DifferentiationSection() {
           variants={leftVariants}
         >
           <h2 className="text-left mx-0 cc-h2">
-            Why Cantech Cloud <br /> Stands Out
+            Why Cantech Cloud Leads <br /> in Cloud Storage
           </h2>
           <p className="leading-relaxed max-w-xl mx-0 subtitle">
-            Cantech Cloud delivers cloud compute solutions that combine speed,
-            flexibility, and robust security. Our platform is designed to keep
-            your operations running smoothly, letting your business scale
-            efficiently while maintaining top-notch reliability.
+            We build our infrastructure on high-speed fiber connections in the best data centers. Our Cloud Storage integrates directly with your remote database for faster backups.
           </p>
         </motion.div>
 
@@ -60,40 +50,38 @@ export default function DifferentiationSection() {
         >
           {/* Card 1 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
-              99.99%
+            <h3  className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              99.97%<span  className="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Uptime for data</span>
             </h3>
             <p className="cc-p">
-              Guaranteed uptime — keeping your applications available around the
-              clock
+              Our distributed network keeps your files available at all times.
             </p>
           </div>
           {/* Card 2 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
-              45%
+            <h3  className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+              40%<span  className="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Lower Total Cost</span>
             </h3>
             <p className="cc-p">
-              Lower operational costs through smart resource management
+              You save on your hardware costs by moving to our managed cloud.
             </p>
           </div>
           {/* Card 3 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
-              60%
+            <h3  className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+             21%<span  className="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Higher Profit Margin</span>
             </h3>
             <p className="cc-p">
-              Quicker deployment cycles compared to traditional IT setups
+              Businesses that are on cloud solutions expand more rapidly than physical servers.
             </p>
           </div>
           {/* Card 4 */}
           <div className="animated-card">
-            <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
-              100%
+            <h3  className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text grid gap-2" > 
+             0%<span  className="text-[18px] font-semibold font-sora text-gray-200 leading-normal">Manual Maintenance Effort</span>
             </h3>
             <p className="cc-p">
-              Elastic scalability — instantly expand or contract based on your
-              needs
+              Our team handles all the hardware updates and security patches for you.
             </p>
           </div>
         </motion.div>
