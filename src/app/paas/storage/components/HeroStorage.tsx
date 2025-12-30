@@ -45,7 +45,7 @@ export default function Hero(){
           </motion.h1>
 
           {/* Subtitle */}
-          <motion.p initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Storage for every workload.
+          <motion.p initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Store, protect, and access your data with high-performance object, file, and backup storage built for speed, enterprise security, and effortless scaling.
           </motion.p>
 
           {/* Feature bullets */}
