@@ -27,7 +27,7 @@ export default function HeroCompute() {
         <span>Experience Optimized Cloud Compute Solutions for</span>
         <span className="block mt-[7px]">All Your Workloads</span>
         </h1>
-        <p className="max-w-3xl mx-auto text-center text-white mb-10 z-10 text-[18px]">Power your workloads with optimized cloud compute that balances performances and cost. Designed to support modern applications, data processing and enterprise grade solutions.
+        <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Power your workloads with optimized cloud compute that balances performances and cost. Designed to support modern applications, data processing and enterprise grade solutions.
 </p>
 
         <div className="gap-4 relative z-10 mb-16">
@@ -56,3 +56,4 @@ export default function HeroCompute() {
     </section>
   );
 }
+
