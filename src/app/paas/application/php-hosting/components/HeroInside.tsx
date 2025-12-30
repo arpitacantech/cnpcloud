@@ -84,11 +84,11 @@ const Hero = React.memo(() => {
   {/* Dark overlay */}
   <div className="absolute inset-0 bg-black/80" />
 </div>
-      <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-gauge-icon lucide-gauge"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><span>High-Performance
+      <div className="inline-flex items-center gap-2 z-10 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-gauge-icon lucide-gauge"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><span>PHP Hosting
     </span></div>
 
-    <h1 className="cc-h1 text-center"><span>Secure & Blazing Fast Managed</span><br/><span>PHP Hosting</span></h1>
-    <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Deploy Laravel, Symfony, WordPress, Magento & more on scalable, secure infrastructure with 24/7 support. Auto-scaling, transparent pricing, and expert management included.</p>
+    <h1 className="cc-h1 text-center"><span>Cloud PHP Hosting – High Performance</span><br/><span>and Scalability</span></h1>
+    <p className="max-w-3xl mx-auto text-center text-gray-500 mb-10 z-10">Cantech Cloud offers the best PHP Hosting for your web applications. Our platform provides a smooth experience for developers and business owners.</p>
 
     <div className="flex items-center gap-4 relative z-10 mb-16">
         <a href="#" className="button"><span>Get Started</span></a>
