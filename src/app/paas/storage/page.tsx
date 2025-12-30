@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar";
+import PaasNavbar from "../components/PaasNavbar";
 import HeroStorage from "./components/HeroStorage";
 import FeatureSection from "./components/FeaturesSection";
 import Storagetypes from "./components/Storagetypes";
@@ -10,7 +10,7 @@ import Footer from "../../components/Footer";
 export default function paas() {
   return (
   <>
-    <Navbar />
+    <PaasNavbar />
     <HeroStorage />
     <FeatureSection />
     <Storagetypes />
