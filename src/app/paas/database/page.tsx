@@ -1,26 +1,26 @@
 import Image from "next/image";
-import PaasNavbar from "../components/PaasNavbar";
+import Navbar from "../../components/Navbar";
 import Hero from "./components/Hero";
-import Features from "./components/Features";
+import DifferentiationSection from "./components/DifferentiationSection";
 import DBTabs from './components/DBTabs';
 import FeatureSection from "./components/FeatureSection";
-import ComparisonSection from "../../components/ComparisonSection";
-import CTASection from "../../components/CTASection";
+import ComparisonSection from "./components/ComparisonSection";
+import CTASection from "./components/CTASection";
 import Footer from "../../components/Footer";
-import FAQ1 from "../../components/FAQ1";
+import Faq from "./components/Faq";
 
-export default function Database() {
+export default function JitsiHosting() {
     return(
         <>
-        <PaasNavbar />  
-        <Hero />
-        <Features />
-        <DBTabs />
-        <FeatureSection />
-        <ComparisonSection />
-        <CTASection />
-        <FAQ1 />
-        <Footer />
+            <Navbar />  
+            <Hero />
+            <DifferentiationSection />
+            <DBTabs />
+            <FeatureSection />
+            <ComparisonSection />
+            <Faq />
+            <CTASection />
+            <Footer />
         </>
     );
 }
