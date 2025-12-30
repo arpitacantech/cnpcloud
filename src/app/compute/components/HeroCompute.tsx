@@ -24,10 +24,11 @@ export default function HeroCompute() {
         </div>
 
         <h1 className="cc-h1">
-        <span>High-performance cloud</span>
-        <span className="block mt-[7px]">made simple</span>
+        <span>Experience Optimized Cloud Compute Solutions for</span>
+        <span className="block mt-[7px]">All Your Workloads</span>
         </h1>
-        <p className="max-w-3xl mx-auto text-center text-white mb-10 z-10 text-[18px]">accessing computing resources instead of owning physical hardware, offering scalability, cost savings, and flexibility for individuals and businesses.</p>
+        <p className="max-w-3xl mx-auto text-center text-white mb-10 z-10 text-[18px]">Power your workloads with optimized cloud compute that balances performances and cost. Designed to support modern applications, data processing and enterprise grade solutions.
+</p>
 
         <div className="gap-4 relative z-10 mb-16">
           <a href="#" className="button"><span>Get Started</span></a>
