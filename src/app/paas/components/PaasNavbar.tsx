@@ -27,13 +27,13 @@ import {
 } from "lucide-react";
 
 const applicationItems = [
-  { name: "PHP Hosting", description: "High-performance PHP runtime", href: "/paas/php-hosting", icon: Code2 },
+  { name: "PHP Hosting", description: "High-performance PHP runtime", href: "/paas/application/php-hosting", icon: Code2 },
   // { name: "Docker Swarm", description: "Container orchestration at scale", href: "/paas/docker-swarm-hosting", icon: Container },
   // { name: "Drupal Hosting", description: "Optimized CMS environment", href: "/paas/drupal-hosting", icon: Globe },
   // { name: "Java Hosting", description: "Spring Boot & Jakarta EE ready", href: "/paas/java-hosting", icon: Coffee },
   // { name: "Jitsi Hosting", description: "Video conferencing platform", href: "/paas/jitsi-hosting", icon: Video },
   // { name: "Kubernetes", description: "Managed K8s clusters", href: "/paas/kubernetes-hosting", icon: Box },
-  { name: "Laravel Hosting", description: "Optimized for Laravel apps", href: "/paas/laravel-hosting", icon: Layers },
+  { name: "Laravel Hosting", description: "Optimized for Laravel apps", href: "/paas/application/laravel-hosting", icon: Layers },
   // { name: "Magento Cluster", description: "High-availability e-commerce", href: "/paas/magento-cluster", icon: ShoppingCart },
   // { name: "Magento Hosting", description: "E-commerce made simple", href: "/paas/magento-hosting", icon: ShoppingCart },
   // { name: "Mattermost", description: "Team collaboration platform", href: "/paas/mattermost-hosting", icon: MessageSquare },
