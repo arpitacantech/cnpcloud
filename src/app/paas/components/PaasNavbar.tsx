@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { 
   Menu, 
   X, 
@@ -24,40 +23,42 @@ import {
   Cloud,
   RefreshCw,
   Archive,
-  FolderOpen
+  FolderOpen,
 } from "lucide-react";
 
 const applicationItems = [
   { name: "PHP Hosting", description: "High-performance PHP runtime", href: "/paas/php-hosting", icon: Code2 },
-  { name: "Docker Swarm", description: "Container orchestration at scale", href: "/paas/docker-swarm-hosting", icon: Container },
-  { name: "Drupal Hosting", description: "Optimized CMS environment", href: "/paas/drupal-hosting", icon: Globe },
-  { name: "Java Hosting", description: "Spring Boot & Jakarta EE ready", href: "/paas/java-hosting", icon: Coffee },
-  { name: "Jitsi Hosting", description: "Video conferencing platform", href: "/paas/jitsi-hosting", icon: Video },
-  { name: "Kubernetes", description: "Managed K8s clusters", href: "/paas/kubernetes-hosting", icon: Box },
+  // { name: "Docker Swarm", description: "Container orchestration at scale", href: "/paas/docker-swarm-hosting", icon: Container },
+  // { name: "Drupal Hosting", description: "Optimized CMS environment", href: "/paas/drupal-hosting", icon: Globe },
+  // { name: "Java Hosting", description: "Spring Boot & Jakarta EE ready", href: "/paas/java-hosting", icon: Coffee },
+  // { name: "Jitsi Hosting", description: "Video conferencing platform", href: "/paas/jitsi-hosting", icon: Video },
+  // { name: "Kubernetes", description: "Managed K8s clusters", href: "/paas/kubernetes-hosting", icon: Box },
   { name: "Laravel Hosting", description: "Optimized for Laravel apps", href: "/paas/laravel-hosting", icon: Layers },
-  { name: "Magento Cluster", description: "High-availability e-commerce", href: "/paas/magento-cluster", icon: ShoppingCart },
-  { name: "Magento Hosting", description: "E-commerce made simple", href: "/paas/magento-hosting", icon: ShoppingCart },
-  { name: "Mattermost", description: "Team collaboration platform", href: "/paas/mattermost-hosting", icon: MessageSquare },
-  { name: "Moodle Hosting", description: "Learning management system", href: "/paas/moodle-hosting", icon: GraduationCap },
-  { name: "Node.js Hosting", description: "Modern JavaScript runtime", href: "/paas/node-js-hosting", icon: Server },
-  { name: "Odoo Hosting", description: "Business apps suite", href: "/paas/odoo-hosting", icon: Package },
-  { name: "Auto Scaling", description: "Scale resources automatically", href: "/paas/auto-scaling", icon: RefreshCw },
+  // { name: "Magento Cluster", description: "High-availability e-commerce", href: "/paas/magento-cluster", icon: ShoppingCart },
+  // { name: "Magento Hosting", description: "E-commerce made simple", href: "/paas/magento-hosting", icon: ShoppingCart },
+  // { name: "Mattermost", description: "Team collaboration platform", href: "/paas/mattermost-hosting", icon: MessageSquare },
+  // { name: "Moodle Hosting", description: "Learning management system", href: "/paas/moodle-hosting", icon: GraduationCap },
+  // { name: "Node.js Hosting", description: "Modern JavaScript runtime", href: "/paas/node-js-hosting", icon: Server },
+  // { name: "Odoo Hosting", description: "Business apps suite", href: "/paas/odoo-hosting", icon: Package },
+  // { name: "Auto Scaling", description: "Scale resources automatically", href: "/paas/auto-scaling", icon: RefreshCw },
 ];
 
-const databaseItems = [
-  { name: "MariaDB Cluster", description: "High-availability MariaDB", href: "/paas/mariadb-cluster", icon: Database },
-  { name: "MongoDB Hosting", description: "Managed NoSQL database", href: "/paas/mongodb-hosting", icon: Layers },
-  { name: "MySQL Cluster", description: "Scalable MySQL clusters", href: "/paas/mysql-cluster", icon: Database },
-  { name: "PostgreSQL", description: "Enterprise PostgreSQL hosting", href: "/paas/postgresql-hosting", icon: HardDrive },
-];
+// const databaseItems = [
+//   { name: "MariaDB Cluster", description: "High-availability MariaDB", href: "/paas/mariadb-cluster", icon: Database },
+//   { name: "MongoDB Hosting", description: "Managed NoSQL database", href: "/paas/mongodb-hosting", icon: Layers },
+//   { name: "MySQL Cluster", description: "Scalable MySQL clusters", href: "/paas/mysql-cluster", icon: Database },
+//   { name: "PostgreSQL", description: "Enterprise PostgreSQL hosting", href: "/paas/postgresql-hosting", icon: HardDrive },
+// ];
 
-const storageItems = [
-  { name: "Backup Storage", description: "Secure data backup solutions", href: "/paas/backup-storage", icon: Archive },
-  { name: "File Storage", description: "Managed file storage", href: "/paas/file-storage", icon: FolderOpen },
-  { name: "Object Storage", description: "S3-compatible object storage", href: "/paas/object-storage", icon: Cloud },
-];
+// const storageItems = [
+//   { name: "Backup Storage", description: "Secure data backup solutions", href: "/paas/backup-storage", icon: Archive },
+//   { name: "File Storage", description: "Managed file storage", href: "/paas/file-storage", icon: FolderOpen },
+//   { name: "Object Storage", description: "S3-compatible object storage", href: "/paas/object-storage", icon: Cloud },
+// ];
 
 const navItems = [
+  { name: "Database", href: "/paas/database", icon: Database },
+  { name: "Storage", href: "/paas/storage", icon: Server },
   { name: "Pricing", href: "/paas/pricing", icon: DollarSign },
   { name: "Blogs", href: "/blog", icon: FileText },
 ];
@@ -86,21 +87,20 @@ export default function PaasNavbar() {
       <div className="p-4">
         <div className={`grid ${items.length > 4 ? 'grid-cols-2' : 'grid-cols-1'} gap-x-4 gap-y-1`}>
           {items.map((item) => (
-            <Link
-              key={item.name}
+            <a
               href={item.href}
               className="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-black transition-colors group"
             >
               <item.icon className="w-4 h-4 text-white/80 mt-0.5 flex-shrink-0" />
               <div className="flex flex-col">
-                <span className="font-sora text-sm font-medium text-foreground group-hover:text-foreground transition-colors">
+                <span className="font-sora text-sm font-medium text-foreground">
                   {item.name}
                 </span>
                 <span className="font-sora text-xs text-muted-foreground">
                   {item.description}
                 </span>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
@@ -123,9 +123,9 @@ export default function PaasNavbar() {
           style={{ backdropFilter: "blur(40px)" }}
         >
           {/* LOGO */}
-          <Link href="/" className="flex-1 flex items-center gap-2">            
+          <a href="/" className="flex-1 flex items-center gap-2">            
             <span className="whitespace-nowrap text-base font-semibold text-white sm:text-lg">Cantech Cloud</span>
-          </Link>
+          </a>
 
           {/* DESKTOP MENU */}
           <ul className="hidden lg:flex flex-1 justify-center items-center space-x-8 text-muted-foreground">
@@ -152,7 +152,7 @@ export default function PaasNavbar() {
             </li>
 
             {/* DATABASES MEGA MENU */}
-            <li 
+            {/* <li 
               className="relative"
               onMouseEnter={() => setActiveMenu('databases')}
               onMouseLeave={() => setActiveMenu(null)}
@@ -171,10 +171,10 @@ export default function PaasNavbar() {
               >
                 {renderMegaMenu(databaseItems, "Databases")}
               </div>
-            </li>
+            </li> */}
 
             {/* STORAGE MEGA MENU */}
-            <li 
+            {/* <li 
               className="relative"
               onMouseEnter={() => setActiveMenu('storage')}
               onMouseLeave={() => setActiveMenu(null)}
@@ -193,28 +193,28 @@ export default function PaasNavbar() {
               >
                 {renderMegaMenu(storageItems, "Storage")}
               </div>
-            </li>
+            </li> */}
 
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link 
+                <a 
                   href={item.href} 
                   className="hover:text-white text-white/80 transition-colors font-sora font-normal"
                 >
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
 
           {/* CTA */}
           <div className="hidden lg:flex flex-1 justify-end">
-            <Link
+            <a
               href="/get-started"
               className="px-6 py-2.5 rounded-full text-foreground font-sora font-medium hover:glow-text transition-all duration-300"
             >
               Get Started →
-            </Link>
+            </a>
           </div>
 
           {/* MOBILE TOGGLE */}
@@ -238,14 +238,14 @@ export default function PaasNavbar() {
       {/* MOBILE SIDEBAR */}
       <aside
         className={`fixed top-0 right-0 z-50 h-full w-[85%] max-w-sm
-          bg-card border-l border-border
+          bg-card/30 backdrop-blur-md border-l border-border
           transform transition-transform duration-300 ease-out
           ${mobileOpen ? "translate-x-0 animate-slide-in" : "translate-x-full"}
         `}
       >
         {/* HEADER */}
         <div className="flex items-center justify-between p-6 border-b border-border">
-          <span className="text-foreground font-sora font-semibold">Menu</span>
+          <span className="text-foreground font-sora font-semibold">&nbsp;</span>
           <button onClick={() => setMobileOpen(false)}>
             <X className="text-foreground" />
           </button>
@@ -258,13 +258,12 @@ export default function PaasNavbar() {
             <p className="text-primary text-xs font-semibold tracking-wider mb-3 font-sora uppercase">Applications</p>
             <div className="space-y-1">
               {applicationItems.map((item) => (
-                <Link
-                  key={item.name}
+                <a
                   href={item.href}
                   className="flex items-start gap-3 px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
-                  <item.icon className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <item.icon className="w-4 h-4 text-white/80 mt-0.5 flex-shrink-0" />
                   <div className="flex flex-col">
                     <span className="text-foreground font-sora text-sm font-medium">
                       {item.name}
@@ -273,13 +272,13 @@ export default function PaasNavbar() {
                       {item.description}
                     </span>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
 
           {/* DATABASES */}
-          <div>
+          {/* <div>
             <p className="text-primary text-xs font-semibold tracking-wider mb-3 font-sora uppercase">Databases</p>
             <div className="space-y-1">
               {databaseItems.map((item) => (
@@ -301,10 +300,10 @@ export default function PaasNavbar() {
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* STORAGE */}
-          <div>
+          {/* <div>
             <p className="text-primary text-xs font-semibold tracking-wider mb-3 font-sora uppercase">Storage</p>
             <div className="space-y-1">
               {storageItems.map((item) => (
@@ -326,32 +325,31 @@ export default function PaasNavbar() {
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* OTHER LINKS */}
           <div className="space-y-1 pt-4 border-t border-border">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
+              <a
                 href={item.href}
                 className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
-                <item.icon className="w-4 h-4 text-muted-foreground" />
+                <item.icon className="w-4 h-4 text-white/80" />
                 <span className="text-foreground font-sora">{item.name}</span>
-              </Link>
+              </a>
             ))}
           </div>
 
           {/* CTA */}
-          <Link
+          <a
             href="/get-started"
             className="block text-center py-3 rounded-full bg-secondary border border-border
                        hover:glow-box transition-all duration-300 font-sora text-foreground"
             onClick={() => setMobileOpen(false)}
           >
             Get Started →
-          </Link>
+          </a>
         </div>
       </aside>
     </>
