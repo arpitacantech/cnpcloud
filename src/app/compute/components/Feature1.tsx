@@ -98,7 +98,7 @@ export default function Feature1() {
                   <h3 className="cc-h3">
                     {item.title}
                   </h3>
-                  <p className="cc-h3">
+                  <p className="cc-p">
                     {item.desc}
                   </p>
                 </div>
@@ -112,3 +112,4 @@ export default function Feature1() {
     )
 
 }
+
