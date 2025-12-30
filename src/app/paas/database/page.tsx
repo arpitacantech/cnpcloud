@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PaasNavbar from "../../components/PaasNavbar";
+import PaasNavbar from "./components/PaasNavbar";
 import Hero from "./components/Hero";
 import DifferentiationSection from "./components/DifferentiationSection";
 import DBTabs from './components/DBTabs';
