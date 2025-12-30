@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import ComputeNavbar from "./components/ComputeNavbar";
 import HeroCompute from "./components/HeroCompute";
 // import DifferentiationSection from "./components/DifferentiationSection";
 // import TextParallaxContentExample from "./components/text-parallax-content-scroll";
@@ -17,7 +17,7 @@ import FAQ1 from "./components/FAQ1";
 export default function Home() {
   return (
    <>
-    <Navbar />
+    <ComputeNavbar />
     <HeroCompute />
     <AnimatedCard
       title="What Sets Cantech Cloud Compute Apart"
