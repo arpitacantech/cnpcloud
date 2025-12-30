@@ -1,19 +1,19 @@
-import Navbar from "../../components/Navbar";
+import PaasNavbar from "../components/PaasNavbar";
 import { PricingFilter } from "./components/PricingFilter";
 import ComparisonSection from "../../components/ComparisonSection";
 import CTASection from "../../components/CTASection";
 import Footer from "../../components/Footer";
-import Faq from "./components/Faq";
+import FAQ1 from "../../components/FAQ1";
 
 export default function PassPricing() {
   return (
   <>
-    <Navbar />
+    <PaasNavbar />
     <PricingFilter />
     <ComparisonSection />
-    <Faq />
-    <CTASection />
-    <Footer />
+      <FAQ1 />
+      <CTASection />
+      <Footer />
   </>
   );
 }
