@@ -1,4 +1,4 @@
-import Navbar from "@/src/app/components/Navbar";
+import PaasNavbar from "../../components/PaasNavbar";
 import HeroInside from "./components/HeroInside";
 import DifferentiationSection from "@/src/app/paas/components/DifferentiationSection";
 import ScrollCards from "@/src/app/paas/components/ScrollCards";
@@ -12,7 +12,7 @@ import Footer from "@/src/app/components/Footer";
 export default function paas() {
   return (
     <>
-      <Navbar />
+      <PaasNavbar />
       <HeroInside />
       <DifferentiationSection />
       <ScrollCards />
