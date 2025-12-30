@@ -1,4 +1,4 @@
-import Navbar from "@/src/app/components/Navbar";
+import PaasNavbar from "../../components/PaasNavbar";
 import HeroSection from "./components/HeroSection";
 import Features from "./components/Features";
 import CardSection from "./components/CardSection";
@@ -12,7 +12,7 @@ import Footer from "@/src/app/components/Footer";
 export default function LaravelHosting() {
   return (
   <>
-  <Navbar />
+  <PaasNavbar />
   <HeroSection />
   <Features/>
   <CardSection />
