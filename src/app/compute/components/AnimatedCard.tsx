@@ -46,16 +46,16 @@ export default function AnimatedCard({
               }}
               className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl"
             >
-              <motion.h3
+              <motion.h2
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="text-white text-3xl font-semibold sm:text-4xl mb-6"
+                className="cc-h2"
               >
                 {title}
-              </motion.h3>
+              </motion.h2>
 
               <motion.p
                 variants={{
@@ -63,7 +63,7 @@ export default function AnimatedCard({
                   visible: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="text-[#94969d]"
+                className="subtitle"
               >
                 {description1}
               </motion.p>
@@ -75,7 +75,7 @@ export default function AnimatedCard({
                     visible: { opacity: 1, y: 0 },
                   }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="text-[#94969d]"
+                  className="subtitle"
                 >
                   {description2}
                 </motion.p>

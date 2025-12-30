@@ -74,11 +74,11 @@ export default function Feature4() {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="rounded lg:p-5 flex flex-col gap-4 lg:transition lg:duration-300 lg:hover:bg-[#101010]"
               >
-                <p className="mt-2 text-white text-lg md:text-xl font-semibold">
+                <h3 className="cc-h3">
                   {item.title}
-                </p>
+                </h3>
 
-                <p className="text-sm md:text-base text-neutral-300 max-w-prose">
+                <p className="subtitle">
                   {item.desc}
                 </p>
               </motion.div>

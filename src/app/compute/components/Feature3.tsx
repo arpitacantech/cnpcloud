@@ -71,10 +71,10 @@ export default function Feature3() {
                   </svg>
                 </div>
 
-                <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">
+                <h3 className="cc-h3">
                   {card.title}
                 </h3>
-                <p className="text-sm md:text-base text-neutral-300 max-w-prose">
+                <p className="subtitle">
                   {card.description}
                 </p>
               </div>

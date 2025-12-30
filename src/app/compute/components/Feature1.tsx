@@ -95,10 +95,10 @@ export default function Feature1() {
                 </div>
 
                 <div>
-                  <h4 className="text-lg text-white font-semibold">
+                  <h3 className="cc-h3">
                     {item.title}
-                  </h4>
-                  <p className="mt-3 text-[#94969d]">
+                  </h3>
+                  <p className="subtitle">
                     {item.desc}
                   </p>
                 </div>

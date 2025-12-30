@@ -51,10 +51,10 @@ function Feature2() {
       >
         <Check className="w-4 h-4 mt-2 text-primary shrink-0" />
         <div>
-          <h4 className="text-lg text-white font-semibold">
+          <h3 className="cc-h3">
                     {item.title}
-                  </h4>
-                  <p className="mt-3 text-[#94969d]">
+                  </h3>
+                  <p className="subtitle">
                     {item.desc}
                   </p>
         </div>
