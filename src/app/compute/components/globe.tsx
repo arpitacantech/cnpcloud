@@ -19,7 +19,7 @@ export default function Featured_05() {
         <div className="z-10 max-w-xl text-left">
           <h2 className="cc-h2">End to End Cloud Solutions for All your Needs</h2>
           <p className="subtitle">
-            Experience end-to-end cloud solutions designed to simplify operations, improve performance and minimize infrastructure complexity.
+            Our cloud compute Solution supports everything from everyday business applications to compute-intensive workloads. With global availability and flexible resources, you stay fast, secure, and in control.
           </p>
         </div>
         <div className="relative h-[180px] w-full max-w-xl">
@@ -147,3 +147,4 @@ export function Globe({
     </div>
   );
 }
+
