@@ -13,9 +13,9 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  titleLine1 = "Let’s Build Your Cloud",
-  titleLine2 = "the Right Way",
-  description = "Our team is here to help you choose, deploy, and manage the right cloud solution with complete peace of mind.",
+  titleLine1,
+  titleLine2,
+  description,
   buttonText = "Let's Talk",
   buttonLink = "#",
   backgroundImage = "/assets/images/cta/cta-img.jpg",
@@ -99,4 +99,5 @@ return (
 );
 
 }
+
 
