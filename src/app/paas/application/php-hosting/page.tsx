@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import PaasNavbar from "../../components/PaasNavbar";
 import HeroInside from "./components/HeroInside";
 import DifferentiationSection from "./components/DifferentiationSection";
@@ -7,6 +8,36 @@ import ComparisonSection from "@/src/app/components/ComparisonSection";
 import CTASection from "./components/CTASection";
 import Faq from "./components/Faq";
 import Footer from "@/src/app/components/Footer";
+
+export const metadata: Metadata = {
+  title: "PHP Hosting – Fast, Secure & Scalable | Cantech Cloud",
+  description: "Cantech Cloud offers PHP hosting with scalable infrastructure, fast performance, built-in security and managed services for modern web and business applications.",
+  keywords: [
+    "PHP Hosting",
+    "Managed PHP Hosting",
+    "Cloud PHP Hosting",
+  ],
+   
+  openGraph: {
+    title: "PHP Hosting – Fast, Secure & Scalable | Cantech Cloud",
+    siteName: "Cantech Cloud",
+    url: "https://www.cantech.cloud/paas/application/php-hosting",
+    description: "Cantech Cloud offers PHP hosting with scalable infrastructure, fast performance, built-in security and managed services for modern web and business applications.",
+    type: "website",
+    images: [
+      {
+        url: "/assets/images/og_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Cantech Cloud",
+      },
+    ],
+  },
+
+  alternates: {
+    canonical: "https://www.cantech.cloud/paas/application/php-hosting",
+  },
+};
 
 export default function paas() {
   return (
