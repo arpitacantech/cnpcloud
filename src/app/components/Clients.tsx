@@ -21,26 +21,29 @@ export default function ClientLogos({ transparent }: ClientLogosProps) {
       }`}
     >
       <h2
-        className={`text-1xl md:text-2xl font-medium mb-4 ${
+        className={`text-xl md:text-2xl font-medium mb-6 ${
           transparent ? "text-white/80" : "text-white"
         }`}
       >
         Trusted By
       </h2>
 
-      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-        {logos.map((logo, index) => (
-          <div
-            key={index}
-            className="w-28 h-12 md:w-32 md:h-14 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
-          >
-            <img
-              src={logo}
-              alt={`Client ${index + 1}`}
-              className="max-w-full max-h-full object-contain"
-            />
-          </div>
-        ))}
+      {/* LOGO MARQUEE */}
+      <div className="relative w-full max-w-5xl overflow-hidden">
+        <div className="flex w-max animate-logo-scroll gap-12">
+          {[...logos, ...logos].map((logo, index) => (
+            <div
+              key={index}
+              className="w-28 h-12 md:w-32 md:h-14 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src={logo}
+                alt={`Client ${index + 1}`}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
