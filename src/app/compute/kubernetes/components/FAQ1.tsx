@@ -206,21 +206,28 @@ useEffect(() => {
                     </div>
                     
                     <div
-                      id={panelId}
-                      role="region"
-                      aria-labelledby={buttonId}
-                      className={`overflow-hidden text-lg leading-relaxed transition-[max-height] duration-500 ease-out ${open ? "max-h-64" : "max-h-0"} text-neutral-400`}>
-                      <div className="cc-p pt-4">
-  {Array.isArray(item.answer) ? (
-    <ul className="list-disc pl-5 space-y-2">
-      {item.answer.map((point, i) => (
-        <li key={i}>{point}</li>
-      ))}
-    </ul>
-  ) : (
-    <p>{item.answer}</p>
-  )}
+  id={panelId}
+  role="region"
+  aria-labelledby={buttonId}
+  className={`grid transition-[grid-template-rows,opacity] duration-500 ease-out ${
+    open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+  } text-neutral-400`}
+>
+  <div className="overflow-hidden">
+    <div className="cc-p pt-4">
+      {Array.isArray(item.answer) ? (
+        <ul className="list-disc pl-5 space-y-2">
+          {item.answer.map((point, i) => (
+            <li key={i}>{point}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>{item.answer}</p>
+      )}
+    </div>
+  </div>
 </div>
+
 
                     </div>
                   </div>
@@ -236,4 +243,5 @@ useEffect(() => {
 
 export default FAQ1;
 export { FAQ1 };
+
 
