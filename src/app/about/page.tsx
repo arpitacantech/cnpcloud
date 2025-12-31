@@ -3,7 +3,7 @@ import { HeroAbout } from "./components/HeroAbout";
 import AnimatedCard from "./components/AnimatedCard";
 import TabSection from "./components/TabSection";
 import Feature from "./components/Feature";
-import CTASection from "../components/CTASection";
+import CTASection from "./components/CTASection";
 import Footer from "../components/Footer";
 
 export default function about() {
@@ -27,5 +27,6 @@ export default function about() {
   </>
   );
 }
+
 
 
