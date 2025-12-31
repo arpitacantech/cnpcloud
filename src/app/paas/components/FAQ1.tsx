@@ -227,9 +227,10 @@ useEffect(() => {
   id={panelId}
   role="region"
   aria-labelledby={buttonId}
-  className={`grid transition-[grid-template-rows,opacity] duration-500 ease-out ${
-    open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-  } text-neutral-400`}
+  className={`grid transition-[grid-template-rows opacity] duration-500 ease-out ${
+  open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+} text-neutral-400`}
+
 >
   <div className="overflow-hidden">
     <div className="cc-p pt-4">
@@ -262,6 +263,7 @@ useEffect(() => {
 
 export default FAQ1;
 export { FAQ1 };
+
 
 
 
