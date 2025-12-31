@@ -54,19 +54,19 @@ export default function Hero(){
             <ul className="list-none mb-14 flex flex-col md:flex-row md:items-center md:justify-center md:flex-wrap lg:flex-nowrap gap-4 md:gap-9 w-fit md:mx-auto">
               <li data-ns-animate="" data-delay="0.3" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
                 <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
-                <span className="text-tagline-2 dark:text-accent/60">Reliable Performance</span>
+                <span className="text-tagline-2">Reliable Performance</span>
               </li>
               <li data-ns-animate="" data-delay="0.4" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
                 <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
-                <span className="text-tagline-2 dark:text-accent/60">Enterprise Security</span>
+                <span className="text-tagline-2">Enterprise Security</span>
               </li>
               <li data-ns-animate="" data-delay="0.5" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
                 <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
-                <span className="text-tagline-2 dark:text-accent/60">Instant Scalability</span>
+                <span className="text-tagline-2">Instant Scalability</span>
               </li>
               <li data-ns-animate="" data-delay="0.5" className="flex items-center gap-2.5 opacity-100 blur-0 translate-x-0 translate-y-0 rotate-0 scale-100">
                 <span className="bg-secondary rounded-full p-1"><Check size={16} /></span>
-                <span className="text-tagline-2 dark:text-accent/60">Proactive Support</span>
+                <span className="text-tagline-2">Proactive Support</span>
               </li>
             </ul>
           </motion.div>
