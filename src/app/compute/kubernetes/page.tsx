@@ -49,10 +49,10 @@ export default function KubernetesPage()
                 <div className="md:px-8 text-center">
 
                     <p className="text-[32px] text-white font-extrabold mx-auto mb-6">
-                       What are the Types of Cloud Storage?
+                       What you get with Cantech Managed Kubernetes
                     </p>
                     <p className="text-[#ffffffb3]">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus
+                        Cantech offers cloud compute solutions that focus on performance, flexibility and security that ensures reliable operations while enabling scalable and efficient growth.
                     </p>
                 </div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -76,9 +76,9 @@ export default function KubernetesPage()
                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"><path fill="#fff" d="M6.142 10.74 9.46 6.253c2.145-2.9 3.217-4.351 4.217-4.045 1 .307 1 2.086 1 5.644v.336c0 1.283 0 1.925.41 2.327l.022.021c.42.394 1.087.394 2.423.394 2.404 0 3.606 0 4.012.73l.02.036c.383.74-.313 1.681-1.705 3.565l-3.317 4.488c-2.145 2.901-3.217 4.352-4.217 4.045-1-.306-1-2.086-1-5.644v-.335c0-1.284 0-1.926-.41-2.328l-.022-.02c-.419-.395-1.087-.395-2.423-.395-2.403 0-3.605 0-4.011-.729a1.223 1.223 0 0 1-.02-.037c-.384-.74.312-1.681 1.704-3.564z"/></svg>
                             </div>
 
-                            <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">High Performance</h3>
+                            <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">Fully Managed Kubernetes</h3>
                             <p className="text-sm md:text-base text-neutral-300 max-w-prose">
-                            Built on a foundation of robust infrastructure, CloudPe Kubernetes offers a 99.99% uptime SLA to keep your applications running smoothly.
+                            Cantech cloud compute manages cluster setup, control plane management, and updates, to free up your space so you can prioritize building and deploying applications.
                             </p>
                         </div>
                         </div>
@@ -99,9 +99,9 @@ export default function KubernetesPage()
                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"><path fill="#fff" d="M6.142 10.74 9.46 6.253c2.145-2.9 3.217-4.351 4.217-4.045 1 .307 1 2.086 1 5.644v.336c0 1.283 0 1.925.41 2.327l.022.021c.42.394 1.087.394 2.423.394 2.404 0 3.606 0 4.012.73l.02.036c.383.74-.313 1.681-1.705 3.565l-3.317 4.488c-2.145 2.901-3.217 4.352-4.217 4.045-1-.306-1-2.086-1-5.644v-.335c0-1.284 0-1.926-.41-2.328l-.022-.02c-.419-.395-1.087-.395-2.423-.395-2.403 0-3.605 0-4.011-.729a1.223 1.223 0 0 1-.02-.037c-.384-.74.312-1.681 1.704-3.564z"/></svg>
                             </div>
 
-                            <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">Enhanced Security</h3>
+                            <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">Top Notch Performance</h3>
                             <p className="text-sm md:text-base text-neutral-300 max-w-prose">
-                            Benefit from role-based access control (RBAC), encrypted connections, and network policies to secure your workloads and data.
+                            Built on strong infrastructure, Cantech’s enterprise-grade managed kubernetes offers a 99.97% uptime SLA to deliver smooth uninterrupted application availability.
                             </p>
                         </div>
                         </div>
@@ -124,7 +124,7 @@ export default function KubernetesPage()
 
                             <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">Multi-Cloud Deployment</h3>
                             <p className="text-sm md:text-base text-neutral-300 max-w-prose">
-                            Deploy workloads across private, public, or hybrid cloud environments with ease.
+                            Deploy various workloads such as public, private and hybrid cloud environments without any kind of complexity.
                             </p>
                         </div>
                         </div>
@@ -145,9 +145,9 @@ export default function KubernetesPage()
                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"><path fill="#fff" d="M6.142 10.74 9.46 6.253c2.145-2.9 3.217-4.351 4.217-4.045 1 .307 1 2.086 1 5.644v.336c0 1.283 0 1.925.41 2.327l.022.021c.42.394 1.087.394 2.423.394 2.404 0 3.606 0 4.012.73l.02.036c.383.74-.313 1.681-1.705 3.565l-3.317 4.488c-2.145 2.901-3.217 4.352-4.217 4.045-1-.306-1-2.086-1-5.644v-.335c0-1.284 0-1.926-.41-2.328l-.022-.02c-.419-.395-1.087-.395-2.423-.395-2.403 0-3.605 0-4.011-.729a1.223 1.223 0 0 1-.02-.037c-.384-.74.312-1.681 1.704-3.564z"/></svg>
                             </div>
 
-                            <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">Node Autoscaling</h3>
+                            <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">Dedicated GPU Clusters for AI and ML workloads</h3>
                             <p className="text-sm md:text-base text-neutral-300 max-w-prose">
-                            Automatically scale your Kubernetes nodes based on workload demands. Optimize resource usage and costs with intelligent autoscaling.
+                            Take advantage of dedicated GPU clusters optimized for AI and ML workloads to improve training and computation heavy tasks.
                             </p>
                         </div>
                         </div> 
@@ -168,9 +168,9 @@ export default function KubernetesPage()
                                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"><path fill="#fff" d="M6.142 10.74 9.46 6.253c2.145-2.9 3.217-4.351 4.217-4.045 1 .307 1 2.086 1 5.644v.336c0 1.283 0 1.925.41 2.327l.022.021c.42.394 1.087.394 2.423.394 2.404 0 3.606 0 4.012.73l.02.036c.383.74-.313 1.681-1.705 3.565l-3.317 4.488c-2.145 2.901-3.217 4.352-4.217 4.045-1-.306-1-2.086-1-5.644v-.335c0-1.284 0-1.926-.41-2.328l-.022-.02c-.419-.395-1.087-.395-2.423-.395-2.403 0-3.605 0-4.011-.729a1.223 1.223 0 0 1-.02-.037c-.384-.74.312-1.681 1.704-3.564z"/></svg>
                                 </div>
 
-                                <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">GPU Clusters</h3>
+                                <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">High-End Security</h3>
                                 <p className="text-sm md:text-base text-neutral-300 max-w-prose">
-                                High-performance GPU clusters for AI/ML workloads. Train models faster with dedicated GPU instances optimized for deep learning.
+                                Get Kubernetes-native security features like Role-Based Access Control (RBAC), encrypted connections, network policies and sensitive data management.
                                 </p>
                             </div>
                         </div>
@@ -191,9 +191,9 @@ export default function KubernetesPage()
                                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"><path fill="#fff" d="M6.142 10.74 9.46 6.253c2.145-2.9 3.217-4.351 4.217-4.045 1 .307 1 2.086 1 5.644v.336c0 1.283 0 1.925.41 2.327l.022.021c.42.394 1.087.394 2.423.394 2.404 0 3.606 0 4.012.73l.02.036c.383.74-.313 1.681-1.705 3.565l-3.317 4.488c-2.145 2.901-3.217 4.352-4.217 4.045-1-.306-1-2.086-1-5.644v-.335c0-1.284 0-1.926-.41-2.328l-.022-.02c-.419-.395-1.087-.395-2.423-.395-2.403 0-3.605 0-4.011-.729a1.223 1.223 0 0 1-.02-.037c-.384-.74.312-1.681 1.704-3.564z"/></svg>
                                 </div>
 
-                                <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">AI/ML & Data Processing</h3>
+                                <h3 className="mt-2 text-white text-lg md:text-xl font-semibold">Auto-Scaling of Kubernetes Node Groups</h3>
                                 <p className="text-sm md:text-base text-neutral-300 max-w-prose">
-                                Use GPU-enabled Kubernetes nodes to run parallelized model training, inference and analytics jobs. Integrate with ML frameworks and scale compute resources on demand.
+                                Automatically adjust your node groups based on your workload needs. In case the application traffic spikes, new nodes are added automatically to maintain high performance.
                                 </p>
                             </div>
                         </div>
