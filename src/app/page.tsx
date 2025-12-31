@@ -7,7 +7,7 @@ import TwoCardSection from "./components/TwoCardSection";
 import FeaturesSection from "./components/FeaturesSection";
 import ComparisonSection from "./components/ComparisonSection";
 import FAQ1 from "./components/FAQ1";
-import CTASection from "./components/CTASection";
+import FooterCTA from "./components/FooterCTA";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -21,7 +21,13 @@ export default function Home() {
       <FeaturesSection />
       <ComparisonSection />
       <FAQ1 />
-      <CTASection />
+      <FooterCTA
+        titleLine1="Need Some"
+        titleLine2="Professional Help?"
+        description="Contact our Customer Service representative to provide you with the best custom made solutions on the market."
+        // buttonText="Let's Talk"
+        // buttonLink="/contact"
+      />
       <Footer />
     {/* </main> */}
     </>
