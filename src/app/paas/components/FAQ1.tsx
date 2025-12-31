@@ -188,49 +188,58 @@ useEffect(() => {
             const buttonId = `faq-trigger-${index}`;
 
             return (
-              <li
-                key={item.question}
-                className={`group relative overflow-hidden rounded-3xl border backdrop-blur-xl transition-all duration-500 hover:-translate-y-0.5 focus-within:-translate-y-0.5 ${palette.border} ${palette.panel} ${palette.shadow}`}
-                onMouseMove={setCardGlow}
-                onMouseLeave={clearCardGlow}
-              >
-                <div
-                  className={`pointer-events-none absolute inset-0 transition-opacity duration-500 ${open ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
-                  style={{ background: `radial-gradient(240px circle at var(--faq-x, 50%) var(--faq-y, 50%), ${palette.glow}, transparent 70%)` }}
-                />
+           <li
+  key={item.question}
+  className={`group relative overflow-hidden rounded-3xl border backdrop-blur-xl transition-all duration-500 hover:-translate-y-0.5 focus-within:-translate-y-0.5 ${palette.border} ${palette.panel} ${palette.shadow}`}
+  onMouseMove={setCardGlow}
+  onMouseLeave={clearCardGlow}
+>
+  <div
+    className={`pointer-events-none absolute inset-0 transition-opacity duration-500 ${open ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
+    style={{ background: `radial-gradient(240px circle at var(--faq-x, 50%) var(--faq-y, 50%), ${palette.glow}, transparent 70%)` }}
+  />
 
-                <button
-                  type="button"
-                  id={buttonId}
-                  aria-controls={panelId}
-                  aria-expanded={open}
-                  onClick={() => toggleQuestion(index)}
-                  style={{ ["--faq-outline" as any]: "rgba(255,255,255,0.35)" }}
-                  className={`relative flex w-full gap-6 px-8 py-7 text-left flex-row-reverse transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--faq-outline)]
-                    ${open ? "items-start" : "items-start"}
-                  `}
-                >
-                  <span className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-500 group-hover:scale-105 ${palette.iconRing} ${palette.iconSurface}`}>
-                    <span className={`pointer-events-none absolute inset-0 rounded-full border opacity-30 ${palette.iconRing} ${open ? "animate-ping" : ""}`} />
-                    <svg className={`relative h-5 w-5 transition-transform duration-500 ${palette.icon} ${open ? "rotate-45" : ""}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 5v14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                      <path d="M5 12h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
-                  </span>
+  <button
+    type="button"
+    id={buttonId}
+    aria-controls={panelId}
+    aria-expanded={open}
+    onClick={() => toggleQuestion(index)}
+    style={{ ["--faq-outline" as any]: "rgba(255,255,255,0.35)" }}
+    className={`relative flex w-full gap-6 px-8 py-7 text-left flex-row-reverse transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--faq-outline)]
+      ${open ? "items-start" : "items-start"}
+    `}
+  >
+    <span className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-500 group-hover:scale-105 ${palette.iconRing} ${palette.iconSurface}`}>
+      <span className={`pointer-events-none absolute inset-0 rounded-full border opacity-30 ${palette.iconRing} ${open ? "animate-ping" : ""}`} />
+      <svg className={`relative h-5 w-5 transition-transform duration-500 ${palette.icon} ${open ? "rotate-45" : ""}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 5v14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M5 12h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    </span>
 
-                  <div className="flex flex-1 flex-col ">
-                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-                      <h3 className="cc-h3">{item.question}</h3>
-                    </div>
-                    
-                    <div id={panelId} role="region" aria-labelledby={buttonId} className={overflow-hidden text-lg leading-relaxed transition-[max-height] duration-500 ease-out ${open ? "max-h-64" : "max-h-0"} text-neutral-400}> <div className="cc-p pt-4"> {Array.isArray(item.answer) ? ( <ul className="list-disc pl-5 space-y-2"> {item.answer.map((point, i) => ( <li key={i}>{point}</li> ))} </ul> ) : ( <p>{item.answer}</p> )} </div>
+    <div className="flex flex-1 flex-col">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+        <h3 className="cc-h3">{item.question}</h3>
+      </div>
 
+      <div
+  id={panelId}
+  role="region"
+  aria-labelledby={buttonId}
+  className={`grid transition-[grid-template-rows,opacity] duration-500 ease-out ${
+    open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+  } text-neutral-400`}
+>
+  <div className="overflow-hidden">
+    <p className="cc-p pt-4">{item.answer}</p>
+  </div>
+</div>
 
+    </div>
+  </button>
+</li>
 
-                    </div>
-                  </div>
-                </button>
-              </li>
             );
           })}
         </ul>
