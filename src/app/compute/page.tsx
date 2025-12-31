@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ComputeNavbar from "./components/ComputeNavbar";
 import HeroCompute from "./components/HeroCompute";
 // import DifferentiationSection from "./components/DifferentiationSection";
@@ -13,6 +14,35 @@ import Footer from "../components/Footer";
 import ComparisonSection from "./components/ComparisonSection";
 import FAQ1 from "./components/FAQ1";
 
+export const metadata: Metadata = {
+  title: "Cloud Compute Solutions & Services | Cantech Cloud",
+  description: "Power your workloads with reliable cloud compute services. Get scalable compute solutions, optimized cloud costs, and flexible compute products for every business need.",
+  keywords: [
+    "Compute",
+    "Cloud Compute",
+    "Compute Solutions",
+  ],
+   
+  openGraph: {
+    title: "Cloud Compute Solutions & Services | Cantech Cloud",
+    siteName: "Cantech Cloud",
+    url: "https://www.cantech.cloud/compute",
+    description: "Power your workloads with reliable cloud compute services. Get scalable compute solutions, optimized cloud costs, and flexible compute products for every business need.",
+    type: "website",
+    images: [
+      {
+        url: "/assets/images/og_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Cantech Cloud",
+      },
+    ],
+  },
+
+  alternates: {
+    canonical: "https://www.cantech.cloud/compute",
+  },
+};
 
 export default function Home() {
   return (
