@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PHP Hosting – Fast, Secure & Scalable | Cantech Cloud",
     siteName: "Cantech Cloud",
-    url: "https://www.cantech.cloud/paas/application/pricing",
+    url: "https://www.cantech.cloud/paas/pricing",
     description: "",
     type: "website",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://www.cantech.cloud/paas/application/pricing",
+    canonical: "https://www.cantech.cloud/paas/pricing",
   },
 };
 
