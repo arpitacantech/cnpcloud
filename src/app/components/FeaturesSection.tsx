@@ -91,7 +91,7 @@ export default function FeatureSection({ className }: { className?: string }) {
   <FeatureCard
     icon={<Zap size={24} />}
     title="Fast Deployment"
-    description="Deploy your apps instantly with zero downtime."
+    description="Cantech enables fast deployment through intelligent automation and resilient infrastructure designed to minimize downtime. Get your applications live faster without compromising performance or operational stability."
     imageSrc="/assets/images/home/feature-img.webp"
     className="
       min-h-[260px]
@@ -134,4 +134,5 @@ export default function FeatureSection({ className }: { className?: string }) {
     </section>
   );
 }
+
 
