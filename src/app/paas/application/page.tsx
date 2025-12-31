@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Best Platform for PaaS Application Hosting | Cantech Cloud",
     siteName: "Cantech Cloud",
-    url: "https://www.cantech.cloud/application",
+    url: "https://www.cantech.cloud/paas/application",
     description: "One platform for all your PaaS applications. Cantech PaaS makes deployment simple, secure and infinitely scalable with managed infrastructure and one-click app hosting.",
     type: "website",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://www.cantech.cloud/application",
+    canonical: "https://www.cantech.cloud/paas/application",
   },
 };
 
