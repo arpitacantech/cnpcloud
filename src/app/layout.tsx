@@ -16,6 +16,31 @@ const lexend = Lexend({
 export const metadata: Metadata = {
   title: "Cloud Compute & PaaS Solutions in India | Cantech Cloud",
   description: "Run modern workloads on Cantech Cloud with reliable cloud compute and PaaS services. Flexible infrastructure, optimized performance, and cost control.",
+  keywords: [
+    "PaaS Solutions ",
+    "Cloud Compute",
+  ],
+  authors: [{ name: "Cantech Cloud" }],
+  applicationName: "Cantech Cloud",
+  openGraph: {
+    title: "Cloud Compute & PaaS Solutions in India | Cantech Cloud",
+    siteName: "Cantech Cloud",
+    url: "https://www.cantech.cloud/",
+    description: "Run modern workloads on Cantech Cloud with reliable cloud compute and PaaS services. Flexible infrastructure, optimized performance, and cost control.",
+    type: "website",
+    images: [
+      {
+        url: "/assets/images/og_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Cantech Cloud",
+      },
+    ],
+  },
+
+  alternates: {
+    canonical: "https://www.cantech.cloud/",
+  },
 };
 
 export default function RootLayout({
