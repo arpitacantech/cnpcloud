@@ -230,10 +230,14 @@ useEffect(() => {
                     </div>
                     
                     <div
-                      id={panelId}
-                      role="region"
-                      aria-labelledby={buttonId}
-                      className={`overflow-hidden text-lg leading-relaxed transition-[max-height] duration-500 ease-out ${open ? "max-h-64" : "max-h-0"} text-neutral-400`}>
+  id={panelId}
+  role="region"
+  aria-labelledby={buttonId}
+  className={`overflow-hidden text-lg leading-relaxed transition-[max-height] duration-500 ease-out ${
+    open ? "max-h-[1000px]" : "max-h-0"
+  } text-neutral-400`}
+>
+
                       <div className="cc-p pt-4">
   {Array.isArray(item.answer) ? (
     <ul className="list-disc pl-5 space-y-2">
@@ -260,4 +264,5 @@ useEffect(() => {
 
 export default FAQ1;
 export { FAQ1 };
+
 
