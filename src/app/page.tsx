@@ -8,7 +8,7 @@ import FeaturesSection from "./components/FeaturesSection";
 import ComparisonSection from "./components/ComparisonSection";
 import FAQ1 from "./components/FAQ1";
 import FooterCTA from "./components/FooterCTA";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"; 
 
 export default function Home() {
   return (
