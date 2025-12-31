@@ -12,9 +12,9 @@ export default function about() {
     <Navbar />
     <HeroAbout />
      <AnimatedCard
-          title="Who We Are"
-          description1="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          // description2="Explore topics such as resource allocation, scaling, monitoring, and best practices."
+          title="The Cantech Cloud Story – Since 2009"
+          description1="In 2009, Cantech Cloud introduced low-cost and high-quality cloud hosting. At the time, we entered a busy market against very large companies. Our team did not quit. We were different based on the high-quality service instead of size. We focused on making every customer happy with great service."
+          description2="In 2013 and 2016, our team received the recognition of ‘Reader’s Choice Best Hosting Company’."
           imageSrc="/call-to-action.webp"
           imageAlt="Virtual Machine Management"
         />
@@ -26,3 +26,4 @@ export default function about() {
   </>
   );
 }
+
