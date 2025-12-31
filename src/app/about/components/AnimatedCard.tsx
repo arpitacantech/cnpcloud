@@ -6,6 +6,7 @@ interface AnimatedCardProps {
   title: string;
   description1: string;
   description2?: string;
+  description3?: string;
   imageSrc?: string;
   imageAlt?: string;
   reverse?: boolean;
@@ -16,6 +17,7 @@ export default function AnimatedCard({
   title,
   description1,
   description2,
+  description3,
   imageSrc,
   imageAlt = "",
   reverse = false,
@@ -80,6 +82,19 @@ export default function AnimatedCard({
                   {description2}
                 </motion.p>
               )}
+
+              {description3 && ( // ✅ NEW
+                <motion.p
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="subtitle"
+                >
+                  {description3}
+                </motion.p>
+              )}
             </motion.div>
 
             {/* IMAGE */}
@@ -108,3 +123,4 @@ export default function AnimatedCard({
     </section>
   );
 }
+
