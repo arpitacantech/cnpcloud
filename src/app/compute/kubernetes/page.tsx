@@ -48,10 +48,10 @@ export default function KubernetesPage()
             <section className="py-14 md:py-16 lg:py-20">
                 <div className="md:px-8 text-center">
 
-                    <p className="text-[32px] text-white font-extrabold mx-auto mb-6">
+                    <h2 className="cc-h2">
                        What you get with Cantech Managed Kubernetes
-                    </p>
-                    <p className="text-[#ffffffb3]">
+                    </h2>
+                    <p className="subtitle">
                         Cantech offers cloud compute solutions that focus on performance, flexibility and security that ensures reliable operations while enabling scalable and efficient growth.
                     </p>
                 </div>
@@ -214,16 +214,16 @@ export default function KubernetesPage()
         }}
         className="md:px-8 text-center"
       >
-        <motion.p
+        <motion.h2
           variants={{
             hidden: { opacity: 0, y: 16 },
             visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-[32px] text-white font-extrabold mx-auto mb-6"
+          className="cc-h2"
         >
-          Flexible Compute & Powerful Add-Ons for Kubernetes
-        </motion.p>
+          Cantech Cloud Compute Advantage for Accelerated Growth
+        </motion.h2>
 
         <motion.p
           variants={{
@@ -231,10 +231,9 @@ export default function KubernetesPage()
             visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
-          className="text-[#ffffffb3]"
+          className="subtitle"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue,
-          nisl eget molestie varius, enim ex faucibus purus
+         Discover why leading companies across various industries trust Cantech Cloud to solve their modern challenges.
         </motion.p>
       </motion.div>
 
@@ -254,10 +253,10 @@ export default function KubernetesPage()
           {/* LEFT FEATURES */}
           <div className="grid gap-6 md:grid-cols-2 md:col-span-2 lg:col-span-3">
             {[
-              "Seamless Demand Handling",
-              "Optimized Cost Efficiency",
-              "Built for Performance",
-              "Zero Operational Burden",
+              "Seamless Management",
+              "Cost Efficiency",
+              "Auto Upgrades",
+              "Comprehensive Management",
             ].map((title, idx) => (
               <motion.div
                 key={idx}
@@ -272,8 +271,7 @@ export default function KubernetesPage()
                   {title}
                 </p>
                 <p className="text-sm md:text-base text-neutral-300 max-w-prose">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  congue, nisl eget molestie varius.
+                  Kubernetes clusters can automatically scale the nodes and workloads to manage surge in traffic while seamlessly maintaining performance.
                 </p>
               </motion.div>
             ))}
@@ -290,8 +288,8 @@ export default function KubernetesPage()
           >
             <img
               className="inset-0 object-cover object-bottom w-full h-56 rounded shadow-lg lg:absolute lg:h-full"
-              src="https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt=""
+              src="/assets/images/compute/kubernetes/flexible-compute-powerful-add-ons-for-kubernetes.webp"
+              alt="Flexible Compute & Powerful Add-Ons for Kubernetes | Cantech Cloud"
             />
           </motion.div>
 
