@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import ComputeNavbar from "../components/ComputeNavbar";
 import HeroSection from "./components/HeroSection";
 import FeatureSection2 from "./components/FeatureSection2";
@@ -42,12 +42,11 @@ export const metadata: Metadata = {
 export default function KubernetesPage()
 {
     return(
-        <>
-            <ComputeNavbar />
-            <HeroSection />
-            <FeatureSection2/>
-            <FeatureSection3/>
-            
+    <>
+      <ComputeNavbar />
+      <HeroSection />
+      <FeatureSection2 />
+      <FeatureSection3 /> 
       <ServicesSection />
       <FAQ1 /> 
       <Footer />
@@ -60,4 +59,3 @@ const Index = () => {
      <ServicesSection />
   );
 };
-// export default Index;
