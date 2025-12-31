@@ -31,12 +31,12 @@ export const HeroAboutEffect = ({
   return (
     <div className={cn("sticky top-80", className)}>
       <h1 className="cc-h1 text-center">
-        <span>{title || "Your Trusted Cloud Partner"}</span>
+        <span>{title || "A Reliable Infrastructure"}</span>
       </h1>
 
       <p className="max-w-3xl mx-auto text-center text-gray-300 mb-10 z-10 text-[18px]">
         {description ||
-          "We simplify cloud computing by providing robust, secure, and cost-effective solutions tailored to your needs."}
+          "We provide high-speed cloud solutions and expert human support services for your business success."}
       </p>
 
       <svg
@@ -178,4 +178,5 @@ export function HeroAbout() {
     </div>
   );
 }
+
 
