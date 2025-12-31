@@ -2,34 +2,34 @@
 
 const cards = [
   {
-    title: "Cloud Migration",
+    title: "High-Performance Cloud Compute",
     description:
-      "Move current workloads and VMs cantech cloud compute service. Eliminate time-consuming, repetitive, and complicated steps like moving machines with multiple virtual disks and manually by copying the data across which simplifies the migration to new platform.",
+      "We offer NVMe storage and the latest Intel and AMD processors on our virtual machines to handle challenging workloads.",
   },
   {
-    title: "Testing and Development",
+    title: "Managed PaaS and Kubernetes",
     description:
-      "Create a new virtual machine in the cloud, deploy open Stack, and run tests easily. We help you solve problems, identify fixes and back-port patches if required. All of this can be achieved within a simple user dashboard and access to repositories with latest updates.",
+      "Our platform automates container orchestration for your team. Control complicated applications with a simple, clean dashboard.",
   },
   {
-    title: "Automation and Optimization ",
+    title: "Reliable Managed Databases",
     description:
-      "Each solution is unique to match your requirements, which leads to improved flexibility and productivity while reducing overall costs and complexity. Cantech compute solutions can provide tailor-made solutions to meet your requirements.",
+      "Your SQL and NoSQL data are automatically synchronized. Our system manages the setup such that you can focus on code.",
   },
   {
-    title: "Continuous Monitoring and Support",
+    title: "Secure Scalable Storage",
     description:
-      "Provides environments for your applications to operate at high efficiency and ensures that it does not disrupt business operation to deliver what you need with our 24/7 support.",
+      "We provide Object Storage and Block Storage solutions. Your information is secure in Tier 3 and Tier 4 datacenters.",
   },
   {
-    title: "Continuous Monitoring and Support",
+    title: "Automated DevOps Integration",
     description:
-      "Provides environments for your applications to operate at high efficiency and ensures that it does not disrupt business operation to deliver what you need with our 24/7 support.",
+      "Our system works with GitHub, Jenkins, and other such tools. We deploy containerized applications without configuring servers manually.",
   },
   {
-    title: "Continuous Monitoring and Support",
+    title: "Global Networking Tools",
     description:
-      "Provides environments for your applications to operate at high efficiency and ensures that it does not disrupt business operation to deliver what you need with our 24/7 support.",
+      "We offer VPC and Load Balancers to offer better security. Users get high-speed connections wherever they are in the world.",
   }
 ];
 
@@ -43,10 +43,10 @@ export default function Feature() {
           Benefits
         </p> */}
         <h2 className="cc-h2">
-          What Makes Us Unique
+          Modern Infrastructure and Cloud Services for Growth
         </h2>
         <p className="subtitle">
-          Deploy your application instantly on our fully redundant, high performance and scalable Cloud Platform-as-a-Service.
+          We integrate enterprise hardware and reasonable billing to your advantage. You have complete control of resources without any long-term contracts or hidden costs.
         </p>
       </div>
       </div>
@@ -95,3 +95,4 @@ export default function Feature() {
     </section>
   );
 }
+
