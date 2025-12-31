@@ -3,6 +3,7 @@ import { HeroAbout } from "./components/HeroAbout";
 import AnimatedCard from "./components/AnimatedCard";
 import TabSection from "./components/TabSection";
 import Feature from "./components/Feature";
+import FAQ1 from "./components/FAQ1";
 import CTASection from "./components/CTASection";
 import Footer from "../components/Footer";
 
@@ -21,12 +22,14 @@ export default function about() {
         />
     <TabSection />
     <Feature />
+    <FAQ1 />
     <CTASection />
     <Footer />
     
   </>
   );
 }
+
 
 
 
