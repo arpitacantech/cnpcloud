@@ -49,7 +49,7 @@ const PRODUCT_DATA: Record<ProductId, ProductData> = {
     id: 'left',
     label: 'Our Mission',
     title: 'Our Mission',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
+    description: 'We provide top-tier cloud hosting that balances speed and price. Our team will ensure that we have the highest uptime with the latest modern infrastructure and provide every customer with expert assistance. We evolve every day to meet your changing business requirements.',
     image: '/assets/images/about/mission.png',
     colors: {
       gradient: 'from-zinc-400 to-zinc-700', // gray gradient
@@ -66,7 +66,7 @@ const PRODUCT_DATA: Record<ProductId, ProductData> = {
     id: 'right',
     label: 'Our Vision',
     title: 'Our Vision',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
+    description: 'Our mission is to become the world leader in secure and fast cloud services. Our team sets new grounds with constant innovation and low cost. We enable each business with world-class technology and quality support.',
     image: '/assets/images/about/mission.png',
     colors: {
       gradient: 'from-zinc-400 to-zinc-700', // gray gradient
@@ -277,4 +277,5 @@ export default function TabSection() {
       <Switcher activeId={activeSide} onToggle={setActiveSide} />
     </div>
   );
+
 }
