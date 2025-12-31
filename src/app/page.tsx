@@ -22,11 +22,11 @@ export default function Home() {
       <ComparisonSection />
       <FAQ1 />
       <FooterCTA
-        //titleLine1="Need Some"
-        //titleLine2="Professional Help?"
-        //description="Contact our Customer Service representative to provide you with the best custom made solutions on the market."
-        // buttonText="Let's Talk"
-        // buttonLink="/contact"
+        titleLine1="Need Some"
+        titleLine2="Professional Help?"
+        description="Contact our Customer Service representative to provide you with the best custom made solutions on the market."
+        //buttonText="Let's Talk"
+        //buttonLink="/contact"
       />
       <Footer />
     {/* </main> */}
