@@ -183,52 +183,35 @@
 ========================================================= */
 @layer components {
   .cc-h1{
-    @apply font-extrabold leading-tight md:leading-[3.5rem] lg:leading-[4rem] mb-8 motion-safe:animate-zoom-in;
-    
-    font-size: clamp(2rem, 6vw, 2.75rem); /* ~32px → 44px */
-
-    @media (min-width: 640px) {
-      font-size: clamp(2.5rem, 5vw, 3.25rem); /* ~40px → 52px */
-    }
-
-    @media (min-width: 1024px) {
-      font-size: var(--cn_fz_64); /* your design token */
-      line-height: 1.1;
-    }
+    @apply font-extrabold leading-tight md:leading-[3.5rem] lg:leading-[4rem] mb-8 motion-safe:animate-zoom-in ;
+    font-size: var(--cn_fz_64);
   }
-  h1 span {
-    @apply inline-block lg:inline bg-gradient-to-b from-white via-gray-300 to-gray-400 bg-clip-text text-transparent;
-    line-height: normal;
-    @media (max-width: 640px) {
-      display: unset !important;
-      padding-left: 8px;
-    }
+  h1 span{
+    @apply bg-gradient-to-b from-white via-gray-300 to-gray-400 bg-clip-text text-transparent;
   }
 
-  .cc-h2 {
+  .cc-h2{
     @apply text-white font-extrabold mx-auto mb-3;
-    font-size: clamp(1.50rem, 5vw, var(--cn_fz_36)); /* ~24px → 36px */
+    font-size: var(--cn_fz_36);
   }
 
-  .cc-h3 {
+  .cc-h3{
     @apply font-semibold text-white;
-    font-size: clamp(1.125rem, 3.5vw, var(--cn_fz_21)); /* ~18px → 21px */
+    font-size: var(--cn_fz_21);
   }
 
-  .title-badges {
+  .title-badges{
     @apply inline-flex items-center gap-2 px-4 py-2 mb-1 uppercase tracking-wider rounded-full bg-cmpt_primary/10 border border-cmpt_primary/20 animate-fade-in;
-    font-size: clamp(0.75rem, 2.5vw, var(--cn_fz_14)); /* ~12px → 14px */
+    font-size: var(--cn_fz_14);
   }
 
-  .subtitle {
+  .subtitle{
     @apply max-w-4xl mx-auto text-[#ffffffb3];
-    font-size: clamp(var(--cn_fz_14), 2.8vw, 1rem); /* ~14px → 18px */
-    line-height: 1.7;
   }
 
-  .cc-p {
+  .cc-p{
     @apply text-gray-400;
-    font-size: clamp(var(--cn_fz_14), 2.5vw, var(--cn_fz_16)); /* ~14px → 16px */
+    font-size: var(--cn_fz_16);
     letter-spacing: 0.3px;
   }
 
@@ -401,6 +384,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+@keyframes logo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logo-scroll {
+  animation: logo-scroll 25s linear infinite;
 }
 
 .button__icon-wrapper {
