@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import PaasNavbar from "../components/PaasNavbar";
 import Hero from "./components/Hero";
@@ -8,6 +9,37 @@ import ComparisonSection from "./components/ComparisonSection";
 import CTASection from "./components/CTASection";
 import Footer from "../../components/Footer";
 import Faq from "./components/Faq";
+
+export const metadata: Metadata = {
+  title: "Enterprise Database Hosting Services | Cantech Cloud",
+  description: "Cantech Cloud provides enterprise database hosting services with secure, scalable database services and reliable hosting solutions built for modern cloud applications.",
+  keywords: [
+    "Database Hosting",
+    "Database Services",
+    "database hosting solutions",
+    "Enterprise Database Hosting",
+  ],
+   
+  openGraph: {
+    title: "Enterprise Database Hosting Services | Cantech Cloud",
+    siteName: "Cantech Cloud",
+    url: "https://www.cantech.cloud/paas/database",
+    description: "Cantech Cloud provides enterprise database hosting services with secure, scalable database services and reliable hosting solutions built for modern cloud applications.",
+    type: "website",
+    images: [
+      {
+        url: "/assets/images/og_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Cantech Cloud",
+      },
+    ],
+  },
+
+  alternates: {
+    canonical: "https://www.cantech.cloud/paas/database",
+  },
+};
 
 export default function JitsiHosting() {
     return(
